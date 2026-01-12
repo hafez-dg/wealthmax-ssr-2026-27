@@ -1,0 +1,439 @@
+<app-banner
+  [title]="'Join as Appointed Representative'"
+  [subtitle]="
+    'Step into a future where your independence thrives under strong professional support.'
+  "
+  [desktopImage]="'/nw/ar banner.svg'"
+  [mobileImage]="'/nw/ar banner mobile.svg'"
+  [buttons]="[
+    {
+      label: 'Join Now',
+      class: 'btn btn-lg bg-white txtorange',
+      click: scrollToForm
+    }
+  ]"
+>
+</app-banner>
+
+<!-- section2 -->
+
+<div class="bgcolorlinear">
+  <div class="container mgtop">
+    <h3 class="heading-txt text-center">
+      Advantages of Joining Wealthmax as AR
+    </h3>
+    <p class="text-Size text-md-center text-justify">
+      Our Appointed Representatives are more than just partners they are the
+      driving force behind our shared success. Discover their inspiring
+      journeys, from the first step into the financial world to building
+      thriving careers with Wealthmax.
+    </p>
+    <div class="cards-container">
+      <div class="card" *ngFor="let card of cards">
+        <div class="align-items-start">
+          <!-- Icon -->
+          <div class="icon-box align-items-center justify-content-center mb-3">
+            <img [src]="card.icon" alt="icon" class="card-icon" />
+          </div>
+
+          <!-- Text -->
+          <div class="flex-grow-1">
+            <h3 class="card-title mb-2 dark-blue">{{ card.title }}</h3>
+            <p class="card-text mb-0">{{ card.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- section3 -->
+
+<div class="container mgtop">
+  <h3 class="heading-txt text-center">How to Get Started?</h3>
+  <p class="text-Size text-md-center text-justify">
+    Are you a dynamic professional looking to boost your income while referring
+    valuable connections in the financial industry? Seize the chance to earn
+    substantial commissions by becoming a valued Introducer with Wealthmax
+    Financial Advisers.
+  </p>
+  <div
+    class="row align-items-center justify-content-center align-items-stretch"
+  >
+    <!-- Left Image -->
+    <div class="col-lg-6 text-center order-2 order-lg-1 mt-4 i-box">
+      <img
+        src="/nw/Figure.png"
+        alt="Team discussion"
+        class="img-fluid rounded-3 shadow-sm"
+      />
+    </div>
+
+    <!-- Right Steps -->
+    <div class="col-lg-6 order-1 order-lg-2 mt-4">
+      <div class="step d-flex align-items-start">
+        <div class="iconImg me-3">
+          <img src="\nw\iicon1.png" alt="Step 1" class="step-icon" />
+        </div>
+        <div>
+          <h6 class="fw-bold sub-txt mb-2">Fill Application Form</h6>
+          <p class="text-Size">
+            Strengthen your client relationships by expanding your service
+            offerings without taking
+          </p>
+        </div>
+      </div>
+
+      <div class="step d-flex align-items-start">
+        <div class="iconImg me-3">
+          <img src="\nw\iicon5.png" alt="Step 1" class="step-icon" />
+        </div>
+        <div>
+          <h6 class="fw-bold sub-txt mb-2">Get Your Documents Verified</h6>
+          <p class="text-Size">
+            Strengthen your client relationships by expanding your service
+            offerings without taking
+          </p>
+        </div>
+      </div>
+
+      <div class="step d-flex align-items-start">
+        <div class="iconImg me-3">
+          <img src="\nw\iicon3.png" alt="Step 1" class="step-icon" />
+        </div>
+        <div>
+          <h6 class="fw-bold sub-txt mb-2">Attend Induction</h6>
+          <p class="text-Size">
+            Strengthen your client relationships by expanding your service
+            offerings without taking
+          </p>
+        </div>
+      </div>
+
+      <div class="step d-flex align-items-start">
+        <div class="iconImg me-3">
+          <img src="\nw\iicon6.png" alt="Step 1" class="step-icon" />
+        </div>
+        <div>
+          <h6 class="fw-bold sub-txt mb-2">Give Financial Exams</h6>
+          <p class="text-Size">
+            Strengthen your client relationships by expanding your service
+            offerings without taking
+          </p>
+        </div>
+      </div>
+
+      <div class="step d-flex align-items-start">
+        <div class="iconImg me-3">
+          <img src="\nw\iicon2.png" alt="Step 1" class="step-icon" />
+        </div>
+        <div>
+          <h6 class="fw-bold sub-txt mb-2">Sign Agreement</h6>
+          <p class="text-Size">
+            Strengthen your client relationships by expanding your service
+            offerings without taking
+          </p>
+        </div>
+      </div>
+
+      <div class="step d-flex align-items-start">
+        <div class="iconImg me-3">
+          <img src="\nw\iicon4.png" alt="Step 1" class="step-icon" />
+        </div>
+        <div>
+          <h6 class="fw-bold sub-txt mb-2">Start Earning Commissions</h6>
+          <p class="text-Size">
+            Strengthen your client relationships by expanding your service
+            offerings without taking
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- section-4 -->
+<div class="container mgtop">
+  <div class="row align-items-center g-4">
+    <!-- Left side: Image -->
+    <div
+      class="col-lg-5 text-center d-flex justify-content-center order-2 order-lg-1 mt-5"
+    >
+      <img src="/nw/arfigure.png" alt="Team" class="imgfluid" />
+    </div>
+
+    <!-- Right side: Content -->
+    <div class="col-lg-7 order-1 order-lg-2">
+      <h2 class="heading-txt text-start fw-semibold mb-3">
+        Uniting Financial Minds for Success
+      </h2>
+      <p class="subheading-txt text-start">
+        “At Wealthmax, success isn’t just an achievement—it’s our mission. With
+        access to 100+ providers and lenders, we open doors to growth,
+        innovation and real opportunities.” <br />
+        <strong
+          >And don’t just take our word for it—see what our ARs have to
+          say.</strong
+        >
+      </p>
+
+      <div
+        id="testimonialCarousel"
+        #testimonialCarousel
+        class="carousel slide mt-4"
+        data-bs-ride="carousel"
+        data-bs-interval="3000"
+        data-bs-pause="true"
+      >
+        <div class="carousel-inner">
+          <!-- Testimonial 1 -->
+          <div class="carousel-item active">
+            <div class="p-4 rounded-5 bgcolor shadow-sm testimonial-card">
+              <h5 class="fw-bold mb-1">
+                Kakarlapudi Varma (Soma Shekhar Varma)
+              </h5>
+              <p class="text-orange small mb-2">Financial Adviser</p>
+              <p class="mb-0 text-muted truncate-4">
+                It's been a while since I started working with Wealthmax
+                Financial Advisers Limited as a financial analyst. I have
+                nothing but positives to say about the team. I can confidently
+                say that it's one of the best workplaces I've been a part of. We
+                have an incredibly supportive work culture, and the team is
+                always embracing and encouraging each other. It's a dynamic yet
+                collaborative environment, well-equipped to make it easy to
+                focus and be productive.
+              </p>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="carousel-item">
+            <div class="p-4 rounded-5 bgcolor shadow-sm testimonial-card">
+              <h5 class="fw-bold mb-1">Geerish Ganesh Mandrekar</h5>
+              <p class="text-orange small mb-2">
+                Protection & Mortgage Consultant
+              </p>
+              <p class="mb-0 text-muted truncate-4">
+                Best company to deal with
+              </p>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="carousel-item">
+            <div class="p-4 rounded-5 bgcolor shadow-sm testimonial-card">
+              <h5 class="fw-bold mb-1">Larisa Golea-Udvar</h5>
+              <p class="text-orange small mb-2">
+                Protection & Mortgage Consultant
+              </p>
+              <p class="mb-0 text-muted truncate-4">
+                Great systems to use for my business As an adviser I have all
+                systems which I can use them to quote my client's. I like the
+                weekly trainings and the help from compliance.
+              </p>
+            </div>
+          </div>
+
+          <!-- Testimonial 4 -->
+          <div class="carousel-item">
+            <div class="p-4 rounded-5 bgcolor shadow-sm testimonial-card">
+              <h5 class="fw-bold mb-1">Varathan Manickalingam</h5>
+              <p class="text-orange small mb-2">Area Sales Manager</p>
+              <p class="mb-0 text-muted truncate-4">
+                Great company to work, Fantastic opportunity...
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Indicators OUTSIDE -->
+        <div class="carousel-indicators-outside mt-3 text-center">
+          <button
+            type="button"
+            data-bs-target="#testimonialCarousel"
+            data-bs-slide-to="0"
+            class="active"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#testimonialCarousel"
+            data-bs-slide-to="1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#testimonialCarousel"
+            data-bs-slide-to="2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#testimonialCarousel"
+            data-bs-slide-to="3"
+          ></button>
+        </div>
+
+        <!-- Controls -->
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#testimonialCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#testimonialCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- last-section -->
+
+<div class="container mgtopbottom b-size">
+  <div
+    class="row justify-content-between shadow rounded p-3 my-6 p-lg-5 rounded-5"
+    id="apply-section"
+  >
+    <!-- Left Section -->
+    <div class="col-lg-6">
+      <h4
+        class="heading-txt text-orange fw-semibold mb-3 text-lg-start text-start"
+      >
+        Join as Appointed Representative
+      </h4>
+      <p class="text-Size mb-4 text-lg-start text-justify">
+        Step into a role where your expertise is valued, your ambitions are
+        supported and your potential is given the platform to truly thrive —
+        becoming an Appointed Representative with us is more than a position,
+        it’s a partnership for lasting success.
+      </p>
+      <div class="row">
+        <div class="col-6 align-items-center mt-4">
+          <div class="me-2">
+            <img src="\nw\Email.png" alt="Email Icon" class="icon-img" />
+          </div>
+          <div>
+            <div class="text-Size text-muted mt-2">Email</div>
+            <a
+              href="mailto:contact@wealthmax.co.uk"
+              class="text-dark text-Size txt-Size"
+              >contact&#64;wealthmax.co.uk</a
+            >
+          </div>
+        </div>
+        <div class="col-6 align-items-center mt-4">
+          <div class="me-2">
+            <img src="\nw\Phone.png" alt="Email Icon" class="icon-img" />
+          </div>
+          <div>
+            <div class="text-Size text-muted mt-2">Phone</div>
+            <a
+              href="tel:+442036758998"
+              class="text-dark text-Size txt-Size "
+              >+44 20 3675 8998</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="col-lg-6 form-section">
+      <h1 class="txt h-size">Join Now</h1>
+      <p class="mt-3 txt sub-size">
+        And be part of a lucrative collaboration with Wealthmax.
+      </p>
+      <form [formGroup]="arForm" (ngSubmit)="onContactSubmit()">
+        <div class="col-md-12 mt-4 mb-4">
+          <label for="fullName">Full Name</label>
+          <input
+            id="fullName"
+            type="text"
+            formControlName="fullName"
+            class="form-control"
+            placeholder="Enter full name"
+            (keypress)="allowOnlyLetters($event)"
+            (blur)="trimFullName()"
+          />
+
+          <small
+            class="form-text error"
+            *ngIf="arForm.get('fullName')?.touched"
+          >
+            <span *ngIf="arForm.get('fullName')?.hasError('required')">
+              Full name is required
+            </span>
+            <!-- <span *ngIf="contactForm.get('fullName')?.hasError('pattern')">
+                Only alphabets are allowed
+              </span> -->
+          </small>
+        </div>
+
+        <!-- Email -->
+        <div class="col-md-12 mb-4">
+          <label>Email</label>
+          <input
+            type="email"
+            class="form-control"
+            formControlName="emailId"
+            placeholder="@abc.co.uk"
+          />
+          <div class="form-text error">
+            <small *ngIf="arForm.get('emailId')?.touched">
+              <span *ngIf="arForm.get('emailId')?.hasError('required')">
+                Email is required
+              </span>
+              <span *ngIf="arForm.get('emailId')?.hasError('pattern')">
+                Please enter a valid email id
+              </span>
+            </small>
+          </div>
+        </div>
+        <!-- Phone Number -->
+        <div class="col-12 mb-5">
+       <label for="contactNumber" class="form-label">Contact Number</label>
+          <input
+            id="contactNumber"
+            type="tel"
+            class="form-control"
+            placeholder="+441234567890"
+            formControlName="contactNumber"
+            autocomplete="tel"
+            inputmode="tel"
+            required
+          />
+
+          <div class="form-text error">
+            <div
+              *ngIf="
+                (f.contactNumber.touched || f.contactNumber.dirty) &&
+                f.contactNumber.invalid
+              "
+              class="error"
+            >
+              <div *ngIf="f.contactNumber.errors?.required">
+                Contact Number is required
+              </div>
+              <div *ngIf="f.contactNumber.errors?.pattern">
+                Please enter a valid contact number:
+                <br />
+                • 10 digits without “+” (e.g. 9876543210) or +CC followed by 10
+                digits (e.g. +441234567890 or +44 1234567890)
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btnall btncolor">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

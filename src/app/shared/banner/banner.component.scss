@@ -1,0 +1,169 @@
+.hero-banner {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center !important;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.main-img {
+  width: 80%;
+  height: auto;
+  border-radius: 8px;
+}
+.overlay-img {
+  position: absolute;
+  bottom: 20px;
+  right: 0px;
+  width: 40%;
+  border-radius: 10px;
+}
+
+img.img-fluid {
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.btn {
+  background: white;
+  color: #ff6600;
+  border: none;
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+
+}
+.btn:hover {
+  background: white;
+  color: #ff6600;
+  border: none;
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.btn-text {
+  font-family: "Inter";
+  font-weight: 600;
+
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: center;
+  vertical-align: middle;
+}
+@media (min-width: 1400px) and (max-width: 1600px) {
+  .hero-banner {
+    height: 40vh;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .hero-banner {
+    height: 37vh;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .hero-banner {
+    height: 38vh;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .hero-banner {
+    height: 33vh;
+  }
+}
+@media (min-width: 767px) and (max-width: 992px) {
+  .hero-banner {
+    height: 30vh;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .hero-banner {
+    height: 35vh;
+  }
+}
+@media (max-width: 767px) {
+  .hero-banner {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center !important;
+    height: 31vh;
+    // height: 260px;
+    display: flex;
+    align-items: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+  .banner-header {
+    font-size: 26px;
+  }
+  .banner-text {
+    font-size: 16px;
+    line-height: 114%;
+  }
+  .btn {
+    // padding: 12px 24px;
+    // font-size: 14px;
+            padding: 12px 12px;
+        font-size: 14px;
+        border-radius: 6px
+  }
+
+}
+
+.banner-header {
+  font-family: "Urbanist" !important;
+  font-weight: 800 !important;
+  font-size: 58px !important;
+  line-height: 100% !important;
+}
+.sub-heading {
+  font-family: "Urbanist" !important;
+  font-weight: 500 !important;
+  font-size: 28px !important;
+  line-height: 112% !important;
+}
+
+@media (min-width: 767px) and (max-width: 1200px) {
+  .banner-header {
+    font-family: "Urbanist" !important;
+    font-weight: 800 !important;
+    font-size: 40px !important;
+    line-height: 100% !important;
+  }
+  .sub-heading {
+    font-family: "Urbanist";
+    font-weight: 500 !important;
+    font-size: 20px !important;
+    line-height: 112% !important;
+  }
+}
+@media (max-width: 767px) {
+  .banner-header {
+    font-family: "Urbanist" !important;
+    font-weight: 800 !important;
+    font-size: 26px !important;
+    line-height: 100%;
+  }
+  .sub-heading {
+    font-family: "Urbanist" !important;
+    font-weight: 500 !important;
+    // font-size: 18px !important;
+    font-size: 16px !important;
+    line-height: 112% !important;
+  }
+}

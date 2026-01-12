@@ -1,0 +1,16 @@
+.hero-banner {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 50dvh;
+  display: flex;
+  align-items: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+.banner-content {
+  background: rgba(0, 0, 0, 0); /* optional dark overlay */
+  /* padding: 0px; */
+  border-radius: 10px;
+}

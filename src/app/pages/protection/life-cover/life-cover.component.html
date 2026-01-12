@@ -1,0 +1,246 @@
+<div class="bgclr_main">
+  <!-- <app-banner-section  title="Life Cover"
+  subtitle="Secure your loved ones’ future with life cover that protects their stability and peace of mind, no matter what life brings."
+  background="public/Protection/Lifecover.png"
+></app-banner-section> -->
+
+  <app-banner
+    [title]="'Life Cover'"
+    [subtitle]="
+      'Ensure your family’s future is safeguarded with personalised life cover solutions built around your needs and dreams'
+    "
+    [desktopImage]="'/desktop image/lifecover.webp'"
+    [mobileImage]="'/Mobile img/life cover.webp'"
+    [buttons]="[
+      {
+        label: ' Get Your Free Quote ',
+        class: 'btn btn-lg bg-orange text-white',
+        href: 'https://wealthmax-financial-advisers.prequo.co.uk/#/',
+        target: '_blank'
+      }
+    ]"
+  ></app-banner>
+
+  <div class="container mgtop gradient-bg">
+    <!-- Title -->
+    <h1 class="heading-txt mb-3 text-center">Why Choose Life Cover?</h1>
+    <div>
+      <p class="text-Size text-justify text-lg-center">
+        Would your family be able to cope financially if you were to
+        unexpectedly pass away? Despite 6 out of 10 UK adults saying that life
+        cover would benefit them and their loved ones, only 35% have a policy in
+        place. Life cover represents the cornerstone of any comprehensive
+        protection planning strategy, and the Wealthmax team of experts is here
+        to help.
+      </p>
+    </div>
+    <div class="mgtop">
+      <h1 class="heading-txt mb-3 text-center">How does Life Cover Work?</h1>
+      <div>
+        <p class="text-Size text-justify text-lg-center">
+          It offers a predetermined lump sum or monthly income that becomes
+          payable in the event that you die or if a medical doctor believes you
+          have less than 12 months to live. The money paid out from the policy
+          not only helps those closest to you with their day to day living costs
+          but also allows them to take care of your funeral expenses and any
+          outstanding debts you might have.
+        </p>
+      </div>
+    </div>
+
+    <div class="mgtop">
+      <!-- Title -->
+      <h1 class="heading-txt mb-3 text-center">What we Offer?</h1>
+      <p class="text-Size text-justify text-lg-center mb-3">
+        From protecting your family’s financial future to covering outstanding
+        commitments, our life cover services are designed to provide security
+        and lasting peace of mind.
+      </p>
+
+      <div class="cards-container mt-5 mb-5">
+        <div class="card" *ngFor="let card of cards">
+          <div class="align-items-start">
+            <!-- Icon -->
+            <div
+              class="icon-box align-items-center justify-content-center mb-3"
+            >
+              <img [src]="card.icon" alt="icon" class="card-icon" />
+            </div>
+
+            <!-- Text -->
+            <div class="flex-grow-1">
+              <h3 class="card-title mb-2 dark-blue">{{ card.title }}</h3>
+              <!-- <p class="card-text mb-0">{{ card.description }}</p> -->
+              <p class="card-text mb-0" [innerHTML]="card.description"></p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mgtopbottom">
+    <h1 class="heading-txt mb-3 text-center">
+      Which Life Cover Option Best Meets your Needs?
+    </h1>
+    <p class="text-Size text-justify text-lg-center mb-3">
+      When discussing life insurance quotes with our experienced advisers at
+      Wealthmax, you’ll receive tailored guidance to help answer the
+      all important question: Which life insurance is right for me? As part of
+      our advice process, we take the time to understand your individual needs
+      and circumstances, considering the following:
+    </p>
+
+    <div class="my-md-5">
+      <div
+        class="row justify-content-center justify-content-md-between align-items-stretch h-100 position-relative"
+      >
+        <!-- Left Column -->
+        <div class="col-md-6 col-lg-4 col-xl-4 row">
+          <div class="row height-cards">
+            <div class="mb-0 mb-md-4">
+              <div class="my-3 icon-img">
+                <img
+                  src="/lifecover/secure.svg"
+                  alt="Secure"
+                  class="img-fluid icon-img"
+                />
+              </div>
+              <div>
+                <h5 class="btn-text1">Secure your financial future</h5>
+                <p class="textSize1">
+                  Your financial obligations, such as debts, income replacement,
+                  and future expenses.
+                </p>
+              </div>
+            </div>
+            <div class="mb-0 mb-md-4">
+              <div class="my-3 icon-img">
+                <img
+                  src="/lifecover/balance.svg"
+                  alt="Balance"
+                  class="img-fluid icon-img"
+                />
+              </div>
+              <div>
+                <h5 class="btn-text1">Balance cover and cost</h5>
+                <p class="textSize1">
+                  The budget you're working with to determine what you can
+                  afford monthly.
+                </p>
+              </div>
+            </div>
+            <div class="mb-0 mb-md-4">
+              <div class="my-3 icon-img">
+                <img
+                  src="/lifecover/payout.svg"
+                  alt="Payout"
+                  class="img-fluid icon-img"
+                />
+              </div>
+              <div>
+                <h5 class="btn-text1">Set your payout preference</h5>
+                <p class="textSize1">
+                 You can choose to make a lump sum payment, ongoing payments, or a combination of both.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Center Image -->
+        <div
+          class="col-0 col-lg-4 col-xl-4 text-center position-relative d-flex justify-content-center align-content-center d-none d-lg-block"
+        >
+          <div class="">
+            <div>
+              <img
+                src="/lifecover/Frame.png"
+                class="rounded-3 img-height"
+                alt="frame"
+              />
+            </div>
+            <div>
+              <button routerLink="/contact-us" class="btnall mt-5 ls-contactus" tabindex="0">
+                Contact Us
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="col-md-6 col-lg-4 col-xl-4 row">
+          <div class="row height-cards">
+            <div class="mb-0 mb-md-4">
+              <div class="my-3 icon-img">
+                <img
+                  src="/lifecover/plan.svg"
+                  alt="lifelong"
+                  class="img-fluid icon-img"
+                />
+              </div>
+              <div>
+                <h5 class="btn-text1">Plan for lifelong cover</h5>
+                <p class="textSize1">
+                  Your permanent coverage and estate planning requirements.
+                </p>
+              </div>
+            </div>
+            <div class="mb-0 mb-md-4">
+              <div class="my-3 icon-img">
+                <img
+                  src="/lifecover/cover mortgage.svg"
+                  alt="Mortgage cover"
+                  class="img-fluid icon-img"
+                />
+              </div>
+              <div>
+                <h5 class="btn-text1">Cover your mortgage needs</h5>
+                <p class="textSize1">
+                  Whether you have a mortgage that will need to be paid off.
+                </p>
+              </div>
+            </div>
+            <div class="mb-0 mb-md-4">
+              <div class="my-3 icon-img">
+                <img
+                  src="/lifecover/plan health.svg"
+                  alt="Plan Health"
+                  class="img-fluid icon-img"
+                />
+              </div>
+              <div>
+                <h5 class="btn-text1">Plan by health and age</h5>
+                <p class="textSize1">Your current state of health and age.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //button -->
+      </div>
+      <div class="d-block d-lg-none justify-content-center text-center">
+        <button routerLink="/contact-us" class="btnall mt-2" tabindex="0">
+          Contact Us
+        </button>
+      </div>
+    </div>
+
+    <!-- faq -->
+    <div class="mgtop">
+      <app-faq [faqs]="faqs"></app-faq>
+    </div>
+  </div>
+
+  <div class="mgtopbottom p-1 p-lg-2">
+    <app-last-btn-comp
+      [align]="'center'"
+      [title]="'Looking for a Life Cover?'"
+      [subtitle]="
+        'Wealthmax is here to help. Our advisers are experienced in life cover solutions and can tailor protection to suit your needs. Contact us today to secure the right cover and safeguard your family’s future.'
+      "
+      [buttonText]="'Speak to our Advisers'"
+      [buttonLink]="'/contact-us'"
+    />
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="cards-container">
+  <div class="card" *ngFor="let card of cards">
+    <div class="d-flex flex-column align-items-start">
+      <img [src]="card.image" alt="icon" class="icon-img mb-1 mb-lg-2" />
+      <h3 class="card-title my-2">{{ card.title }}</h3>
+      <p class="card-text mb-0">{{ card.description }}</p>
+    </div>
+  </div>
+</div>

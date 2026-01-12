@@ -1,0 +1,230 @@
+<div class="dialog-container">
+  <div class="job-info">
+    <div class="d-flex justify-content-between position-relative">
+      <div>
+        <h2 class="text-nowrap headingtxt mb-0">{{ data.jobTitle || "—" }}</h2>
+      </div>
+      <div class="position-relative">
+        <div class="closeicon" (click)="close()">
+          <img src="/jad/close.svg" alt="close" />
+        </div>
+      </div>
+    </div>
+
+    <p class="high-para">
+      We are looking for an ambitious, self-motivated individual who takes pride
+      in delivering the best.
+    </p>
+  </div>
+
+  <div>
+    <div class="row justify-content-between mb-4 g-3">
+      <div
+        class="col-6 col-md-4 "
+      >
+        <div>
+          <div class="jobheading">Job ID</div>
+          <div class="jobheadingdata">
+            {{ data.jobId || data.jobid || "—" }}
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="col-6 col-md-4 "
+      >
+        <div>
+          <div class="jobheading">Work Style</div>
+          <div class="jobheadingdata">{{ data.workstyle || "—" }}</div>
+        </div>
+      </div>
+
+      <div
+        class="col-6 col-md-4 "
+      >
+        <div>
+          <div class="jobheading">Date Posted</div>
+          <div class="jobheadingdata">
+            {{
+              data.dateposted
+                ? (data.dateposted | date : "mediumDate")
+                : data.createdAt
+                ? (data.createdAt | date : "mediumDate")
+                : "—"
+            }}
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-6 col-md-4 "
+      >
+       <div>
+         <div class="jobheading">Job Type</div>
+        <div class="jobheadingdata">{{ data.jobtype || data.type || "—" }}</div>
+       </div>
+      </div>
+
+      <div
+        class="col-6 col-md-4 "
+      >
+      <div>
+          <div class="jobheading">Department</div>
+        <div class="jobheadingdata">
+          {{ data.department || data.dpt || "—" }}
+        </div>
+      </div>
+      </div>
+
+      <div
+        class="col-6 col-md-4 "
+      >
+       <div>
+         <div class="jobheading">Apply By</div>
+        <div class="jobheadingdata">
+          {{
+            data.jobapplybeforedate
+              ? (data.jobapplybeforedate | date : "mediumDate")
+              : "—"
+          }}
+        </div>
+       </div>
+      </div>
+    </div>
+
+    <!-- <div class="row justify-content-between mb-4 g-3">
+
+    </div> -->
+  </div>
+
+  <hr />
+
+  <h3 class="form-title">Submit Form</h3>
+
+   <form [formGroup]="applicationForm" (ngSubmit)="submit()" class="application-form">
+    <div class="form-grid">
+      <!-- Full Name -->
+      <div class="form-field full">
+        <label for="name" class="form-label">Full Name</label>
+        <input
+          id="name"
+          type="text"
+          class="form-control"
+          formControlName="name"
+          placeholder="Enter your full name"
+          (keypress)="allowOnlyLetters($event)"
+          (blur)="trimName('firstName')"
+        />
+        <div class="error small mt-1" *ngIf="applicationForm.get('name')?.touched && applicationForm.get('name')?.invalid">
+          <div *ngIf="applicationForm.get('name')?.hasError('required')">Full name is required.</div>
+          <div *ngIf="applicationForm.get('name')?.hasError('maxlength')">Name must be 30 characters or fewer.</div>
+          <div *ngIf="applicationForm.get('name')?.hasError('pattern')">Name can only contain letters and spaces.</div>
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="form-field">
+        <label for="email" class="form-label">Email</label>
+        <input
+          id="email"
+          type="email"
+          class="form-control"
+          formControlName="email"
+          placeholder="@abc.com"
+          autocomplete="email"
+        />
+        <div class="error small mt-1" *ngIf="applicationForm.get('email')?.touched && applicationForm.get('email')?.invalid">
+          <div *ngIf="applicationForm.get('email')?.hasError('required')">Email is required.</div>
+          <div *ngIf="applicationForm.get('email')?.hasError('email')">Please enter a valid email address.</div>
+        </div>
+      </div>
+
+      <!-- Phone -->
+      <div class="form-field">
+        <label for="phone" class="form-label">Phone Number</label>
+        <input
+          id="phone"
+          type="tel"
+          class="form-control"
+          formControlName="phone"
+          placeholder="+44 (555) 000-0000"
+        />
+        <div class="error small mt-1" *ngIf="applicationForm.get('phone')?.touched && applicationForm.get('phone')?.invalid">
+          <div *ngIf="applicationForm.get('phone')?.hasError('required')">Phone number is required.</div>
+          <div *ngIf="applicationForm.get('phone')?.hasError('minlengthDigits')">
+            Phone must contain at least {{ applicationForm.get("phone")?.getError("minlengthDigits")?.required }} digits.
+          </div>
+          <div *ngIf="applicationForm.get('phone')?.hasError('maxlengthDigits')">
+            Phone must contain no more than {{ applicationForm.get("phone")?.getError("maxlengthDigits")?.required }} digits.
+          </div>
+          <div *ngIf="applicationForm.get('phone')?.hasError('pattern')">Phone contains invalid characters.</div>
+        </div>
+      </div>
+
+      <!-- CV Upload (full width) -->
+      <div class="form-field full">
+        <label class="form-label">Upload your CV</label>
+        <div class="file-upload-wrapper">
+          <label for="cv" class="custom-file-upload" aria-label="Choose CV file">
+            Choose File
+          </label>
+          <div class="file-name" title="{{ fileName || 'No file chosen' }}">
+            {{ fileName || 'No file chosen' }}
+          </div>
+          <input
+            #cvInput
+            id="cv"
+            type="file"
+            (change)="onFileChange($event)"
+            accept=".pdf,.doc,.docx"
+            hidden
+          />
+        </div>
+        <div class="error small mt-2" *ngIf="applicationForm.get('cv')?.touched && applicationForm.get('cv')?.invalid">
+          Please upload your CV (PDF, DOC, or DOCX).
+        </div>
+      </div>
+
+      <!-- Submit -->
+      <div class="form-actions">
+        <button type="submit" class="submit-btn">
+          <i class="fa-solid fa-paper-plane" style="font-size: 16px"></i>
+          <span>Submit</span>
+        </button>
+      </div>
+    </div>
+  </form>
+
+  <div class="mgtopdp">
+    <!-- Job Description -->
+    <div class="mb-4 text-start">
+      <h3 class="headingsection-2">Job Description</h3>
+      <!-- <p >
+        {{ data.jobdesp || data.jobDesp || "Description not available" }}
+      </p> -->
+      <p class="textSize text-muted" [innerHTML]="data?.jobdesp"></p>
+    </div>
+
+
+    <div class="row py-3 g-4 mgtopdp widthiconscont">
+      <div class="col-6 d-flex flex-column align-items-start office">
+        <img src="/jad/oft.svg" alt="office" class="iconsize" />
+        <div class="oft">Office Timings</div>
+        <div class="ofpm">{{ data.officeTiming }}</div>
+      </div>
+
+      <div class="col-6 d-flex flex-column align-items-start office">
+        <img src="/jad/cal.svg" alt="calendar" class="iconsize" />
+        <div class="oft">Office Days</div>
+        <div class="ofpm">{{ data.officeDay }}</div>
+      </div>
+    </div>
+    <div>
+      <p class="notetxt">
+        Please note, due to the nature of the role, the successful candidate
+        will be required to work from our Head Office in Knowle Solihull full
+        time during initial training. Following competency sign off, this will
+        be a hybrid role.
+      </p>
+    </div>
+  </div>
+</div>

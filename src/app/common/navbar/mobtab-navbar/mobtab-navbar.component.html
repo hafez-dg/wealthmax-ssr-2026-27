@@ -1,0 +1,115 @@
+<nav
+  class="p-2 navbar navbar-expand-xxl navbar-light bgclr_main position-relative"
+  id="full-navbar"
+>
+  <div class="row w-100 justify-content-center align-content-center">
+    <!-- Left Toggler -->
+    <div class="col-6 d-flex justify-content-start">
+      <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+        <span [ngClass]="showNavbar ? 'bi bi-x-lg fs-2' : 'navbar-toggler-icon'"></span>
+      </button>
+    </div>
+
+    <!-- Right Logo -->
+    <div class="col-6 text-end">
+      <a class="navbar-brand" routerLink="/" (click)="closeNavbar()">
+        <img class="maxlogo" src="/willsplanning/wealthmaxlogo.svg" />
+      </a>
+    </div>
+
+    <div class="navbar-collapse" [ngClass]="{ collapse: !showNavbar }">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <ng-container *ngFor="let item of mainLinks">
+          <!-- Normal link -->
+          <li *ngIf="!item.hasDropdown" class="nav-item">
+            <a
+              class="nav-link"
+              [routerLink]="item.routerLink"
+              [class.active-link]="isRouteActive(item.routerLink)"
+              (click)="closeNavbar()"
+            >
+              {{ item.label }}
+            </a>
+          </li>
+
+          <!-- Dropdown -->
+          <li *ngIf="item.hasDropdown" class="nav-item">
+            <div class="nav-link dropdown-parent" [class.active-link]="isChildActive(item)">
+              <button
+                type="button"
+                class="dropdown-label"
+                (click)="toggleDropdown(item.dropdownKey || item.label, $event)"
+              >
+                {{ item.label }}
+              </button>
+
+              <button
+                type="button"
+                class="dropdown-arrow"
+                (click)="toggleDropdown(item.dropdownKey || item.label, $event)"
+                aria-label="Toggle submenu"
+              >
+                <span
+                  class="bi"
+                  [ngClass]="
+                    isDropdownOpen(item.dropdownKey || item.label)
+                      ? 'bi-chevron-up'
+                      : 'bi-chevron-down'
+                  "
+                ></span>
+              </button>
+            </div>
+
+            <ul class="dropdown-menu" [class.show]="isDropdownOpen(item.dropdownKey || item.label)">
+              <li>
+                <a
+                  class="dropdown-item parent-item"
+                  [routerLink]="item.routerLink"
+                  [class.active-child]="isRouteActive(item.routerLink)"
+                  (click)="closeNavbar()"
+                >
+                  {{ item.label }}
+                </a>
+              </li>
+
+              <ng-container *ngIf="getDropdown(item.dropdownKey) as dropdown">
+                <ng-container *ngIf="dropdown.groups; else simpleMenu">
+                  <li *ngFor="let group of dropdown.groups">
+                    <div class="dropdown-header">{{ group.groupTitle }}</div>
+                    <a
+                      *ngFor="let sub of group.items"
+                      class="dropdown-item"
+                      [routerLink]="sub.link"
+                      [class.active-child]="isRouteActive(sub.link)"
+                      (click)="closeNavbar()"
+                    >
+                      {{ sub.label }}
+                    </a>
+                  </li>
+                </ng-container>
+
+                <ng-template #simpleMenu>
+                  <li *ngFor="let sub of dropdown.items">
+                    <a
+                      class="dropdown-item"
+                      [routerLink]="sub.link"
+                      [class.active-child]="isRouteActive(sub.link)"
+                      (click)="closeNavbar()"
+                    >
+                      {{ sub.label }}
+                    </a>
+                  </li>
+                </ng-template>
+              </ng-container>
+            </ul>
+          </li>
+        </ng-container>
+      </ul>
+      <button class="btnall ms-lg-2" type="button">
+        <a href="https://myzone.wealthmax.co.uk" class="adviser-hub-btn" target="_blank">
+          Adviser Hub
+        </a>
+      </button>
+    </div>
+  </div>
+</nav>

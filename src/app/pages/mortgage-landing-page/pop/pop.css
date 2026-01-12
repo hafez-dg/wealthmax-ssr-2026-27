@@ -1,0 +1,219 @@
+
+.mat-mdc-dialog-surface {
+  border-radius: 18px !important;
+  overflow: visible !important; /* remove scrollbars */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Dialog Pane Width */
+.cdk-overlay-pane {
+  width: 500px !important;
+  max-width: 95vw !important;
+}
+
+@media (max-width: 600px) {
+  .cdk-overlay-pane {
+    width: 92vw !important;
+  }
+}
+
+/* Dialog Content */
+.mat-mdc-dialog-content,
+.mat-dialog-content {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 500px;
+  box-sizing: border-box;
+  overflow: visible !important; /* remove scrollbars */
+  max-height: none !important;
+}
+
+/* Remove extra Material padding */
+.mat-mdc-dialog-container,
+.mat-mdc-dialog-content {
+  padding: 10px 20px !important;
+}
+
+
+h2 {
+  font-family: "Epilogue", sans-serif;
+  font-weight: 700;
+  font-size: 3.6vh;
+  color: #1d283a;
+  margin-bottom: 1rem;
+}
+
+.form-label,label {
+  font-family: "Epilogue", sans-serif!important;
+  font-weight: 550!important;
+  font-size: 1.7vh!important;
+  color: #323232!important;
+  margin-top: 16px!important;
+}
+
+.sizetxt {
+  font-family: "Epilogue", sans-serif;
+  font-weight: 400;
+  font-size: 1.6vh;
+  line-height: 27px;
+  color: #1d283a;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  margin-top: 5px;
+}
+
+.form-control {
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ced4da;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  font-family: "Epilogue", sans-serif;
+  font-weight: 400;
+  font-size: 1.5vh;
+}
+
+.form-control:focus {
+  border-color: #f58534;
+  box-shadow: 0 0 0 0.2rem rgba(245, 133, 52, 0.25);
+}
+
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+  margin-left: 12px !important; /* reset for uniform alignment */
+}
+
+.custom-checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.interest-row .col-6,
+.interest-row .col-sm-6,
+.interest-row .col-md-6,
+.interest-row .col-12 {
+  flex: 0 0 50%; /* two per row */
+  max-width: 50%;
+}
+
+@media (max-width: 576px) {
+  .interest-row .col-6,
+  .interest-row .col-sm-6,
+  .interest-row .col-md-6,
+  .interest-row .col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.custom-btn {
+  height: 45px;
+  border-radius: 8px;
+  background-color: #ff751d !important;
+  color: #fff;
+  font-size: 16px;
+  /* font-weight: 600; */
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.custom-btn:hover {
+  background-color: #e67521 !important;
+}
+
+/* Close Button */
+.close-btn {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+  margin-bottom: 22px;
+}
+
+.close-btn:hover {
+  color: #ff6600;
+}
+
+.row > * {
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 3px;
+}
+
+@media (max-width: 768px) {
+  .mat-dialog-content {
+    padding: 1.5rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+  .custom-btn {
+    height: 50px;
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}
+
+.cdk-overlay-pane {
+  width: 100% !important;       /* take full viewport width */
+  max-width: 500px !important;  /* limit max width for desktop */
+  margin: 0 auto !important;    /* center it horizontally */
+  box-sizing: border-box;
+}
+
+.mat-mdc-dialog-content,
+.mat-dialog-content {
+  width: 100% !important;
+  max-width: 100% !important;   /* prevent extra blank space */
+  padding: 2rem 1.5rem !important;
+  box-sizing: border-box;
+}
+
+/* Remove extra scroll and padding issues */
+.mat-mdc-dialog-surface {
+  overflow: visible !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .cdk-overlay-pane {
+    width: 92vw !important;
+    padding: 0 10px !important; /* add small padding on mobile */
+  }
+
+  .mat-mdc-dialog-content {
+    padding: 1.5rem 1rem !important;
+  }
+}
+.custom-checkbox {
+  width: 18px !important;
+  height: 18px !important;
+  cursor: pointer;
+  
+  /* border: 2px solid #000000; */
+  border-radius: 3px;
+  display: inline-block;
+  position: relative;
+}
+
+/* .custom-checkbox:checked::after {
+  content: "✔"; */
+  /* font-size: 14px;
+  color: #fffdfc;
+  position: absolute;
+  background-color: rgb(255, 100, 3);
+  top: -2px;
+  left: 2px;
+} */

@@ -1,0 +1,349 @@
+.no-blogs {
+  min-height: 100vh;
+}
+
+.illustration {
+  max-width: 420px;
+}
+
+@media (min-width: 992px) {
+  .illustration {
+    max-width: 520px;
+  }
+}
+.btn {
+  background-color: #ff751d;
+  color: #fff;
+}
+.text-main {
+  color: #ff751d;
+}
+.imgd {
+  max-width: 60%;
+}
+
+.card {
+  border-radius: 8px;
+}
+.object-fit-cover {
+  object-fit: contain;
+}
+
+.card img.rounded-start {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+@media (max-width: 991.98px) {
+  .card img.rounded-start {
+    border-radius: 8px 8px 0 0;
+  }
+}
+
+.pagination .page-link {
+  border-radius: 8px;
+  margin: 0 0.15rem;
+}
+
+.list-group-item {
+  border: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.hover-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.hover-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0.6rem 1.4rem rgba(0, 0, 0, 0.08);
+}
+
+.text-accent {
+  color: #f26c2a;
+}
+
+.recent-posts-card {
+  border: 1px solid rgba(242, 108, 42, 0.45);
+  border-radius: 12px;
+  background: #fff;
+}
+.accent-underline {
+  width: 46px;
+  height: 2px;
+  background: #f26c2a;
+  border-radius: 2px;
+}
+
+.recent-thumb {
+  width: 64px;
+  height: 64px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+.comment-chip {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.recent-title {
+  display: block;
+  color: #1b1b1b;
+  font-weight: 600;
+  line-height: 1.25;
+}
+@media (max-width: 575.98px) {
+  .recent-thumb {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+.post-title-accent {
+  color: #eb7124;
+  font-weight: 700;
+  line-height: 1.25;
+}
+.rounded-4 {
+  border-radius: 14px !important;
+}
+
+.post-meta .meta-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(242, 108, 42, 0.08);
+  color: #eb7124;
+  border: 1px solid rgba(242, 108, 42, 0.18);
+}
+
+.btn-accent {
+  background: #eb7124;
+  color: #fff;
+  border: 1px solid #eb7124;
+  border-radius: 8px;
+}
+.btn-accent:hover {
+  filter: brightness(0.95);
+  color: #fff;
+}
+
+.need-help-card {
+  --nh-orange: #e56b1e;
+  background: var(--nh-orange);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+.need-help-card .card-body {
+  padding: 18px 18px 20px;
+}
+
+.need-help-card .nh-kicker {
+  font-size: 14px;
+  letter-spacing: 0.01em;
+}
+.need-help-card .nh-company {
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 700;
+}
+.need-help-card .nh-line {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  opacity: 0.98;
+}
+.need-help-card .nh-btn {
+  font-size: 16px;
+  padding: 0.6rem 1.1rem;
+  color: var(--nh-orange);
+}
+.need-help-card .nh-underline {
+  width: 30px;
+  height: 3px;
+  margin-bottom: 10px;
+  background: #fff;
+  border-radius: 3px;
+}
+
+.need-help-card .nh-decor {
+  position: absolute;
+  width: 150px;
+  height: 52px;
+  border-radius: 12px;
+  pointer-events: none;
+}
+.need-help-card .nh-decor::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+.need-help-card .nh-decor::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.9);
+}
+.need-help-card .nh-decor--back::before {
+  background: rgba(255, 255, 255, 0.12);
+}
+.need-help-card .nh-decor--back::after {
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.35);
+}
+.need-help-card .nh-decor--front::before {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.need-help-card .nh-decor--tl {
+  transform: rotate(-12deg);
+}
+.need-help-card .nh-decor--tl.nh-decor--back {
+  top: 10px;
+  left: -36px;
+}
+.need-help-card .nh-decor--tl.nh-decor--front {
+  top: 20px;
+  left: -22px;
+}
+
+.need-help-card .nh-band {
+  position: absolute;
+  right: -28px;
+  bottom: 64px;
+  width: 150%;
+  height: 56px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  transform: rotate(12deg);
+  pointer-events: none;
+}
+.need-help-card .nh-decor--br {
+  transform: rotate(12deg);
+}
+.need-help-card .nh-decor--br.nh-decor--back {
+  right: 22px;
+  bottom: 26px;
+}
+.need-help-card .nh-decor--br.nh-decor--front {
+  right: 12px;
+  bottom: 16px;
+}
+
+.need-help-card a[href^="mailto:"] {
+  overflow-wrap: anywhere;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+  .need-help-card .card-body {
+    padding: 16px;
+  }
+  .need-help-card .nh-line {
+    margin-bottom: 10px;
+  }
+}
+
+.post-card {
+  border-radius: 16px;
+  background: #fff;
+  overflow: hidden;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.post-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.08);
+}
+
+.post-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.post-body {
+  padding: 14px 16px 16px;
+  background: #fff;
+}
+.post-meta {
+  margin: 8px 0 6px;
+  padding: 0;
+  list-style: none;
+  color: #f26c2a;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.post-title {
+  margin: 6px 0 8px;
+  font-weight: 700;
+  color: #222;
+  line-height: 1.25;
+}
+
+.post-divider {
+  height: 1px;
+  background: #ececec;
+  margin: 6px 0 10px;
+}
+
+.post-read {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #f26c2a;
+  font-weight: 600;
+}
+.post-read .post-arrow {
+  font-weight: 700;
+  line-height: 1;
+}
+
+@media (max-width: 575.98px) {
+  .post-body {
+    padding: 12px 14px 14px;
+  }
+  .post-title {
+    font-size: 1rem;
+  }
+}
+.cards-row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+}
+
+.cards-row > [class^="col-"],
+.cards-row > [class*=" col-"] {
+  flex: 0 0 auto;
+  max-width: 100%;
+}
+.post-title-accent {
+  color: #e56b1e;
+}
+.cal-icon {
+  font-size: 14.6px;
+}
+
+.ratio-16x9 {
+  --bs-aspect-ratio: 50.25% !important ;
+}
+.img-wrapper {
+  width: 800px;
+  height: 330px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.img-fill {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

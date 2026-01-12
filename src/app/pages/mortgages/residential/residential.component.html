@@ -1,0 +1,179 @@
+<div class="bgclr_main">
+  <!-- section-1 -->
+
+<app-banner
+  [title]="'Residential Mortgages'"
+  [subtitle]="
+    'Achieve your property ambitions with tailored buy to let mortgage solutions built around your goals'
+  "
+[desktopImage]="'/desktop image/residential.webp'"
+[mobileImage]="'/Mobile img/residential mortgage.webp'"
+   [buttons]="[
+    {
+      label: 'Book a Free Consultation',
+      class: 'btn btn-lg bg-white txtorange',
+      action: 'dialog'
+    }
+  ]"
+/>
+<!-- section 2 -->
+<div class="container mgtop">
+  <h3 class="heading-txt mb-3 text-center">Why Choose Residential Mortgage?</h3>
+  <p class="text-Size text-justify text-lg-center mb-0">
+    If you're looking to enter the residential property market, you need
+    guidance to help you navigate your way past the pitfalls that many fall
+    into. Whether you're a first time buyer or looking to remortgage, the
+    Wealthmax team can find the ideal solution for your needs.
+  </p>
+  <p class="text-Size text-justify text-lg-center">
+    With so many
+    options available, it can be very confusing and difficult to find the option
+    that suits your circumstances and goals. However, with our experts by your
+    side, we’ll be with you every step of the way to ensure you make the right
+    decision when securing your new home.
+  </p>
+</div>
+<!-- section-3 -->
+<div class="bgcolorlinear">
+  <div class="container mgtop">
+    <h3 class="heading-txt mb-3 text-center">What we Offer?</h3>
+    <p class="textSize text-justify text-md-center">
+      Whether you’re stepping onto the property ladder or moving home, our
+      residential mortgages provide flexibility and guidance at every stage.
+    </p>
+    <div class="cards-container mt-1 mt-4">
+      <app-cards [cards]="cards"> </app-cards>
+    </div>
+  </div>
+</div>
+
+<!-- section-4 -->
+<div class="container mgtop">
+  <div class="mb-2 mb-md-3">
+    <h3 class="heading-txt mb-3 text-center">
+      What are Benefits of Residential Mortgage?
+    </h3>
+    <p class="text-Size text-justify text-md-center mb-3 mb-lg-5">
+      Finding the right deal in residential mortgages is crucial, particularly
+      as it's one of the biggest financial decisions you'll ever need to make.
+      We have access to mortgages from all the major providers in the UK and
+      we'll help you understand everything there is to know about your home
+      loan. Here are just a few of the important aspects to consider.
+    </p>
+  </div>
+  <div class="row justify-content-center align-items-center gx-4">
+    <div class="col-12 col-lg-6 d-flex flex-column justify-content-center">
+      <div class="d-flex a mb-3 feature border-bottom">
+        <div class="me-3 icon-col">
+          <img
+            src="/mortgages/resdiential/a1.svg"
+            alt="icon"
+            class="icon-img"
+          />
+        </div>
+        <div>
+          <h4 class="heading-title">Interest Rates</h4>
+          <p class="text-Size">
+            You'll encounter Fixed-rate, variable-rate, or tracker options that
+            all offer different levels of stability and flexibility.
+          </p>
+        </div>
+      </div>
+
+      <div class="d-flex mb-3 feature border-bottom">
+        <div class="me-3 icon-col">
+          <img
+            src="/mortgages/resdiential/a2.svg"
+            alt="icon"
+            class="icon-img"
+          />
+        </div>
+        <div>
+          <h4 class="heading-title">Loan Term</h4>
+          <p class="text-Size">
+            Shorter mortgage terms may mean higher monthly payments but lower
+            overall interest costs.
+          </p>
+        </div>
+      </div>
+
+      <div class="d-flex mb-3 feature border-bottom">
+        <div class="me-3 icon-col">
+          <img
+            src="/mortgages/resdiential/a3.svg"
+            alt="icon"
+            class="icon-img"
+          />
+        </div>
+        <div>
+          <h4 class="heading-title">Deposit Size</h4>
+          <p class="text-Size">
+            Larger deposits often result in better rates and lower monthly
+            payments, as the amount being borrowed is lower.
+          </p>
+        </div>
+      </div>
+      <div class="d-flex mb-3 feature border-bottom">
+        <div class="me-3 icon-col">
+          <img
+            src="/mortgages/resdiential/a4.svg"
+            alt="icon"
+            class="icon-img"
+          />
+        </div>
+        <div>
+          <h4 class="heading-title">Government Schemes</h4>
+          <p class="text-Size">
+            You can explore Help to Buy or shared ownership schemes for
+            assistance with deposits.
+          </p>
+        </div>
+      </div>
+      <div class="d-flex mb-3 feature border-bottom">
+        <div class="me-3 icon-col">
+          <img
+            src="/mortgages/resdiential/a5.svg"
+            alt="icon"
+            class="icon-img"
+          />
+        </div>
+        <div>
+          <h4 class="heading-title">Specialist Mortgages</h4>
+          <p class="text-Size">
+            There are also options for self-employed individuals or those with
+            unique circumstances.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-6 d-flex justify-content-center">
+      <!-- constrain height so it doesn't force parent taller than desired -->
+      <img
+        src="/mortgages/resdiential/rsdeiential-right-side.png"
+        alt="illustration"
+        class="img-fluid right-illustration"
+      />
+    </div>
+  </div>
+</div>
+
+<!-- section-5 -->
+<div class="container mgtop box-shadow-faq">
+  <app-faq [faqs]="buyToLetFaqs"></app-faq>
+</div>
+
+<!-- secton-6 -->
+<div class="container mgtopbottom p-1 p-lg-2">
+  <app-last-btn-comp
+    [align]="'center'"
+    [title]="'Looking for Residential Mortgage? '"
+    [subtitle]="
+      'Wealthmax is here to help. Our advisers are experienced in financing and have access to a wide range of mortgage options. Contact us today to discuss your mortgage requirements and secure the ideal financing solution.'
+    "
+    [buttonText]="'Speak to our Advisers'"
+    [buttonLink]="'/contact-us'"
+  />
+</div>
+
+</div>

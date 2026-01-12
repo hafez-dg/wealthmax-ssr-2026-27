@@ -1,0 +1,304 @@
+<app-banner
+  [title]="'Join as an introducer'"
+  [subtitle]="
+    'As an introducer, you’re forging connections that strengthen a community driven by trust and ambition.'
+  "
+  [desktopImage]="'/desktop image/introducer.webp'"
+  [mobileImage]="'/Mobile img/join as introducer.webp'"
+  [buttons]="[
+    {
+      label: 'Join Now',
+      class: 'btn btn-lg bg-white txtorange',
+      click: scrollToForm
+    }
+  ]"
+>
+</app-banner>
+
+<!-- section2 -->
+
+<div class="bgcolorlinear">
+  <div class="container mgtop">
+    <h3 class="heading-txt text-center">
+      Advantages of Joining Wealthmax as Introducer
+    </h3>
+    <p class="text-Size text-md-center text-justify">
+      Partnering with Wealthmax as an Introducer means opening doors to
+      limitless opportunities from expanding your network and earning
+      competitive rewards to contributing to financial solutions that truly make
+      a difference.
+    </p>
+    <div class="cards-container">
+      <div class="card" *ngFor="let card of cards">
+        <div class="align-items-start">
+          <!-- Icon -->
+          <div class="icon-box align-items-center justify-content-center mb-3">
+            <img [src]="card.icon" alt="icon" class="card-icon" />
+          </div>
+
+          <!-- Text -->
+          <div class="flex-grow-1">
+            <h3 class="card-title mb-2 dark-blue">{{ card.title }}</h3>
+            <p class="card-text mb-0">{{ card.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- section 3 -->
+
+<div class="container mgtop">
+  <h3 class="heading-txt text-center">How to Get Started?</h3>
+  <p class="text-Size text-md-center text-justify">
+    Are you a dynamic professional looking to boost your income while referring
+    valuable connections in the financial industry? Seize the chance to earn
+    substantial commissions by becoming a valued Introducer with Wealthmax
+    Financial Advisers.
+  </p>
+  <div class="row align-items-center justify-content-center align-items-stretch">
+    <!-- Left Image -->
+    <div class="col-lg-5 text-center mb-4 mb-md-0 order-2 order-lg-1 mt-4">
+      <img
+        src="/nw/Figure.png"
+        alt="Team discussion"
+        class="imgfluid rounded-3 shadow-sm"
+      />
+    </div>
+
+    <!-- Right Steps -->
+    <div class="col-lg-6 order-1 order-lg-2 mt-4">
+      <div class="step d-flex align-items-start">
+        <div class="iconImg me-3">
+          <img src="\nw\iicon1.png" alt="Step 1" class="step-icon" />
+        </div>
+        <div>
+          <h6 class="fw-bold sub-txt mb-2">Fill Application Form</h6>
+          <p class="small">
+            Strengthen your client relationships by expanding your service
+            offerings without taking
+          </p>
+        </div>
+      </div>
+
+      <div class="step d-flex align-items-start">
+        <div class="iconImg me-3">
+          <img src="\nw\iicon2.png" alt="Step 1" class="step-icon" />
+        </div>
+        <div>
+          <h6 class="fw-bold sub-txt mb-2">Sign Introducer Agreement</h6>
+          <p class="small">
+            Strengthen your client relationships by expanding your service
+            offerings without taking
+          </p>
+        </div>
+      </div>
+
+      <div class="step d-flex align-items-start">
+        <div class="iconImg me-3">
+          <img src="\nw\iicon3.png" alt="Step 1" class="step-icon" />
+        </div>
+        <div>
+          <h6 class="fw-bold sub-txt mb-2">Get Onboarded</h6>
+          <p class="small">
+            Strengthen your client relationships by expanding your service
+            offerings without taking
+          </p>
+        </div>
+      </div>
+
+      <div class="step d-flex align-items-start">
+        <div class="iconImg me-3">
+          <img src="\nw\iicon4.png" alt="Step 1" class="step-icon" />
+        </div>
+        <div>
+          <h6 class="fw-bold sub-txt mb-2">
+            Earn on Every Successful Introduction
+          </h6>
+          <p class="small">
+            Strengthen your client relationships by expanding your service
+            offerings without taking
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- section 4 -->
+
+<div class="container mgtop">
+  <div class="row align-items-center g-4">
+    <!-- Left: Image -->
+    <div class="col-lg-5 d-flex justify-content-center order-2 order-lg-1 mt-4">
+      <img src="\nw\introducerfig.png" alt="Person" class="img-fluid" />
+    </div>
+
+    <!-- Right: Content -->
+    <div class="col-lg-7 order-1 order-lg-2">
+      <h3
+        class="heading-txt text-orange fw-semibold mb-3 text-lg-start text-center"
+      >
+        Unmatched Earning Potentials
+      </h3>
+      <p class="text-Size mb-4 text-lg-start text-center">
+        Are you a dynamic professional looking to boost your income while
+        referring valuable connections in the financial industry?<br />
+        Seize the chance to earn substantial commissions by becoming a valued
+        Introducer with Wealthmax Financial Advisers. We empower individuals
+        like you to thrive as Introducers Earning Commissions for every
+        successful business introduction. Your role as an Introducer is pivotal.
+        You bring external business to Wealthmax and we reward you generously
+        for your contributions.
+      </p>
+      <div class="d-flex justify-content-lg-start justify-content-center">
+        <button class="btnall" (click)="scrollToForm()">Join Now</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- section 5 -->
+
+<div class="container mgtopbottom b-size">
+  <div
+    class="row justify-content-between shadow rounded p-3 my-6 p-lg-5 rounded-5"
+    id="apply-section"
+  >
+    <!-- Left Section -->
+    <div class="col-lg-6">
+      <h4
+        class="heading-txt text-orange fw-semibold mb-3 text-lg-start text-start"
+      >
+        Join as Introducer
+      </h4>
+      <p class="text-Size mb-4 text-lg-start text-justify">
+        Becoming an Introducer with Wealthmax, provides you access to a
+        extensive range of products tailored to diverse client needs. Enables
+        you to offer everyone a unique product based on their need. Our diverse
+        product proposition increases your chances of successful business
+        introduction and enables you to earn lucrative commissions from it.
+      </p>
+      <div class="row">
+        <div class="col-6 align-items-center mt-4">
+          <div class="me-2">
+            <img src="\nw\Email.png" alt="Email Icon" class="icon-img" />
+          </div>
+          <div>
+            <div class="text-Size text-muted mt-2">Email</div>
+            <a
+              href="mailto:contact@wealthmax.co.uk"
+              class="text-dark text-Size txt-Size"
+              >contact&#64;wealthmax.co.uk</a
+            >
+          </div>
+        </div>
+        <div class="col-6 align-items-center mt-4">
+          <div class="me-2">
+            <img src="\nw\Phone.png" alt="Email Icon" class="icon-img" />
+          </div>
+          <div>
+            <div class="text-Size text-muted mt-2">Phone</div>
+            <a
+              href="tel:+442036758998"
+              class=" text-dark text-Size txt-Size"
+              >+44 20 3675 8998</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="col-lg-6 form-section">
+      <h1 class="txt h-size">Join Now</h1>
+      <p class="mt-3 txt sub-size">
+        And be part of a lucrative collaboration with Wealthmax.
+      </p>
+      <form [formGroup]="introducerForm" (ngSubmit)="onContactSubmit()">
+        <div class="col-md-12 mt-4 mb-4">
+          <label for="fullName">Full Name</label>
+          <input
+            id="fullName"
+            type="text"
+            formControlName="fullName"
+            class="form-control"
+            placeholder="Enter full name"
+            (keypress)="allowOnlyLetters($event)"
+            (blur)="trimFullName()"
+          />
+
+          <small
+            class="form-text error"
+            *ngIf="introducerForm.get('fullName')?.touched"
+          >
+            <span *ngIf="introducerForm.get('fullName')?.hasError('required')">
+              Full name is required
+            </span>
+            <!-- <span *ngIf="contactForm.get('fullName')?.hasError('pattern')">
+                Only alphabets are allowed
+              </span> -->
+          </small>
+        </div>
+
+        <!-- Email -->
+        <div class="col-md-12 mb-4">
+          <label>Email</label>
+          <input
+            type="email"
+            class="form-control"
+            formControlName="emailId"
+            placeholder="@abc.co.uk"
+          />
+          <div class="form-text error">
+            <small *ngIf="introducerForm.get('emailId')?.touched">
+              <span *ngIf="introducerForm.get('emailId')?.hasError('required')">
+                Email is required
+              </span>
+              <span *ngIf="introducerForm.get('emailId')?.hasError('pattern')">
+                Please enter a valid email id
+              </span>
+            </small>
+          </div>
+        </div>
+        <!-- Phone Number -->
+        <div class="col-12 mb-5">
+         <label for="contactNumber" class="form-label">Contact Number</label>
+          <input
+            id="contactNumber"
+            type="tel"
+            class="form-control"
+            placeholder="+441234567890"
+            formControlName="contactNumber"
+            autocomplete="tel"
+            inputmode="tel"
+            required
+          />
+
+          <div class="form-text error">
+            <div
+              *ngIf="
+                (f.contactNumber.touched || f.contactNumber.dirty) &&
+                f.contactNumber.invalid
+              "
+              class="error"
+            >
+              <div *ngIf="f.contactNumber.errors?.required">
+                Contact Number is required
+              </div>
+              <div *ngIf="f.contactNumber.errors?.pattern">
+                Please enter a valid contact number:
+                <br />
+                • 10 digits without “+” (e.g. 9876543210) or +CC followed by 10
+                digits (e.g. +441234567890 or +44 1234567890)
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btnall btncolor">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

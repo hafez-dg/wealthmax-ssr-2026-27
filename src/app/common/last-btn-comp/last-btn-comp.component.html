@@ -1,0 +1,22 @@
+<div
+  class="h-auto container bgclr_main"
+  [ngClass]="{
+    'align-left': align === 'left',
+    'align-center': align === 'center'
+  }"
+>
+  <!-- Title -->
+  <h2 class="heading-txt" [innerHTML]="title"></h2>
+
+  <!-- Subtitle -->
+  <p class="text-Size mb-4 text-center  " [innerHTML]="subtitle"></p>
+
+  <!-- Button -->
+  <div >
+    <button class="btnall text-white mb-1"
+    [routerLink]="buttonLink"
+    >
+      {{ buttonText }}
+    </button>
+  </div>
+</div>

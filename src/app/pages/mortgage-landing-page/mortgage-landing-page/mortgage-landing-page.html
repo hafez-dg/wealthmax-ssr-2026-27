@@ -1,0 +1,474 @@
+<div class="bgclr contact-section mt-5">
+  <div
+    class="top-header-container d-flex justify-content-between align-items-center py-3"
+  >
+    <img
+      src="/mortgageLandingPage/wealthmaxlogo.svg"
+      alt="WealthMax Logo"
+      class="img-fluid logo"
+    />
+
+    <button matButton (click)="openDialog()" class="adviser-hub-btn border-0">
+      Request a callback
+    </button>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container py-md-4">
+    <div class="row align-items-center rounded py-5 mx-0">
+      <!-- Left Section -->
+      <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+        <h2 class="fw-bold text-size">
+          Check Your Mortgage<br />
+          Repayments Instantly with
+          <span class="txt-clr"><p>Real-Time Lender Deals</p></span>
+        </h2>
+
+        <p class="mt-3 text-muted text-start sub-heading">
+          Compare real UK mortgage rates and get tailored advice from our
+          qualified mortgage advisers nearby. See accurate monthly repayments on
+          our mortgage repayment calculator. Based on real offers from top
+          lenders in the UK. It's quick, accurate, and completely free to use.
+        </p>
+
+        <div class="d-flex flex-wrap gap-3 my-3">
+          <div class="d-flex align-items-center gap-2 button-icon-size">
+            <img
+              src="/mortgageLandingPage/tick.svg"
+              alt="check"
+              class="icon-img1"
+            />
+            No credit check
+          </div>
+          <div class="d-flex align-items-center gap-2 button-icon-size">
+            <img
+              src="/mortgageLandingPage/tick.svg"
+              alt="check"
+              class="icon-img1"
+            />
+            No obligations
+          </div>
+          <div class="d-flex align-items-center gap-2 button-icon-size">
+            <img
+              src="/mortgageLandingPage/tick.svg"
+              alt="check"
+              class="icon-img1"
+            />
+            Free advice
+          </div>
+        </div>
+
+        <div class="d-flex flex-wrap gap-3 mt-3">
+          <button
+            class="btn px-4 bg-icon rounded-3 button-size"
+            (click)="scrollToForm()"
+          >
+            Calculate Your Mortgage Now
+          </button>
+
+          <!-- <button class="btn btn-outline-primaryfw-semibold" disabled>
+            Request a Free Consultation
+          </button> -->
+        </div>
+
+        <div class="d-flex flex-wrap gap-3 mt-4 align-items-center">
+          <div
+            class="badge bg-light border px-3 py-2 d-flex align-items-center gap-2 fca-badge button-icon-size"
+          >
+            <img
+              src="/mortgageLandingPage/fca.svg"
+              alt="FCA"
+              class="badge-icon"
+              id="cal"
+            />
+            FCA Regulated
+          </div>
+
+          <div>
+            <a
+              href="https://www.google.com/maps/place/Wealthmax+Financial+Advisers+Limited/@51.4888301,-0.3134515,17z/data=!3m1!4b1!4m6!3m5!1s0x48760dbc719cf051:0x9db2f90b30b82e0c!8m2!3d51.4888301!4d-0.3134515!16s%2Fg%2F11gl298nv_?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+            >
+              <img
+                src="/mortgageLandingPage/google.svg"
+                alt="google-rating"
+                class="g_rating"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Section (Placeholder box or image) -->
+      <div
+        class="col-lg-6 col-md-12 d-flex justify-content-center align-items-center"
+      >
+        <div
+          class="placeholder-box d-flex justify-content-center align-items-center"
+        >
+          <img
+            src="/mortgageLandingPage/Group 1000006416.svg"
+            alt="Placeholder Image"
+            class="img-fluid rounded"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Existing Mortgage Calculator Section -->
+  <div class="container py-5 text-sm-center text-start">
+    <h2 class="top-heading mb-4">Find Your Best Mortgage Deal in Seconds</h2>
+    <p class="text-muted sub-heading">
+      Tired of guessing your repayments or comparing endless offers? Our
+      intelligent Mortgage Calculator does the hard work for you — analyzing
+      real-time data from trusted lenders to reveal tailored deals that match
+      your goals.
+    </p>
+  </div>
+
+  <div class="container">
+    <iframe
+      class="p-3"
+      style="background: white; border-radius: 12px"
+      src="https://webtools.twenty7tec.com/Sourcing/WebToolsTwo?apiKey=b35a7324-3af6-4760-802c-3f08dcf43e98&pluginKey=cde198f9-a1ef-4c9b-a5a9-89c8a6a63573"
+      width="100%"
+      height="750px"
+    ></iframe>
+  </div>
+
+  <!-- Calculator Steps -->
+  <div class="container py-5 text-sm-center text-start pdml">
+    <h2 class="top-heading mb-4">How to Use Our Mortgage Calculator</h2>
+    <p class="text-muted sub-heading mb-subheading">
+      Our Calculator helps you calculate Monthly Mortgage Repayments and compare
+      between real lenders for suitable deals, all in one place.
+    </p>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3" *ngFor="let step of steps">
+        <div class="step-card">
+          <div class="step-number">{{ step.id }}</div>
+          <div class="icon-box mt-3">
+            <img [src]="step.icon" [alt]="step.title" class="step-icon" />
+          </div>
+          <h5 class="styleh5">{{ step.title }}</h5>
+          <p class="stylep">{{ step.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Your Mortgage, Backed by Experts -->
+  <div class="container text-sm-center text-start py-0 py-md-4 pdml">
+    <h2 class="top-heading mb-4">Your Mortgage, Backed by Experts</h2>
+
+    <p class="text-muted sub-heading mb-subheading">
+      Finding the right mortgage or comparing mortgage rates can be complicated,
+      that's where we come in. At Wealthmax, we combine access to the UK's top
+      lenders with expert guidance to help you make the right decision for your
+      needs.
+    </p>
+
+    <div
+      class="row gy-4 gx-0 border rounded-4 shadow-sm p-4 p-md-5"
+      style="background-color: #fdf1ea; border-color: #eb7124 !important"
+    >
+      <div
+        class="col-md-6 col-lg-3 d-flex flex-column text-start p-0 p-md-3 feature-box m-0"
+        *ngFor="let feature of features; let i = index"
+        [ngClass]="{ 'border-lg-start': i !== 0 }"
+      >
+        <div class="icon-box">
+          <img [src]="feature.icon" [alt]="feature.title" class="step-icon" />
+        </div>
+
+        <h5 class="styleh5 mb-2">{{ feature.title }}</h5>
+        <p class="stylep text-muted">{{ feature.description }}</p>
+
+        <!-- horizontal line only mobile/tablets -->
+        <div class="mobile-divider" *ngIf="i !== features.length - 1"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Request a Callback Section -->
+  <div class="container my-5 pdml">
+    <div
+      class="d-flex flex-column flex-md-row align-items-center greyradius bg-desktop"
+    >
+      <!-- Left Text -->
+      <div
+        class="text-center text-md-start mb-md-0 flex-fill"
+        style="margin-left: 5%"
+      >
+        <h5 class="imgtext mb-4">
+          <div class="responsive-text">
+            <span>Not sure what's right for you? Speak to</span>
+            <span>one of our advisers today.</span>
+          </div>
+        </h5>
+
+        <button
+          matButton
+          (click)="openDialog()"
+          class="btn px-4 py-2 f18 fw-semibold rounded-3 mx-auto mx-md-0 d-block"
+          style="background-color: #21c45d; color: white"
+        >
+          Request a Callback
+        </button>
+      </div>
+
+      <!-- Right Image -->
+      <div class="d-none d-md-block">
+        <img
+          src="/mortgageLandingPage/imgsectiongirl.svg"
+          alt="Adviser illustration"
+          class="img-fluid h-100"
+          style="object-fit: contain; max-height: 100%"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!--your Mortgage options  Section  -->
+
+  <div class="mortgage-section py-0 py-md-4">
+    <div class="container">
+      <h2 class="top-heading mb-4 text-sm-center text-start">
+        Your Mortgage Options, Explained
+      </h2>
+
+      <p class="text-muted sub-heading mb-subheading text-sm-center text-start">
+        Navigating the world of mortgages can feel complex, but it doesn't have
+        to be. At Wealthmax, we guide you through every step, helping you
+        understand your options and choose the mortgage that fits your unique
+        needs. Whether you're buying your first home, looking to remortgage,
+        investing in property, or moving to a new home, we have the expertise to
+        make the process simple and straightforward. Our mortgage repayment
+        calculator can give you a clear view of your payments before you even
+        apply.
+      </p>
+
+      <div class="row g-4">
+        <div class="col-lg-6 col-md-6" *ngFor="let item of mortgageOptions">
+          <div class="card card-box p-4 h-100">
+            <div class="mb-3" [ngStyle]>
+              <img [src]="item.icon" alt="icon" class="optionIcon" />
+            </div>
+            <h5 class="styleh5 mb-2">{{ item.title }}</h5>
+            <p class="text-muted stylep">{{ item.desc }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-box text-center mt-5 p-3 shadow-sm">
+        Every mortgage type comes with its own rules and considerations. That's
+        why our mortgage advisers are here to answer your questions, provide
+        personalised guidance, and help you make informed decisions, all while
+        saving you time and avoiding unnecessary stress.
+      </div>
+    </div>
+  </div>
+  <!-- Mortgage journey in 4 easy step -->
+  <div class="container py-5">
+    <h2 class="top-heading mb-5 text-sm-center text-start">
+      Your Mortgage Journey in 4 Easy Steps
+    </h2>
+    <div class="steps-wrapper">
+      <!-- Step 1 -->
+      <div class="step-box position-relative mb-4">
+        <div class="d-flex align-items-center">
+          <!-- <div class="icon-wrapper flex-shrink-0"> -->
+          <div>
+            <!-- Calculator Icon -->
+            <img
+              src="/mortgageLandingPage/step1.svg"
+              alt="FCA"
+              class="stepsicon"
+            />
+          </div>
+          <!-- </div> -->
+          <div class="step-content ps-3">
+            <div class="d-flex align-items-center mb-2">
+              <span class="step-label">Step 1</span>
+              <h5 class="styleh5 mb-0 ms-2">Calculate Your Mortgage</h5>
+            </div>
+            <p class="text-muted stylep mb-0">
+              Use our quick online mortgage repayment calculator to estimate how
+              much you could borrow and what your monthly payments might look
+              like.
+            </p>
+          </div>
+        </div>
+        <div class="connector"></div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step-box position-relative mb-4">
+        <div class="d-flex align-items-center">
+          <!-- <div class="icon-wrapper flex-shrink-0"> -->
+          <div>
+            <!-- Person Icon -->
+            <img
+              src="/mortgageLandingPage/step2.svg"
+              alt="FCA"
+              class="stepsicon"
+            />
+          </div>
+          <!-- </div> -->
+          <div class="step-content ps-3">
+            <div class="d-flex align-items-center mb-2">
+              <span class="step-label">Step 2</span>
+              <h5 class="styleh5 mb-0 ms-2">Get Personalised Guidance</h5>
+            </div>
+            <p class="text-muted stylep mb-0">
+              Once you've seen your results, one of our mortgage advisers nearby
+              will reach out to understand your needs, budget, and goals.
+            </p>
+          </div>
+        </div>
+        <div class="connector"></div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step-box position-relative mb-4">
+        <div class="d-flex align-items-center">
+          <!-- <div class="icon-wrapper flex-shrink-0"> -->
+          <div>
+            <!-- Chart Icon -->
+            <img
+              src="/mortgageLandingPage/step3.svg"
+              alt="FCA"
+              class="stepsicon"
+            />
+          </div>
+          <!-- </div> -->
+          <div class="step-content ps-3">
+            <div class="d-flex align-items-center mb-2">
+              <span class="step-label">Step 3</span>
+              <h5 class="styleh5 mb-0 ms-2">Compare the Best Deals</h5>
+            </div>
+            <p class="text-muted stylep mb-0">
+              We work with a wide range of lenders in UK to find suitable
+              mortgage options that match your circumstances and deliver
+              competitive mortgage rates.
+            </p>
+          </div>
+        </div>
+        <div class="connector"></div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="step-box position-relative mb-0">
+        <div class="d-flex align-items-center">
+          <!-- <div class="icon-wrapper flex-shrink-0"> -->
+          <div>
+            <!-- Check Icon -->
+            <img
+              src="/mortgageLandingPage/step4.svg"
+              alt="FCA"
+              class="stepsicon"
+            />
+          </div>
+          <!-- </div> -->
+          <div class="step-content ps-3">
+            <div class="d-flex align-items-center mb-2">
+              <span class="step-label">Step 4</span>
+              <h5 class="styleh5 ms-2">Apply with Confidence</h5>
+            </div>
+            <p class="text-muted stylep mb-0">
+              We'll guide you through the paperwork, handle the application, and
+              keep you updated at every stage until your mortgage is approved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-5 d-flex justify-content-center align-items-center">
+      <p class="text-muted f18">
+        From start to finish, you'll have expert help and the clarity of our
+        mortgage calculator to keep your journey simple.
+      </p>
+    </div>
+  </div>
+
+  <div class="journey-section text-center py-5">
+    <div class="container">
+      <h2 class="mb-3">Start Your Mortgage Journey Today</h2>
+      <span
+        >Whether you're buying, remortgaging, or investing, your next step
+        starts here.</span
+      >
+      <p class="">
+        Use our free mortgage repayment calculator to see what you could borrow,
+        get instant estimates, and connect with an adviser who'll guide you
+        every step of the way. Our advisers can also help you compare mortgage
+        rates, secure a mortgage quote, and find the right deal from trusted
+        lenders in UK.
+      </p>
+      <h6 class="fw-semibold mb-4 mt-4 f18" style="color: #fff">
+        Start with our calculator - it's quick, accurate, and free.
+      </h6>
+
+      <a
+        class="btn btn-primary btn-lg shadow-sm button-size"
+        (click)="scrollToForm()"
+      >
+        <i class="bi bi-calculator me-2"></i>
+        Calculate Your Mortgage Now
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer
+    class="footer text-center text-muted small py-4 px-3"
+    style="font-size: 1.7vh; font-family: 'Epilogue'"
+  >
+    <div class="container text-sm-center text-start">
+      <p class="mb-2">
+        Wealthmax Financial Advisers Limited Registered in England & Wales No.
+        10501962. Registered Address: The Mille, 3rd Floor, River Suite, 1000
+        Great West Road, Brentford, London, TW8 9DW. Authorised and Regulated by
+        the Financial Conduct Authority under reference number No 766509.
+        Details are available at <a
+          href="https://register.fca.org.uk/."
+          class="footer-link"
+          target="_blank"
+          >https://register.fca.org.uk/ </a
+        >.
+        <a href="https://wealthmax.co.uk/privacy-policy" class="footer-link"
+          >Privacy Policy</a
+        >
+        |
+        <a
+          href="https://wealthmax.co.uk/terms-and-conditions"
+          class="footer-link"
+          >Terms & Conditions</a
+        >
+        |
+        <a href="https://wealthmax.co.uk/complaints-policy" class="footer-link"
+          >Complaints Procedure</a
+        >
+        |
+        <a href="https://wealthmax.co.uk/fair-treatment" class="footer-link"
+          >Fair Treatment of Customers
+        </a>
+        |
+        <a
+          href="https://wealthmax.co.uk/financial-ombudsman-services"
+          class="footer-link"
+          >Financial Ombudsman Service</a
+        >
+      </p>
+      <p class="mb-2">
+        Your Home may be repossessed if you do not keep up repayment on your
+        mortgages.
+      </p>
+      <p class="mb-0 f18">
+        Copyright © 2025 Wealthmax Financial Advisers. All rights reserved.
+      </p>
+    </div>
+  </footer>
+</div>

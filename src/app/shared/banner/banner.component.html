@@ -1,0 +1,70 @@
+<div
+  class="hero-banner d-flex align-content-center"
+  [ngStyle]="backgroundStyle"
+>
+  <div class="container">
+    <div class="row g-0">
+      <h1 class="banner-header">{{ title }}</h1>
+    </div>
+    <div class="row g-0 col-md-7">
+      <p class="col-md-12 sub-heading banner-text" [innerHTML]="subtitle"></p>
+    </div>
+    <div *ngIf="buttons && buttons.length" class="row mt-1 mt-lg-2">
+      <div class="col-12 d-flex gap-2">
+        <ng-container *ngFor="let btn of buttons">
+          <!-- external link -->
+          <a
+            *ngIf="btn.href"
+            [href]="btn.href"
+            [target]="btn.target || '_self'"
+            class="btn"
+
+          >
+            {{ btn.label }}
+          </a>
+
+          <!-- router navigation -->
+          <a
+            *ngIf="btn.routerLink && !btn.action"
+            [routerLink]="btn.routerLink"
+            class="btn"
+            [ngClass]="btn.class"
+          >
+            {{ btn.label }}
+          </a>
+
+          <!-- open dialog action -->
+          <button
+            *ngIf="btn.action === 'dialog'"
+            type="button"
+            class="btn"
+            [ngClass]="btn.class"
+            (click)="openDialog()"
+          >
+            {{ btn.label }}
+          </button>
+
+          <!-- button with click handler -->
+          <button
+            *ngIf="btn.click"
+            class="btn"
+            [ngClass]="btn.class"
+            (click)="btn.click()"
+            type="button"
+          >
+            {{ btn.label }}
+          </button>
+
+          <!-- fallback plain button -->
+          <button
+            *ngIf="!btn.href && !btn.routerLink && btn.action !== 'dialog' && !btn.click"
+            class="btn"
+            [ngClass]="btn.class"
+          >
+            {{ btn.label }}
+          </button>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

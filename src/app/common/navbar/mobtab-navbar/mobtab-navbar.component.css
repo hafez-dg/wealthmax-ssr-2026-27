@@ -1,0 +1,167 @@
+/* Make sure navbar sits above other content */
+#full-navbar {
+  position: relative; /* kept intentionally */
+  z-index: 1200; /* higher than the hero banner */
+  overflow: visible; /* allow absolute overlay to show */
+}
+
+/* Collapse overlay: absolute full-width panel that doesn't push content */
+#full-navbar .below-dropdown {
+  position: absolute;
+  top: 100%; /* directly below the navbar */
+  left: 0;
+  width: 85%;
+  height: 90vh;
+  display: none; /* hidden by default */
+  z-index: 1199;
+  background-color: rgba(
+    254,
+    251,
+    249,
+    0.986
+  ) !important; /* change as needed */
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 1rem 1.25rem;
+  box-sizing: border-box;
+  max-height: calc(100vh - 70px); /* adjust 70px to actual navbar height */
+  overflow-y: auto; /* internal scroll if long */
+}
+
+/* Small tweak - remove focus ring on toggler for mouse click, keep keyboard focus */
+.navbar-toggler:focus:not(:focus-visible) {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Example logo sizing */
+.maxlogo {
+  height: 44px;
+  width: auto;
+  object-fit: cover;
+}
+
+.navbar-collapse {
+  flex-grow: 1;
+  flex-basis: 100%;
+  align-items: center;
+  position: absolute;
+  background-color: rgba(254, 251, 249);
+  top: 100%;
+  height: 90vh;
+  width: 80%;
+  left: 0;
+  overflow-y: auto;
+}
+.navbar-toggler {
+  width: auto;
+  height: 50px;
+}
+.main-header {
+  color: #fc7a08;
+  font-weight: 600;
+}
+
+.nav-item.dropdown.open > .nav-link,
+.nav-link.active-link {
+  color: #ff6a00;
+  font-weight: 600;
+}
+
+.nav-item.dropdown.open > .nav-link .bi,
+.nav-link.active-link .bi {
+  color: inherit;
+}
+
+/* Parent looks active (orange + semibold) */
+.nav-link.active-link {
+  color: #ff6f2e !important;
+  font-weight: 600;
+}
+
+/* Active child item (left border + bold + orange text) */
+.dropdown-menu .dropdown-item.active-child {
+  color: #ff6f2e !important;
+  font-weight: 600;
+  background-color: rgba(255, 111, 46, 0.12) !important;
+  position: relative;
+}
+
+.dropdown-menu .dropdown-item.active-child::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 14px;
+  width: 2px;
+  background: #ff6f2e;
+  border-radius: 2px;
+}
+
+.dropdown-parent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.dropdown-label {
+  flex: 1;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+}
+
+.dropdown-arrow {
+  background: transparent;
+  border: 0;
+  padding: 0 6px;
+  color: inherit;
+  line-height: 1;
+}
+
+#full-navbar .dropdown-menu {
+  position: static;
+  float: none;
+  width: calc(100% - 1rem);
+  margin: 0.5rem 0 0.75rem 0.2rem;
+  padding: 0.5rem 0;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  display: none;
+  background: #fff;
+}
+
+#full-navbar .dropdown-menu.show {
+  display: block;
+}
+
+#full-navbar .dropdown-header {
+  padding: 0.3rem 1rem;
+  font-weight: 300;
+  color: #555;
+}
+
+#full-navbar .dropdown-item {
+
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+#full-navbar .dropdown-item.parent-item {
+  color: #ff6f2e !important;
+  font-weight: 600;
+  background: transparent !important;
+}
+ .adviser-hub-btn,
+.adviser-hub-btn:visited,
+.adviser-hub-btn:hover,
+.adviser-hub-btn:focus,
+.adviser-hub-btn:active {
+  color: #ffffff !important;
+  text-decoration: none !important;
+}

@@ -1,0 +1,204 @@
+<div class="bgclr_main">
+  <app-banner
+    [title]="'First Time Buyer Mortgage'"
+    [subtitle]="
+      'Looking for your first mortgage to get onto the property ladder? We can search across lenders using sourcing technology and give you tailored mortgage advice to suit your needs'
+    "
+    [desktopImage]="'/desktop image/firsttimebuyer.webp'"
+    [mobileImage]="'/Mobile img/firstTimeBuyer.webp'"
+    [buttons]="[
+      {
+        label: 'Book a Free Consultation',
+        class: 'btn btn-lg bg-white txtorange',
+        action: 'dialog'
+      }
+    ]"
+  />
+  <!-- section 2 -->
+  <div class="container mgtop">
+    <h3 class="heading-txt mb-3 text-center">
+      Why Choose First Time Buyer Mortgage?
+    </h3>
+    <p class="text-Size text-justify text-lg-center mb-0">
+      Buying your first home can feel both exciting and overwhelming, which is
+      why having expert guidance can make the process easier. At Wealthmax, we
+      provide mortgage advice for first time buyers and will take the time to
+      explain your options clearly, based on your circumstances.
+    </p>
+    <p class="text-Size text-justify text-lg-center">
+      We work with a wide range of lenders, including many of the UK’s largest
+      mortgage providers, to help identify products that may be suitable for
+      your needs. Our aim is to support you in navigating the mortgage process
+      with confidence, so you can take your next steps toward home ownership.
+    </p>
+  </div>
+  <!-- <div class="mt-5 marginCal">
+    <P class="txtorange heading-txt topMargin text-center">
+      Stamp Duty Calculator</P
+    >
+    <div class="d-flex justify-content-center">
+      <iframe
+        class="p-3 Calculator"
+        src="https://webtools.twenty7tec.com/Sourcing/WebToolsTwo?apiKey=b35a7324-3af6-4760-802c-3f08dcf43e98&pluginKey=c530269b-0476-4a28-a866-a80df2fde7ea"
+      ></iframe>
+    </div>
+  </div> -->
+
+   <div class="container mgtop d-flex align-items-center justify-content-evenly" >
+    <!-- Card -->
+    <div class="row justify-content-evenly align-items-center calc-container width95 py-4" >
+      <!-- LEFT IMAGE -->
+      <div class="col-12 col-lg-8 col-xl-8">
+        <!-- Heading -->
+        <h2 class="heading-txt mb-3 text-start">
+          Calculate Your Stamp Duty Instantly
+        </h2>
+        <p class="text-Size text-justify text-lg-start mb-5">
+          Confused about how much tax you’ll pay on your new property? Our smart
+          Stamp Duty Calculator instantly breaks down your costs — factoring in
+          property value, location, and buyer type — so you know exactly what to
+          budget before you buy.
+        </p>
+      </div>
+
+      <!-- RIGHT CONTENT -->
+
+      <div class="col-12 col-lg-4 col-xl-3 text-center d-flex align-item-end " style="padding-inline: 0px !important;">
+        <div class="calc-card">
+          <h4>Stamp Duty Calculator</h4>
+          <p>
+            Whether you’re a first-time buyer, moving to a new home, or
+            purchasing an additional property, use our stamp duty calculator to
+            find out exactly what you have to pay.
+          </p>
+          <button class="calc-btn" routerLink="/mortgage-calculator/stampduty-calculator">
+            Calculate Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- section-3 -->
+  <div class="bgcolorlinear">
+    <div class="container mgtop">
+      <h3 class="heading-txt mb-3 text-center">What we Offer?</h3>
+      <p class="textSize text-justify text-md-center">
+        First time buyer mortgages come in variety of forms. Each caters to
+        different set of financial situations and preferences. They include
+      </p>
+      <div class="cards-container mt-1 mt-4">
+        <app-cards [cards]="cards"> </app-cards>
+      </div>
+    </div>
+  </div>
+  <!-- section-4 -->
+  <div class="container mgtop">
+    <div class="mb-2 mb-md-3">
+      <h3 class="heading-txt mb-3 text-center">
+        What are Benefits of First Time Buyer Mortgage?
+      </h3>
+      <p class="text-Size text-justify text-md-center mb-3 mb-lg-5">
+        A first-time buyer mortgage opens the door to homeownership, offering
+        tailored benefits and financial support designed to help individuals
+        take their first step onto the property ladder. Let’s explore some of
+        the key advantages available to those purchasing their first home.
+      </p>
+    </div>
+    <div class="row justify-content-center align-items-center gx-4 pt-1">
+      <div class="col-12 col-lg-6 d-flex flex-column justify-content-center">
+        <div class="d-flex align-items-start mb-3 feature border-bottom">
+          <div class="me-3 icon-col">
+            <img
+              src="/mortgages/first-time-buyer/financial.svg"
+              alt="icon"
+              class="icon-img"
+            />
+          </div>
+          <div>
+            <h4 class="heading-title">Financial Assessment</h4>
+            <p class="text-Size">
+              They’ll evaluate your income, savings and credit score to
+              determine what you can afford.
+            </p>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-start mb-3 feature border-bottom">
+          <div class="me-3 icon-col">
+            <img
+              src="/mortgages/first-time-buyer/additional (2).svg"
+              alt="icon"
+              class="icon-img"
+            />
+          </div>
+          <div>
+            <h4 class="heading-title">Additional Costs</h4>
+            <p class="text-Size">
+              You'll find out about other expenses such as stamp duty, legal
+              fees and insurance premiums.
+            </p>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-start mb-3 feature border-bottom">
+          <div class="me-3 icon-col">
+            <img
+              src="/mortgages/first-time-buyer/research.svg"
+              alt="icon"
+              class="icon-img"
+            />
+          </div>
+          <div>
+            <h4 class="heading-title">Research Options</h4>
+            <p class="text-Size">
+              They’ll explore various mortgage types, including fixed-rate,
+              variable-rate and Help to Buy schemes.
+            </p>
+          </div>
+        </div>
+        <div class="d-flex align-items-start mb-3 feature border-bottom">
+          <div class="me-3 icon-col">
+            <img
+              src="/mortgages/first-time-buyer/long term.svg"
+              alt="icon"
+              class="icon-img"
+            />
+          </div>
+          <div>
+            <h4 class="heading-title">Long term Planning</h4>
+            <p class="text-Size">
+              Your adviser will ensure the mortgage you opt for aligns with your
+              future financial goals for stability and growth.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-6 d-flex justify-content-center">
+        <img
+          src="/mortgages/first-time-buyer/fsrs.png"
+          alt="illustration"
+          class="img-fluid right-illustration"
+        />
+      </div>
+    </div>
+  </div>
+  <!-- section-5 -->
+  <div class="container mgtop box-shadow-faq">
+    <app-faq [faqs]="buyToLetFaqs"></app-faq>
+  </div>
+  <!-- secton-6 -->
+  <div class="container mgtopbottom p-1 p-lg-2">
+    <app-last-btn-comp
+      [align]="'center'"
+      [title]="'Looking for First Time Buyer Mortgage?'"
+      [subtitle]="
+        'Wealthmax is here to help. Our advisers are experienced in financing and have access to a wide range of mortgage options. Contact us today to discuss your mortgage requirements and secure the ideal financing solution.'
+      "
+      [buttonText]="'Speak to our Advisers'"
+      [buttonLink]="'/contact-us'"
+    />
+  </div>
+</div>

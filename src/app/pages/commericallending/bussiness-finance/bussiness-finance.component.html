@@ -1,0 +1,138 @@
+<app-banner
+  [title]="'Business Finance'"
+  [subtitle]="
+    'Fuel your business ambitions with tailored finance solutions designed to support growth, manage cash flow and unlock new opportunities'
+  "
+  [desktopImage]="'/desktop image/businessFinance.webp'"
+  [mobileImage]="'/Mobile img/business finance.webp'"
+  [buttons]="[
+    {
+      label: 'Book a Free Consultation',
+      class: 'btn btn-lg bg-white txtorange',
+      action: 'dialog'
+    }
+  ]"
+></app-banner>
+<div class="container mgtop">
+  <h3 class="heading-txt mb-3 text-center">Why Choose Business Finance?</h3>
+  <p class="text-Size text-justify text-lg-center">
+    Business finance is essential for helping companies manage cash flow, invest
+    in growth, and seize new opportunities. It can be used for a wide range of
+    needs, from purchasing equipment and inventory to funding expansion,
+    marketing campaigns, or even acquiring another business. Unlike personal
+    finance, business finance is tailored to support the unique demands of
+    running and scaling an organisation, providing the resources needed to
+    remain competitive in market. At Wealthmax Financial Advisers, we work
+    closely with businesses to identify the most suitable finance options,
+    enabling them to achieve long-term stability and sustainable growth.
+  </p>
+</div>
+
+<div class="container mgtop">
+  <div>
+    <h3 class="heading-txt mb-3 text-center">
+      What are Benefits of Business Finance?
+    </h3>
+    <p class="text-Size text-md-center text-justify mb-3">
+      Empower your business with tailored funding solutions that support growth,
+      stability and long-term success.
+    </p>
+  </div>
+  <div class="row justify-content-center align-items-center gx-4 pt-1">
+    <div class="col-12 col-lg-6 d-flex flex-column justify-content-center">
+      <!-- each feature row is a flex row so icon and text align nicely -->
+      <div class="d-flex align-items-start mb-3 feature border-bottom">
+        <div class="me-3 icon-col">
+          <img
+            src="/commerciallending/bussiness/icon1.svg"
+            alt="icon"
+            class="icon-img"
+          />
+        </div>
+        <div>
+          <h4 class="heading-title">Fuel Growth & Expansion</h4>
+          <p class="text-Size new-txt">
+            Access funds to enter new markets, acquire businesses or scale
+            operations with confidence.
+          </p>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-start mb-3 feature border-bottom">
+        <div class="me-3 icon-col">
+          <img
+            src="/commerciallending/bussiness/icon2.svg"
+            alt="icon"
+            class="icon-img"
+          />
+        </div>
+        <div>
+          <h4 class="heading-title">Upgrade & Expand Facilities</h4>
+          <p class="text-Size new-txt">
+            Renovate existing spaces, expand capacity or purchase essential
+            equipment and inventory.
+          </p>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-start mb-3 feature border-bottom">
+        <div class="me-3 icon-col">
+          <img
+            src="/commerciallending/bussiness/icon3.svg"
+            alt="icon"
+            class="icon-img"
+          />
+        </div>
+        <div>
+          <h4 class="heading-title">Stabilize Cash Flow</h4>
+          <p class="text-Size new-txt">
+            Manage day-to-day financial needs effectively, ensuring smooth
+            operations without disruptions
+          </p>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-start mb-3 feature border-bottom">
+        <div class="me-3 icon-col">
+          <img
+            src="/commerciallending/bussiness/icon4.svg"
+            alt="icon"
+            class="icon-img"
+          />
+        </div>
+        <div>
+          <h4 class="heading-title">Unlock Growth Potential</h4>
+          <p class="text-Size new-txt">
+            Turn land or property opportunities into profitable developments
+            without upfront financial strain.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-6 d-flex justify-content-center">
+      <!-- constrain height so it doesn't force parent taller than desired -->
+      <img
+        src="/commerciallending/bussiness/bussiness-benefit-banner.png"
+        alt="illustration"
+        class="img-fluid right-illustration"
+      />
+    </div>
+  </div>
+</div>
+<div class="container mgtop">
+  <app-faq [faqs]="buyToLetFaqs"></app-faq>
+</div>
+
+<!-- section-5 -->
+<div class="container mgtopbottom p-1 p-lg-2">
+  <app-last-btn-comp
+    [align]="'center'"
+    [title]="'Looking for Business Loan?'"
+    [subtitle]="
+      'Wealthmax Financial Advisers is here to help! Our advisers are experienced in business loans and can tailor solutions to meet your company’s funding needs. Contact us today to secure the right finance and support the growth and stability of your business.'
+    "
+    [buttonText]="'Speak to our Advisers'"
+    [buttonLink]="'/contact-us'"
+  />
+</div>

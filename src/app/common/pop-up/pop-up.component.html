@@ -1,0 +1,153 @@
+<h2 mat-dialog-title>Get in Touch with Us</h2>
+
+<mat-dialog-content class="mat-typography">
+  <form [formGroup]="bookForm" (ngSubmit)="submit()" novalidate>
+    <!-- Full Name -->
+    <div class="mb-3 text-start">
+      <label for="fullName" class="form-label">Full Name</label>
+      <input
+        id="fullName"
+        type="text"
+        class="form-control"
+        placeholder="Full Name"
+        formControlName="fullName"
+        autocomplete="name"
+        (keypress)="allowOnlyLetters($event)"
+        (paste)="onNamePaste($event)"
+        (blur)="trimName()"
+        required
+      />
+      <div
+        *ngIf="
+          (f.fullName.touched || f.fullName.dirty || submitted) &&
+          f.fullName.invalid
+        "
+        class="error"
+      >
+        <div *ngIf="f.fullName.errors?.required">Name is required.</div>
+        <div *ngIf="f.fullName.errors?.minlength">
+          Name must be at least 2 characters.
+        </div>
+        <div *ngIf="f.fullName.errors?.pattern">
+          Only letters and single spaces between names are allowed.
+        </div>
+      </div>
+    </div>
+
+    <!-- Email -->
+    <div class="mb-3 text-start">
+      <label for="emailId" class="form-label">Email address</label>
+      <input
+        id="emailId"
+        type="email"
+        class="form-control"
+        placeholder="name@example.com"
+        formControlName="emailId"
+        autocomplete="email"
+        required
+      />
+      <div
+        *ngIf="
+          (f.emailId.touched || f.emailId.dirty || submitted) &&
+          f.emailId.invalid
+        "
+        class="error"
+      >
+        <div *ngIf="f.emailId.errors?.required">Email is required.</div>
+        <div *ngIf="f.emailId.errors?.email">Email is invalid.</div>
+      </div>
+    </div>
+
+    <!-- Contact Number -->
+    <div class="mb-3 text-start">
+      <label for="contactNumber" class="form-label">Contact Number</label>
+      <input
+        id="contactNumber"
+        type="tel"
+        class="form-control"
+        placeholder="+441234567890"
+        formControlName="contactNumber"
+        autocomplete="tel"
+        inputmode="tel"
+        required
+      />
+      <div
+        *ngIf="
+          (f.contactNumber.touched || f.contactNumber.dirty || submitted) &&
+          f.contactNumber.invalid
+        "
+        class="error"
+      >
+        <div *ngIf="f.contactNumber.errors?.required">
+          Contact Number is required
+        </div>
+        <div *ngIf="f.contactNumber.errors?.pattern">
+          Please enter a valid contact number:
+          <br />
+          • 10 digits without “+” (e.g. 9876543210) <br />
+          • or +CC followed by 10 digits (e.g. +911234567890 or +91 1234567890)
+        </div>
+      </div>
+    </div>
+
+    <!-- Preferred date & time -->
+    <div class="mb-3 text-start">
+      <label for="availableTime" class="form-label"
+        >Preferred date & time</label
+      >
+      <input
+        id="availableTime"
+        type="datetime-local"
+        class="form-control"
+        formControlName="availableTime"
+        [min]="minDateTime"
+        required
+      />
+      <div
+        *ngIf="
+          (f.availableTime.touched || f.availableTime.dirty || submitted) &&
+          f.availableTime.invalid
+        "
+        class="error"
+      >
+        <div *ngIf="f.availableTime.errors?.required">
+          Date & time is required.
+        </div>
+        <div *ngIf="f.availableTime.errors?.invalidDate">
+          Invalid date format.
+        </div>
+        <div *ngIf="f.availableTime.errors?.past">
+          Time cannot be in the past.
+        </div>
+      </div>
+    </div>
+
+    <!-- Hidden fields -->
+    <input type="hidden" formControlName="pageRequest" />
+    <input type="hidden" formControlName="category" />
+
+    <!-- Actions -->
+    <div class="d-flex justify-content-end gap-2 popup-actions mt-3">
+      <!-- Cancel -->
+      <button
+        type="button"
+        class="btn btn-outline-secondary cancel-btn"
+        (click)="onCancel()"
+        [disabled]="isSubmitting"
+      >
+        Cancel
+      </button>
+
+      <!-- Submit -->
+      <button
+        mat-flat-button
+        type="submit"
+        class="btnall"
+        style="background-color: #eb7124; color: #fff; border-radius: 8px"
+        [attr.aria-busy]="isSubmitting"
+      >
+        {{ isSubmitting ? "Submitting…" : textBtn || "Submit" }}
+      </button>
+    </div>
+  </form>
+</mat-dialog-content>

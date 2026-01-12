@@ -1,0 +1,213 @@
+<app-banner
+  [title]="'Who we are'"
+  [subtitle]="
+    'At Wealthmax, we believe finance is personal. That’s why we design every plan around you — your dreams, your journey, your future. '
+  "
+  [desktopImage]="'/desktop image/whoweare.webp'"
+  [mobileImage]="'/Mobile img/who we are.webp'"
+  [buttons]="[
+    {
+      label: 'Join Now',
+      class: 'btn btn-lg bg-white txtorange',
+      routerLink: '/network'
+    }
+  ]"
+>
+</app-banner>
+
+<!-- section 2 -->
+
+<div class="bgcolorlinear">
+  <div class="container mgtop">
+    <h3 class="heading-txt text-center">
+      Why Choose Wealthmax Financial Advisers?
+    </h3>
+    <p class="text-Size text-md-center text-justify">
+      Not only our advisers are highly trained and skilled but specialised in
+      helping people understand the financial risks they expose themselves to.
+      As well as empower themselves to better protect from the devastating
+      financial impacts that result from illness, injury or death.With access to
+      some of the major lenders and providers from across the UK market, our
+      team can find the products that fit each client’s needs and are uniquely
+      equipped to help customers build long term financial relationships,
+      putting our customers at the heart of everything we do.
+    </p>
+    <div class="cards-container">
+      <div class="card" *ngFor="let card of cards">
+        <div class="align-items-start">
+          <!-- Icon -->
+          <div class="icon-box align-items-center justify-content-center mb-3">
+            <img [src]="card.icon" alt="icon" class="icon-img" />
+          </div>
+
+          <!-- Text -->
+          <div class="flex-grow-1">
+            <h3 class="card-title mb-2 dark-blue">{{ card.title }}</h3>
+            <p class="card-text mb-0">{{ card.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center align-items-center mt-5">
+      <button class="btnall mb-4" routerLink="/contact-us">
+        Request a Callback
+        <i class="bi bi-telephone ms-1"></i>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- section 3 -->
+
+<div class="mgtop container">
+  <div>
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-4">
+        <h2 class="heading-txt">A Glimpse into Wealthmax Financial Advisers</h2>
+        <p class="mb-3 text-Size">
+          Wealthmax Financial Advisers was established in 2017 with the sole
+          purpose of providing reliable financial advice while maintaining
+          transparency and trust among all stakeholders and we are committed to
+          it. This ever evolving financial sector sometimes becomes overwhelming
+          when people are not very confident about their financial ambitions and
+          requirements. This is where Wealthmax knocks the doors. With the help
+          of our team and our committed Advisers over the past 8 years we have
+          been maintaining a transparent and customer-centric culture. Alongside
+          our main venture of Insurance and Mortgage Broking, we also offer
+          Estate Planning and Pension & Investment services from our subsidiary
+          companies Wealthmax Estate Planning and Wealthmax Pensions.
+        </p>
+        <div class="d-flex align-items-start mb-2">
+          <img
+            src="/howarewe/Frame.svg"
+            alt="Tailored Solutions"
+            class="icon-img me-2"
+            width="24"
+          />
+          <p class="mb-0 text-Size">
+            Tailored insurance and mortgage solutions designed around you.
+          </p>
+        </div>
+        <div class="d-flex align-items-start mb-3">
+          <img
+            src="/howarewe/Group.svg"
+            alt="Helping Families"
+            class="icon-img me-2"
+            width="24"
+          />
+          <p class="mb-0 text-Size">
+            Helping thousands of families understand their financial needs and
+            invest accordingly.
+          </p>
+        </div>
+        <div class="d-flex justify-content-center justify-content-lg-start">
+          <button class="btnall" routerLink="/contact-us">Contact Us</button>
+        </div>
+      </div>
+      <div class="col-lg-6 text-center">
+        <img src="/howarewe/a1.png" alt="Wealthmax" class="img-fluid" />
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div class="container">
+  <div class="mgtop">
+    <h3 class="heading-txt mb-3 text-center">Company History</h3>
+    <p class="text-Size text-justify text-lg-center">
+      Explore the milestones, challenges, and achievements that have defined our
+      growth and strengthened our commitment to delivering reliable financial
+      services.
+    </p>
+  </div>
+</div> -->
+
+<!-- Section 4 -->
+<!-- <div *ngIf="carouselVisible">
+  <ngb-carousel
+    #myCarousel="ngbCarousel"
+    [interval]="4000"
+    [pauseOnHover]="false"
+    [wrap]="true"
+    [showNavigationIndicators]="false"
+    [showNavigationArrows]="false"
+  >
+    <ng-template ngbSlide *ngFor="let group of groupedHistory">
+      <div class="container d-flex justify-content-center align-content-center">
+        <div class="row justify-content-center widthcaursol">
+          <div
+            class="col-12  col-lg-4 pdmob "
+            *ngFor="let item of group"
+          >
+            <div class="history-item">
+            
+              <ng-container *ngIf="isMobile; else desktopLayout">
+                
+                <div >
+                  <div class="img-area-mobile" style="object-fit: cover">
+                    <img [src]="item.image" class="history-img" />
+                  </div>
+                  <div class="text-area-mobile border-left-container">
+                    <h4 class="year text-start">{{ item.year }}</h4>
+                    <p class="desc text-start">{{ item.text }}</p>
+                  </div>
+                </div>
+              </ng-container>
+
+              <ng-template #desktopLayout>
+              
+                <ng-container *ngIf="item.up; else textBelow">
+                  <div
+                    class="text-area1 border-left-container position-relative"
+                  >
+                    <div class="position-absolute imgwidth">
+                      <h4 class="year text-start">{{ item.year }}</h4>
+                      <p class="desc text-start pb-0">{{ item.text }}</p>
+                    </div>
+                  </div>
+                  <div class="img-area1 imgwidth" style="object-fit: cover">
+                    <img [src]="item.image" class="history-img rounded-2" />
+                  </div>
+                </ng-container>
+
+                <ng-template #textBelow>
+                  <div class="below-empty"></div>
+                  <div class="img-area2 imgwidth" style="object-fit: cover">
+                    <img [src]="item.image" class="history-img" />
+                  </div>
+                  <div
+                    class="text-area2 position-relative border-left-container"
+                  >
+                    <div class="below-con position-absolute imgwidth">
+                      <h4 class="year text-start">{{ item.year }}</h4>
+                      <p class="desc text-start">{{ item.text }}</p>
+                    </div>
+                  </div>
+                </ng-template>
+              </ng-template>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="custom-prev" (click)="myCarousel.prev()">‹</button>
+      <button class="custom-next" (click)="myCarousel.next()">›</button>
+    </ng-template>
+  </ngb-carousel>
+</div> -->
+
+<!-- Section 5 -->
+<div>
+  <div class="mgtopbottom text-center container">
+    <h2 class="heading-txt text-center">
+      Let’s build something great together
+    </h2>
+    <p class="mb-4 text-Size text-center">
+      We hold the belief that individualized guidance is crucial when it comes
+      to making well-informed financial choices. Having a professional who
+      comprehends your distinct circumstances enables them to assist you in
+      making optimal decisions regarding your finances.
+    </p>
+    <button class="btnall" routerLink="/contact-us">
+      Request a Callback
+      <i class="bi bi-telephone ms-1"></i>
+    </button>
+  </div>

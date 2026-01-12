@@ -1,0 +1,75 @@
+<div class="bgclr_main">
+  <app-banner
+    [title]="'Careers'"
+    [subtitle]="
+      'Join us to be part of a community that values innovation, collaboration and growth '
+    "
+    [desktopImage]="'/desktop image/careers.webp'"
+    [mobileImage]="'/Mobile img/careers.webp'"
+    [buttons]="[
+      {
+        label: 'Join Now',
+        class: 'btn btn-lg bg-white txtorange',
+        routerLink: '/network'
+      }
+    ]"
+  >
+  </app-banner>
+  <div class="container mgtop">
+    <div class="">
+      <div class="row align-items-center">
+        <div
+          class="col-12 col-lg-6 mb-3 mb-md-0 position-relative pt-3 order-2 order-lg-1"
+        >
+          <div class="image-wrapper widthofimage">
+            <img src="/careers/c1.png" alt="Team" class="img-fluid main-img" />
+            <img
+              src="/careers/overlay-img.png"
+              alt="Overlay"
+              class="overlay-img"
+            />
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 order-1 order-lg-2">
+          <h3 class="heading-txt mb-3">Join Our Team</h3>
+          <p class="text-Size me-4" style="letter-spacing: -0.1px;">
+            We’re always looking for talented individuals who share our values,
+            passion and commitment. Whether you're interested in joining our
+            Head Office team or working in the field, we offer opportunities
+            across the UK as part of our continued growth.
+          </p>
+          <p class="text-Size text-start">
+            Explore our current openings below — we’d love to hear from you
+          </p>
+          <div class="mt-1">
+            <div class="pd_pointsbottom d-flex align-items-center">
+              <i
+                class="bi bi-check me-1 fs-3 rounded-circle"
+                style="color: #ff6600"
+              ></i>
+              <span class="points text-Size">Innovate</span>
+            </div>
+            <div class="pd_pointsbottom d-flex align-items-center">
+              <i
+                class="bi bi-check me-1 fs-3 rounded-circle"
+                style="color: #ff6600"
+              ></i>
+              <span class="points text-Size">Collaborate</span>
+            </div>
+            <div class="pd_pointsbottom d-flex align-items-center">
+              <i
+                class="bi bi-check me-1 fs-3 rounded-circle"
+                style="color: #ff6600"
+              ></i>
+              <span class="points text-Size">Grow</span>
+            </div>
+            <div class="pd_pointsbottom mt-3">
+              <button class="btnall" routerLink="/who-we-are">About Us</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <app-h-career3 />
+  </div>
+</div>

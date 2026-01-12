@@ -1,0 +1,11 @@
+.textSize{
+text-align: left;
+}
+@media (max-width: 425px) {
+    .bannerheadertxt{
+        font-size: 25px!important;
+
+    }
+}
+   
+ 

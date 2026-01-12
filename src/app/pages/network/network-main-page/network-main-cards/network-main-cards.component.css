@@ -1,0 +1,119 @@
+/* Background container with gradient */
+.bgcolorlinear {
+  border-radius: 0 0 36px 36px;
+  padding:0px 0px 30px 0px;
+  background: linear-gradient(
+    to top,
+    rgba(255, 220, 197, 1) 20%,
+    rgba(255, 250, 248, 1) 80% /* light orange top */
+  );
+}
+
+/* Card grid */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 per row on desktop */
+  gap: 24px;
+}
+
+/* Individual card */
+.card {
+  background: #fff;
+  border-radius: 16px;
+  border: 3px solid rgba(255, 201, 167, 1);
+  padding: 5%;
+  height: 100%;
+  min-height: 120px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card > div {
+  gap: 12px;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+   border: 3px solid #ff6600;
+  box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* Icon */
+.card .icon-box {
+  min-width: 50px;
+  height: 50px;
+  background: rgba(255, 201, 167, 0);
+  border-radius: 12px;
+}
+
+.card .card-icon {
+  width: 50px;
+  height: 50px;
+}
+
+/* Text */
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba(1, 0, 76, 1);
+  font-family: "Urbanist";
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.card-text {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0%;
+}
+@media (max-width: 1500px) {
+  .card-title {
+    font-size: 20px;
+  }
+  .card-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 1100px) {
+  .card-title {
+    font-size: 18px;
+  }
+  .card-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .card .card-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (max-width: 999px){
+  .cards-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .card-title {
+    font-size: 16px;
+  }
+  .card-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .cards-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .card .icon-box {
+  min-width: 40px;
+  height: 40px;
+}
+}

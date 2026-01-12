@@ -1,0 +1,11 @@
+
+
+/* main block alignment */
+.align-center {
+  text-align: center;
+  justify-content: center;
+}
+
+.align-left {
+  text-align: left;
+}

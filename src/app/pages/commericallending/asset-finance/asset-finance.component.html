@@ -1,0 +1,143 @@
+<app-banner
+  [title]="'Asset Finance'"
+  [subtitle]="
+    'Empowering businesses with flexible Asset Finance options that turn investment opportunities into tangible assets and long-term value'
+  "
+  [desktopImage]="'/desktop image/asset finance.webp'"
+  [mobileImage]="'/Mobile img/asset finance.webp'"
+  [buttons]="[
+    {
+      label: 'Book a Free Consultation',
+      class: 'btn btn-lg bg-white txtorange',
+      action: 'dialog'
+    }
+  ]"
+></app-banner>
+<div class="container mgtop">
+  <!-- Title -->
+  <h3 class="heading-txt mb-3 text-center">Why Choose Asset Finance?</h3>
+
+  <p class="text-Size text-justify text-lg-center">
+    Asset finance is a flexible way for businesses to acquire vehicles,
+    machinery, technology, or other essential equipment without the need for
+    large upfront costs. Instead of tying up valuable working capital, payments
+    are spread over an agreed period, making it easier to manage cash flow while
+    still accessing the tools needed for growth. It can also unlock value from
+    existing assets, providing funds that can be reinvested back into the
+    business. At Wealthmax Financial Advisers, we help clients find the right
+    asset finance solution, ensuring they can invest in their future with
+    confidence and financial stability.
+  </p>
+  <div class="mgtop">
+    <div>
+      <h3 class="heading-txt mb-3 text-center">
+        What are Benefits of Asset Finance?
+      </h3>
+      <p class="text-Size text-md-center text-justify mb-3">
+        The advantage of asset financing is that the initial cost for vehicles,
+        machinery or indeed, any kind of essential business equipment can be
+        met without draining your cash reserves. The asset itself serves as
+        collateral, meaning you can preserve your working capital while at the
+        same time maintaining liquidity.
+      </p>
+    </div>
+    <div class="row justify-content-center align-items-center gx-4 pt-1">
+      <div class="col-12 col-lg-6 d-flex flex-column justify-content-center">
+        <!-- each feature row is a flex row so icon and text align nicely -->
+        <div class="d-flex align-items-start mb-3 feature border-bottom">
+          <div class="me-3 icon-col">
+            <img
+              src="/commerciallending/asset/icon1.svg"
+              alt="icon"
+              class="icon-img"
+            />
+          </div>
+          <div>
+            <h4 class="heading-title">Preserve Working Capital</h4>
+            <p class="text-Size">
+              Acquire essential business equipment without draining your cash
+              reserves, keeping funds available for other operations.
+            </p>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-start mb-3 feature border-bottom">
+          <div class="me-3 icon-col">
+            <img
+              src="/commerciallending/asset/icon2.svg"
+              alt="icon"
+              class="icon-img"
+            />
+          </div>
+          <div>
+            <h4 class="heading-title">Flexible Financing Options</h4>
+            <p class="text-Size ">
+              Asset finance offers adaptable repayment terms, allowing
+              businesses to manage cash flow efficiently.
+            </p>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-start mb-3 feature border-bottom">
+          <div class="me-3 icon-col">
+            <img
+              src="/commerciallending/asset/icon3.svg"
+              alt="icon"
+              class="icon-img"
+            />
+          </div>
+          <div>
+            <h4 class="heading-title">Tax Advantages</h4>
+            <p class="text-Size">
+              Certain asset finance arrangements can provide tax benefits,
+              reducing overall business costs.
+            </p>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-start mb-3 feature border-bottom">
+          <div class="me-3 icon-col">
+            <img
+              src="/commerciallending/asset/icon4.svg"
+              alt="icon"
+              class="icon-img"
+            />
+          </div>
+          <div>
+            <h4 class="heading-title">Maintain Competitiveness</h4>
+            <p class="text-Size">
+              By investing in critical machinery, vehicles, or IT
+              infrastructure, your business stays modern and competitive in its
+              sector.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-6 d-flex justify-content-center">
+        <!-- constrain height so it doesn't force parent taller than desired -->
+        <img
+          src="/commerciallending/asset/benefit-banner.png"
+          alt="illustration"
+          class="img-fluid right-illustration"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="mgtop">
+    <app-faq [faqs]="buyToLetFaqs"></app-faq>
+  </div>
+</div>
+
+<!-- section-5 -->
+<div class="mgtopbottom p-1 p-lg-2">
+  <app-last-btn-comp
+    [align]="'center'"
+    [title]="'Looking for Asset Finance?'"
+    [subtitle]="
+      'Wealthmax Financial Advisers is here to help! Our advisers are experienced in asset finance and can guide you to secure the right funding for your business equipment or vehicles. Contact us today to find the ideal solution for your business growth needs.'
+    "
+    [buttonText]="'Speak to our Advisers'"
+    [buttonLink]="'/contact-us'"
+  />
+</div>

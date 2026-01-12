@@ -1,0 +1,101 @@
+@if(!tabmob) {
+<div class="top-header">
+  <div class="top-header-container">
+    <div class="logo-section">
+      <a routerLink="/">
+        <img src="/willsplanning/wealthmaxlogo.svg" alt="WealthMax Logo" class="logo-img" />
+      </a>
+    </div>
+
+    <div class="contact-section">
+      <div class="contact-info">
+        <a href="tel:+442036758998" class="contact-item">
+          <i class="bi bi-telephone-fill"></i>
+          <span>+44 20 3675 8998</span>
+        </a>
+        <a href="mailto:contact@wealthmax.co.uk" class="contact-item">
+          <i class="bi bi-envelope-fill"></i>
+          <span>contact&#64;wealthmax.co.uk</span>
+        </a>
+      </div>
+      <a href="https://myzone.wealthmax.co.uk" class="adviser-hub-btn" target="_blank">
+        Adviser Hub
+      </a>
+    </div>
+  </div>
+</div>
+
+<nav id="full-navbar" class="navbar-new">
+  <div class="navbar-container">
+    <div class="nav-items-wrapper">
+      <div
+        class="nav-item-wrapper"
+        *ngFor="let link of mainLinks"
+        (mouseenter)="openDropdown(link.dropdownKey)"
+        (mouseleave)="link.hasDropdown ? scheduleClose() : null"
+      >
+        <div
+          class="nav-item"
+          [class.has-dropdown]="link.hasDropdown"
+          [class.dropdown-open]="activeDropdown === link.dropdownKey"
+        >
+          <a
+            [routerLink]="link.routerLink"
+            routerLinkActive="active-link"
+            [routerLinkActiveOptions]="{ exact: false }"
+            class="nav-link"
+          >
+            {{ link.label }}
+          </a>
+
+          <div *ngIf="activeDropdown === link.dropdownKey" class="dropdown-panel">
+            <div class="dropdown-content">
+              <ng-container *ngIf="getDropdown(activeDropdown) as dropdown">
+                <!--  Title ng  -->
+                <!-- <h3 class="dropdown-title">{{ dropdown.title }}</h3> -->
+
+                <!-- Dropdown Items -->
+                <div class="dropdown-items-grid">
+                  <ng-container *ngIf="dropdown.groups; else flatItems">
+                    <div class="dropdown-group" *ngFor="let group of dropdown.groups">
+                      <h4 class="group-title">{{ group.groupTitle }}</h4>
+                      <div class="group-items">
+                        <a
+                          class="dropdown-link"
+                          *ngFor="let item of group.items"
+                          [routerLink]="item.link"
+                          routerLinkActive="active-dropdown-link"
+                        >
+                          {{ item.label }}
+                        </a>
+                      </div>
+                    </div>
+                  </ng-container>
+
+                  <!-- Flat Items Template (for Mortgage, About Us, etc.) -->
+                  <ng-template #flatItems>
+                    <div class="dropdown-flat-items">
+                      <a
+                        class="dropdown-link"
+                        *ngFor="let item of dropdown.items"
+                        [routerLink]="item.link"
+                        routerLinkActive="active-dropdown-link"
+                      >
+                        {{ item.label }}
+                      </a>
+                    </div>
+                  </ng-template>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+} @else {
+<div class="position-relative">
+  <app-mobtab-navbar [dropdowns]="dropdowns" [mainLinks]="allLinks"> </app-mobtab-navbar>
+</div>
+}

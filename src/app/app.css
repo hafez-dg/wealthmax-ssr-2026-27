@@ -1,0 +1,140 @@
+/* Essential for loader to overlay entire page */
+.wealthmax-loader-wrapper {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #ffffff00, #e4ecf500);
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.wealthm
+.bgclr_main {
+  transition: opacity 0.4s ease;
+}
+
+.global-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+ax-loader-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.wealthmax-loader-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(135deg, #f9fbfc09, #e4ecf50e);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.wealthmax-loader-container {
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.wealthmax-logo img {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.wealthmax-loader-spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #d4dce6;
+  border-top: 6px solid #005bac; /* Wealthmax blue */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+  box-shadow: 0 0 10px rgba(0, 91, 172, 0.3);
+}
+
+.wealthmax-loader-text {
+  font-size: 1.25rem;
+  color: #005bac;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot-flash::after {
+  content: '';
+  display: inline-block;
+  width: 1.5ch;
+  text-align: left;
+  animation: dot-flash 1.5s infinite steps(4);
+  vertical-align: baseline;
+}
+
+.wealthmax-tagline {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #4a4a4a;
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Animations */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes dot-flash {
+  0%   { content: ''; }
+  25%  { content: '.'; }
+  50%  { content: '..'; }
+  75%  { content: '...'; }
+  100% { content: ''; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.wealthmax-tagline {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0d47a1;
+  margin-top: 0.5rem;
+  letter-spacing: 1px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  animation: fadeSlideIn 1s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+/* Animation to slide in */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+

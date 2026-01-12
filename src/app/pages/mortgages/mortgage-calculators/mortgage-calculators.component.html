@@ -1,0 +1,42 @@
+<app-banner
+  [title]="'Mortgage Calculators'"
+  [subtitle]="
+    'Our mortgage calculators can give you an idea of how much you could borrow, your monthly repayments, stamp duty costs, overpayments, and more'
+  "
+  [desktopImage]="'/desktop image/calcMainPage.webp'"
+  [mobileImage]="'/Mobile img/calcMain.webp'"
+/>
+<div class="container mgtopbottom py-3">
+  <div class="calc-container">
+    <!-- CARD 1 -->
+
+    <div class="calc-card">
+      <h4>Best Buy Calculator</h4>
+      <p>
+        Compare mortgage rates with top lenders and find the mortgage deal
+        that’s right for you.
+      </p>
+      <button class="calc-btn" routerLink="best-buys">Compare Rates</button>
+    </div>
+
+
+    <div class="calc-card">
+      <h4>Mortgage rates and repayments</h4>
+      <p>
+        Compare mortgage deals and find out what your interest rate and monthly
+        repayments could be.
+      </p>
+      <button class="calc-btn" routerLink="repayment-calculator">Calculate Your Repayment</button>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="calc-card">
+      <h4>Stamp Duty Calculator</h4>
+      <p>
+        Whether you’re a first-time buyer, moving to a new home, or purchasing
+        an additional property, find out exactly what you have to pay.
+      </p>
+      <button class="calc-btn" routerLink="stampduty-calculator">Calculate Now</button>
+    </div>
+  </div>
+</div>

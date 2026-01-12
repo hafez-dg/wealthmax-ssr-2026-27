@@ -1,0 +1,123 @@
+<div class="bgclr_main">
+  <app-banner
+    [title]="'Commercial Lending'"
+    [subtitle]="
+      'Drive your business forward with strategic lending designed to unlock opportunities, strengthen growth and build financial resilience'
+    "
+    [desktopImage]="'/desktop image/commercial.webp'"
+    [mobileImage]="'/Mobile img/comercial lending.webp'"
+    [buttons]="[
+      {
+        label: 'Book a free Consultation',
+        class: 'btn btn-lg bg-white txtorange',
+        action: 'dialog'
+      }
+    ]"
+  ></app-banner>
+
+  <!-- first section -->
+  <div class="gradient-bg">
+    <div class="container mgtop">
+      <div class="row">
+        <div class="col-12 col-lg-6">
+          <h2 class="txtorange heading-txt">
+            Why Choose Wealthmax for your Commercial Lending?
+          </h2>
+          <div class="textSize text-justify">
+            <p>
+              Commercial financing can be used for the full spectrum of needs,
+              empowering businesses to get ahead in a competitive marketplace.
+              As such, the Wealthmax team of financial advisers helps our
+              clients obtain the funding they require for an array of reasons.
+              Expansion into new locations or markets Acquiring new machinery
+              and upgrading equipment managing cash flow during seasonal
+              fluctuations renovating or expanding existing premises. Covering
+              unexpected emergency expenses bridging and auction purchases
+              property purchase both owner occupied and investments property
+              development finance.
+            </p>
+          </div>
+        </div>
+        <!-- Right side images -->
+        <div class="col-12 col-lg-6 mt-3">
+          <div class="row">
+            <div class="d-flex position-relative image-section">
+              <!-- Left big image -->
+              <div class="img-box big-img h-100 me-1">
+                <img
+                  src="/commerciallending/mainimg.png"
+                  alt="Main Image"
+                  class="animated-img main-img"
+                />
+              </div>
+
+              <!-- Right stacked images -->
+              <div class="col-6 d-flex flex-column">
+                <div class="img-box small-img flex-fill mb-2">
+                  <img
+                    src="/commerciallending/topimg.png"
+                    alt="Top Image"
+                    class="animated-img top-img"
+                  />
+                </div>
+                <div class="img-box small-img flex-fill">
+                  <img
+                    src="/commerciallending/bottom..png"
+                    alt="Bottom Image"
+                    class="animated-img bottom-img"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- What we Offer? -->
+    <div class="container py-3 py-md-5 mt-3 text-center">
+      <h2 class="txtorange heading-txt topMargin">What we Offer?</h2>
+      <p class="textSize text-center">
+        Commercial financing is suitable for a wide range of individuals and
+        organisations, whether talking about small and medium-sized enterprises
+        (SMEs), property developers, non-profit organisations or large
+        corporations.
+      </p>
+
+      <!-- Cards Grid -->
+      <div class="row g-4 justify-content-center mt-3 mb-3">
+        <div class="col-12 col-lg-4" *ngFor="let card of cards">
+          <div
+            class="card h-100 border-0 shadow-sm rounded-4 border-card hover-card text-start p-0 p-md-3"
+          >
+            <div class="card-body d-flex flex-column align-items-start">
+              <img [src]="card.icon" alt="icon" class="mb-3 card-icon" />
+              <h5 class="fw-bold btn-text mb-2">{{ card.title }}</h5>
+              <p class="mb-3 text-muted textSize text-start">
+                {{ card.description }}
+              </p>
+              <a [href]="card.link" class="txtorange mt-auto underline-link"
+                >Learn More</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- last section -->
+  <div class="container mgtopbottom p-1 p-lg-2">
+    <app-last-btn-comp
+      [align]="'center'"
+      [title]="'Looking for Commercial Lending Solutions?'"
+      [subtitle]="
+        'Our brokers are experienced in financing and have access to a wide range of
+    mortgage options. Contact us today to discuss your mortgage requirements and
+    secure the ideal financing solution.'
+      "
+      [buttonText]="'Speak to our Advisers'"
+      [buttonLink]="'/contact-us'"
+    />
+  </div>
+</div>

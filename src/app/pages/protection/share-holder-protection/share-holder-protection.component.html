@@ -1,0 +1,140 @@
+<app-banner
+  [title]="'Shareholder Protection Cover'"
+  [subtitle]="
+    'Safeguard key stakeholders with bespoke shareholder protection solutions that ensure financial stability and smooth transitions '
+  "
+  [desktopImage]="'/desktop image/shareholder.webp'"
+  [mobileImage]="'/Mobile img/shareholder protection.webp'"
+  [buttons]="[
+    {
+      label: 'Book a Free Consultation',
+      class: 'btn btn-lg bg-white txtorange',
+      action: 'dialog'
+    }
+  ]"
+></app-banner>
+
+<div class="container mgtop">
+  <h3 class="heading-txt mb-3 text-center">
+    Why have Shareholder Protection Cover?
+  </h3>
+  <p class="text-Size text-justify text-lg-center">
+    There’s a common misconception that shareholder protection and directors’
+    insurance are the same. In reality, they are distinctly different forms of
+    business cover. Shareholder protection is designed to safeguard business
+    owners in the event of a shareholder’s death or diagnosis of a critical
+    illness, whereas directors’ insurance typically relates to indemnity or
+    liability risks associated with a director’s role.
+  </p>
+
+  <p class="text-Size text-justify text-lg-center">
+    Shareholder protection is also often confused with key person insurance.
+    While both aim to mitigate financial risks, they serve different purposes.
+    Key person insurance helps protect the business against the loss of a vital
+    individual whose absence could affect profitability. In contrast,
+    shareholder protection specifically addresses ownership continuity—ensuring
+    that if a shareholder exits due to death or illness, the remaining owners
+    can retain control and minimise disruption to the business.
+  </p>
+</div>
+<!-- Title -->
+
+<div class="container">
+  <div class="mgtop">
+    <h3 class="heading-txt mb-3 text-center">
+      What are Benefits of Shareholder Protection Cover?
+    </h3>
+  </div>
+  <div class="row justify-content-center align-items-center gx-4 pt-5">
+    <div class="col-12 col-lg-6 d-flex flex-column justify-content-center">
+      <!-- each feature row is a flex row so icon and text align nicely -->
+      <div class="d-flex align-items-start mb-3 feature border-bottom">
+        <div class="me-3 icon-col">
+          <img src="/share holder/business.svg" alt="icon" class="icon-img" />
+        </div>
+        <div>
+          <h4 class="heading-title">Business Security</h4>
+          <p class="text-Size">
+            Business Security Shareholder protection provides a financial safety
+            net that helps ensure business continuity in the event of a
+            shareholder’s death or critical illness. It enables the remaining
+            shareholders to retain control and avoid disruption.
+          </p>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-start mb-3 feature border-bottom">
+        <div class="me-3 icon-col">
+          <img src="/share holder/decision.svg" alt="icon" class="icon-img" />
+        </div>
+        <div>
+          <h4 class="heading-title">Decision - Making Power is Retained</h4>
+          <p class="text-Size">
+            Decision-Making Power Is Retained With the right arrangements in
+            place, surviving shareholders can purchase the departing
+            shareholder’s stake, preventing external parties from gaining
+            influence over business decisions.
+          </p>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-start mb-3 feature border-bottom">
+        <div class="me-3 icon-col">
+          <img
+            src="/share holder/stakeholder.svg"
+            alt="icon"
+            class="icon-img"
+          />
+        </div>
+        <div>
+          <h4 class="heading-title">Stakeholder / Investor Confidence</h4>
+          <p class="text-Size">
+            Stakeholder & Investor Confidence Having shareholder protection
+            demonstrates sound risk management, which can enhance confidence
+            among investors, lenders, and other stakeholders.
+          </p>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-start mb-3 feature border-bottom">
+        <div class="me-3 icon-col">
+          <img src="/share holder/market.svg" alt="icon" class="icon-img" />
+        </div>
+        <div>
+          <h4 class="heading-title">A Market for the Shares</h4>
+          <p class="text-Size">
+            A Market for the Shares When structured correctly, shareholder
+            protection creates a market for shares in private companies that are
+            too small to be listed on a recognised exchange. The policy provides
+            the funds needed for a smooth transfer of ownership between existing
+            shareholders.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-6 d-flex justify-content-center">
+      <!-- constrain height so it doesn't force parent taller than desired -->
+      <img
+        src="/share holder/protection.png"
+        alt="illustration"
+        class="img-fluid right-illustration"
+      />
+    </div>
+  </div>
+</div>
+<div class="container mgtop">
+  <app-faq [faqs]="faqs"></app-faq>
+</div>
+
+<div class="container mgtopbottom p-1 p-lg-2">
+  <app-last-btn-comp
+    [align]="'center'"
+    [title]="'Looking for a Shareholder Protection Cover?'"
+    [subtitle]="
+      'Wealthmax is here to help. Our advisers are experienced in shareholder protection cover and can provide solutions tailored to your business. Contact us today to secure the right cover and ensure stability if a shareholder unexpectedly passes away or becomes critically ill.'
+    "
+    [buttonText]="'Speak to our Advisers'"
+    [buttonLink]="'/contact-us'"
+  />
+</div>

@@ -1,0 +1,407 @@
+/* Background container with gradient */
+.bgcolorlinear {
+  border-radius: 0 0 36px 36px;
+  padding: 0px 0px 30px 0px;
+  background: linear-gradient(
+    to top,
+    rgba(255, 220, 197, 1) 20%,
+    rgba(255, 250, 248, 1) 80% /* light orange top */
+  );
+}
+
+.container {
+  overflow: visible !important;
+}
+.subheading-txt {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+/* Card grid */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 per row on desktop */
+  gap: 24px;
+  margin-top: 4%;
+}
+
+/* Individual card */
+.card {
+  background: #fff;
+  border-radius: 16px;
+  border: 3px solid rgba(255, 201, 167, 1);
+  padding: 5%;
+  height: 100%;
+  min-height: 120px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card > div {
+  gap: 12px;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border: 3px solid #ff6600;
+  box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* Icon */
+.card .icon-box {
+  min-width: 50px;
+  height: 50px;
+  background: rgba(255, 201, 167, 0);
+  border-radius: 12px;
+}
+
+.card .card-icon {
+  width: 50px;
+  height: 50px;
+}
+.step > div > p {
+  text-align: left !important;
+}
+
+/* Text */
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba(1, 0, 76, 1);
+  font-family: "Urbanist";
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.card-text {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0%;
+}
+
+.iconImg {
+  margin-bottom: 2%;
+}
+
+.sub-txt {
+  font-family: "Urbanist";
+  font-weight: 600;
+  font-style: "SemiBold";
+  color: #01004c;
+  font-size: 22px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+.small {
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: "Regular";
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0%;
+  color: rgba(52, 52, 52, 1);
+}
+.form-section {
+  width: 45%;
+  height: 55%;
+  border-radius: 22px;
+  gap: 10px;
+  padding: 3% 6%;
+  background-image: url("/nw/form-img.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+.txt {
+  color: #fff;
+  font-family: "Inter", sans-serif;
+}
+
+.btncolor {
+  /* width: 159px;
+  height: 50px;
+  border-radius: 8px;
+  gap: 8px;
+  padding: 12px 30px; */
+  color: #eb7124;
+  background-color: #fff;
+}
+
+.btncolor:hover {
+  background-color: #fff;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: #ccc !important; /* optional, sets normal border */
+}
+.img-fluid {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.h-size {
+  font-size: 50px;
+}
+.sub-size {
+  font-size: 18px;
+}
+@media (max-width: 1500px) {
+  .card-title {
+    font-size: 20px;
+  }
+  .card-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .h-size {
+    font-size: 36px;
+  }
+}
+@media (max-width: 1200px) {
+  .card-title {
+    font-size: 18px;
+  }
+  .card-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .card .card-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .small {
+    font-size: 16px;
+  }
+  .sub-size {
+    font-size: 16px;
+  }
+   .form-section {
+    width: 50%;
+    height: auto;
+  }
+}
+@media (max-width: 990px) {
+  .form-section {
+    width: 100%;
+    height: 100%;
+    margin-top: 5%;
+  }
+  .img-fluid {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+  }
+  .imgfluid {
+    width: 45%;
+    height: auto;
+    object-fit: cover;
+  }
+  .i-box {
+    height: 70%;
+  }
+  .cards-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .small {
+    font-size: 16px;
+  }
+  .subheading-txt {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .h-size {
+    font-size: 32px;
+  }
+}
+@media (max-width: 767px) {
+  .step > div > p {
+    text-align: justify !important;
+  }
+  .card-title {
+    font-size: 16px;
+  }
+  .card-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .cards-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .card .icon-box {
+    min-width: 40px;
+    height: 40px;
+  }
+  .sub-txt {
+    font-size: 18px;
+  }
+  .small {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .subheading-txt {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .h-size {
+    font-size: 20px;
+  }
+  .sub-size {
+    font-size: 14px;
+  }
+  .b-size{
+    margin-bottom: 10%;
+  }
+}
+
+/* Orange accent color */
+.text-orange {
+  color: #eb7124;
+}
+
+/* Background box for testimonials */
+.bgcolor {
+  background-color: #fff4ed;
+  border: 1px solid #f8c9b0;
+  box-shadow: 0px 0px 19px rgba(235, 113, 36, 0.15);
+  height: 24vh;
+  border-radius: 12px !important;
+}
+
+/* New wrapper for outside indicators */
+.carousel-indicators-outside {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* spacing between dots */
+  margin-top: 2%; /* distance from carousel */
+}
+
+/* Indicators styling */
+.carousel-indicators-outside [data-bs-target] {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #f3b992;
+  border: none;
+}
+
+.carousel-indicators-outside .active {
+  background-color: #eb7124;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  display: none !important;
+}
+
+.b-color {
+  box-shadow: 0px 0px 19px 0px rgba(235, 113, 36, 0.15) !important;
+}
+
+.error {
+  color: #01004c !important;
+}
+
+@media (max-width: 450px) {
+  .txt-Size {
+    font-size: 12px !important;
+  }
+}
+@media (max-width: 390px) {
+  .txt-Size {
+    font-size: 10px !important;
+  }
+  .bgcolor {
+    height: 30vh;
+  }
+}
+.carousel-item {
+  position: static !important;
+  float: left;
+  width: 100%;
+  margin-right: -100%;
+  backface-visibility: hidden;
+  transition: transform 0.6s ease-in-out;
+}
+.carousel-inner {
+    position: static !important;
+    width: 100%;
+    overflow: hidden;
+}
+/* .carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+  transition: transform 0.6s ease;
+} */
+
+/* Make fade smoother and keep consistent card height to avoid jumps */
+/* .carousel.carousel-fade .carousel-item {
+  transition: opacity 0.6s ease-in-out; 
+  backface-visibility: hidden;
+} */
+
+/* Ensure the cards occupy the same height (prevents layout jumping) */
+/* .testimonial-card {
+  height: 24vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+} */
+/* Optional: keep indicators visually aligned when card height changes */
+/* .carousel-indicators-outside {
+  margin-top: 1rem;
+} */
+
+.truncate-4 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  overflow: hidden;
+}
+
+/* Smooth card slide effect */
+/* .carousel-item-next .testimonial-card,
+.carousel-item-start .testimonial-card {
+  animation: slideInRight 0.8s ease forwards;
+}
+
+.carousel-item-prev .testimonial-card,
+.carousel-item-end .testimonial-card {
+  animation: slideInLeft 0.8s ease forwards;
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+} */

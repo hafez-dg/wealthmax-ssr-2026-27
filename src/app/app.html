@@ -1,0 +1,25 @@
+<!-- <div class="" style="position: relative">
+  <div *ngIf="isLoading || isloading" class="global-loader">
+    <mat-spinner class="orange-spinner"></mat-spinner>
+  </div>
+
+  <ng-container *ngIf="routeReady && !isLoading">
+    <app-navbar *ngIf="!hideLayout()"></app-navbar>
+
+    <div #navbarRef id="notnavbar" (click)="onNavbarRefClick()">
+      <router-outlet></router-outlet>
+      <app-cookie-consent></app-cookie-consent>
+      <app-footer *ngIf="!hideLayout()"></app-footer>
+    </div>
+  </ng-container>
+</div> -->
+<div class="" style="position: relative">
+  <ng-container>
+    <app-navbar *ngIf="!hideLayout()"></app-navbar>
+    <div #navbarRef id="notnavbar" (click)="onNavbarRefClick()">
+      <router-outlet></router-outlet>
+      <app-cookie-consent></app-cookie-consent>
+      <app-footer *ngIf="!hideLayout()"></app-footer>
+    </div>
+  </ng-container>
+</div>

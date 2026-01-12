@@ -1,0 +1,27 @@
+<!-- Overlay with blur -->
+<div class="blur-overlay" *ngIf="showPopup"></div>
+
+<!-- Popup -->
+<div class="cookie-popup text-Size" *ngIf="showPopup">
+  <div class="cookie-content">
+
+    <p>
+      We use cookies and similar technologies to collect information from your device when you use our website.
+    </p>
+    <p>
+      Some are essential to make sure our website works properly and is secure. Others are optional and need your consent.
+      For example, where we use cookies to help show you more relevant content and adverts.
+    </p>
+
+    <div class="cookie-buttons">
+      <!-- ✅ Added click handlers -->
+      <button class="btn btn w-90 cookie btnall" (click)="acceptCookies()">
+        Allow all cookies
+      </button>
+      <button class="btn btn-outline w-90 cookie btnall" (click)="rejectCookies()">
+        Reject all cookies
+      </button>
+    </div>
+
+  </div>
+</div>

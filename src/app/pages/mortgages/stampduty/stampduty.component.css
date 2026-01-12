@@ -1,0 +1,151 @@
+/* Outer section */
+.calc-wrapper {
+  padding: 40px 0;
+}
+
+/* Center container */
+.calc-grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  padding: 20px 0;
+
+}
+
+/* Main card container */
+.calc-card {
+  width: 100%;
+  max-width: 800px;   /* Same width as screenshot */
+  background: transparent !important;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Iframe container */
+.calc-card-body {
+  width: 100%;
+  padding: 0;
+  /* background: #fff; */
+
+}
+
+/* Iframe styling */
+.calc-card-body iframe {
+  width: 100%;
+  height: 730px;  /* matches screenshot height */
+  border: none;
+  background-color: transparent;
+}
+
+
+
+/* Mobile */
+@media (max-width: 670px) {
+  .calc-card-body iframe {
+    height: 820px;
+  }
+  .container{
+    padding-inline: 1% !important;
+  }
+}
+
+.iframe-height {
+  position: relative;
+  height: 520px;   /* must be fixed or min-height */
+  width: 100%;
+}
+
+.iframe-loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #f9fafb;
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.spinner {
+  width: 38px;
+  height: 38px;
+  border: 4px solid #e5e7eb;
+  border-top: 4px solid #ff7a00;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 12px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}
+
+
+.calc-card-body {
+  position: relative;
+  height: 520px;       /* MUST be fixed */
+  width: 100%;
+  overflow: hidden;
+}
+
+.iframe-loader {
+  position: absolute;
+  inset: 0;
+  background: #f9fafb;
+  border-radius: 12px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 5;
+}
+
+.Calculator {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e5e7eb;
+  border-top: 4px solid #ff7a00;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+.calc-card-body {
+  position: relative;
+  width: 100%;
+  height: 520px;
+}
+
+.Calculator {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.iframe-loader {
+  position: absolute;
+  inset: 0;
+  background: #f9fafb;
+  z-index: 10;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

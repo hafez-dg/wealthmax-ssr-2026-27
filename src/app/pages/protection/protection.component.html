@@ -1,0 +1,148 @@
+<div class="bgclr_main">
+  <app-banner
+    [title]="'Protection Planning'"
+    [subtitle]="
+      'Safeguard your tomorrow with protection plans designed to provide peace of mind, security and strength through life’s uncertainties'
+    "
+    [desktopImage]="'/desktop image/protection.webp'"
+    [mobileImage]="'/Mobile img/protection.webp'"
+    [buttons]="[
+      {
+        label: ' Get Your Free Quote ',
+        class: 'btn btn-lg bg-orange text-white',
+        href: 'https://wealthmax-financial-advisers.prequo.co.uk/#/',
+        target: '_blank'
+      }
+    ]"
+  ></app-banner>
+
+  <!-- first top section -->
+
+  <div class="container mgtop">
+    <div class="row">
+      <div class="col-12 col-lg-6">
+        <h2 class="txtorange heading-txt">
+          Why Choose Wealthmax for your Protection Plan?
+        </h2>
+        <div class="textSize text-justify">
+          <p>
+            At Wealthmax, we specialise in helping people understand the
+            financial risks they run and protect themselves and their families
+            from the financial impacts of illness, injury and death. We also
+            help our customers buy and protect their homes and business premises
+            and to manage their accumulated wealth.
+          </p>
+          <p>
+            Illness or injury can occur at any time and the problems that follow
+            can be as unexpected as the illness or the injury itself. We will
+            help you work out what measures you can put in place to protect
+            yourself and the people who rely on you most from the financial
+            consequences that might follow. Having the right cover in place
+            offers great peace of mind in an uncertain world.
+          </p>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6 h-100">
+        <div class="row">
+          <div class="position-relative image-section">
+            <!-- Left big image -->
+            <div class="img-box big-img h-100">
+              <img
+                src="/protection-img/main.svg"
+                alt="Main Image"
+                class="animated-img main-img"
+              />
+            </div>
+
+            <!-- Right stacked images -->
+            <div class="col-6 d-flex flex-column">
+              <div class="img-box small-img flex-fill mb-2">
+                <img
+                  src="/protection-img/right.svg"
+                  alt="Top Image"
+                  class="animated-img top-img"
+                />
+              </div>
+              <div class="img-box small-img flex-fill">
+                <img
+                  src="/protection-img/topimg.png"
+                  alt="Bottom Image"
+                  class="animated-img bottom-img"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="gradient-bg">
+    <!-- What we Offer? -->
+    <div class="container py-3 py-md-5 mt-3 text-center">
+      <h2 class="text-center txtorange heading-txt topMargin">
+        What we Offer?
+      </h2>
+      <p class="textSize text-center">
+        Protection planning is about creating a financial safety net that
+        ensures you, your family, or your business are supported in the face of
+        life’s uncertainties—such as illness, loss of income, or death.
+      </p>
+
+      <div
+        class="button-container d-flex flex-wrap justify-content-center gap-3 mt-4 mb-5"
+      >
+        <button
+          *ngFor="let tab of tabs"
+          class="btn btntxt rounded-5 btn-large-custom"
+          [ngClass]="{
+            'btn-outline-orange': activeTab !== tab,
+            'btn-orange text-white': activeTab === tab
+          }"
+          (click)="setTab(tab)"
+        >
+          {{ tab }}
+        </button>
+      </div>
+
+      <!-- Cards Grid -->
+      <div class="row g-4 justify-content-center">
+        <div
+          class="col-12 col-sm-10 col-md-6 col-md-12 col-lg-6"
+          *ngFor="let card of offers[activeTab]"
+        >
+          <div
+            class="card h-100 border-0 shadow-sm rounded-4 border-card hover-card text-start p-0 p-md-3"
+          >
+            <div class="card-body d-flex flex-column align-items-start">
+              <img [src]="card.icon" alt="icon" class="mb-3 card-icon" />
+              <h5 class="btn-text mb-2">{{ card.title }}</h5>
+              <p class="mb-3 text-muted textSize text-start">
+                {{ card.description }}
+              </p>
+              <!-- HTML -->
+              <button
+                class="txtorange mt-auto underline-link"
+                [routerLink]="card.link"
+              >
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- last section -->
+  <div class="container mgtopbottom p-1 p-lg-2">
+    <app-last-btn-comp
+      [align]="'center'"
+      [title]="'Looking for Protection Plan?'"
+      [subtitle]="
+        'Our advisers are experienced in financing and have access to a wide range of Protection Planning options. Contact us today to discuss your Protection requirements and secure the ideal financing solution.'
+      "
+      [buttonText]="'Speak to our Advisers'"
+      [buttonLink]="'/contact-us'"
+    />
+  </div>
+</div>

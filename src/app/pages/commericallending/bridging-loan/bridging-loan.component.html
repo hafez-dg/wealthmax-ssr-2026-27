@@ -1,0 +1,169 @@
+<div class="bgclr_main">
+  <app-banner
+    [title]="'Bridging Loan'"
+    [subtitle]="
+      'Protect your assets and secure your legacy with tailored Trust Planning solutions designed to safeguard your wealth for generations'
+    "
+    [desktopImage]="'/desktop image/bridgingLoan.webp'"
+    [mobileImage]="'/Mobile img/bridging loan.webp'"
+    [buttons]="[
+      {
+        label: 'Book a Free Consultation',
+        class: 'btn btn-lg bg-white txtorange',
+        action: 'dialog'
+      }
+    ]"
+  ></app-banner>
+  <div class="container mgtop">
+    <h3 class="heading-txt mb-3 text-center">Why Choose Bridging Loan?</h3>
+    <p class="text-Size text-justify text-lg-center">
+      A bridging loan in the UK is a short-term financing option designed to
+      “bridge” the gap when funds are needed quickly, often between buying a new
+      property and selling an existing one. It provides fast access to capital,
+      making it useful for property purchases, renovations, or covering urgent
+      financial commitments. While interest rates are typically higher than
+      standard mortgages, the flexibility and speed of approval make bridging
+      loans a valuable solution for both homeowners and investors. At Wealthmax
+      Financial Advisers, we specialise in guiding clients through bridging
+      finance, ensuring you secure the right option tailored to your
+      circumstances.
+    </p>
+  </div>
+  <div class="bgcolorlinear">
+    <div class="container mgtop">
+      <h3 class="heading-txt mb-3 text-center">What we Offer?</h3>
+      <p class="textSize text-md-center text-justify">
+        Bridging loans give businesses fast, flexible funding to cover
+        short-term gaps, secure property, or seize timely opportunities without
+        delays.
+      </p>
+      <div class="row g-4 justify-content-center mt-3 mb-3">
+        <div
+          class="col-12 col-sm-10 col-md-6 col-lg-6"
+          *ngFor="let card of cards"
+        >
+          <div
+            class="card h-100 border-0 shadow-sm rounded-4 border-card hover-card text-start p-3"
+          >
+            <div class="card-body d-flex flex-column align-items-start">
+              <img [src]="card.icon" alt="icon" class="mb-3 card-icon" />
+              <h5 class="fw-bold btn-text mb-2">{{ card.title }}</h5>
+              <p class="mb-3 text-muted textSize text-start">{{ card.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mgtop">
+    <div>
+      <h3 class="heading-txt mb-3 text-center">
+        What are Benefits of Bridging Loan?
+      </h3>
+      <p class="text-Size text-md-center text-justify mb-3">
+        A bridging loan is a kind of short-term financing that's used to
+        'bridge’ the gap between the purchase of a new property and the sale of
+        your old one. Here are a few benefits of Bridging Loan
+      </p>
+    </div>
+    <div class="row justify-content-center align-items-center gx-4 pt-1">
+      <div class="col-12 col-lg-6 d-flex flex-column justify-content-center">
+        <!-- each feature row is a flex row so icon and text align nicely -->
+        <div class="d-flex align-items-start mb-3 feature border-bottom">
+          <div class="me-3 icon-col">
+            <img
+              src="/commerciallending/bridgingloan/benefits-icon-5.svg"
+              alt="icon"
+              class="icon-img"
+            />
+          </div>
+          <div>
+            <h4 class="heading-title">Quick Access to Funds</h4>
+            <p class="text-Size new-txt">
+              Receive financing faster than traditional loans, helping you act
+              on time-sensitive opportunities.
+            </p>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-start mb-3 feature border-bottom">
+          <div class="me-3 icon-col">
+            <img
+              src="/commerciallending/bridgingloan/benefits-icon-6.svg"
+              alt="icon"
+              class="icon-img"
+            />
+          </div>
+          <div>
+            <h4 class="heading-title">Flexible Repayment Options</h4>
+            <p class="text-Size new-txt">
+              Short-term solutions tailored to your business needs without
+              long-term commitments.
+            </p>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-start mb-3 feature border-bottom">
+          <div class="me-3 icon-col">
+            <img
+              src="/commerciallending/bridgingloan/benefits-icon-7.svg"
+              alt="icon"
+              class="icon-img"
+            />
+          </div>
+          <div>
+            <h4 class="heading-title">Bridge Financial Gaps</h4>
+            <p class="text-Size new-txt">
+              Cover temporary cash flow shortages, property purchases, or other
+              urgent expenses.
+            </p>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-start mb-3 feature border-bottom">
+          <div class="me-3 icon-col">
+            <img
+              src="/commerciallending/bussiness/icon1.svg"
+              alt="icon"
+              class="icon-img"
+            />
+          </div>
+          <div>
+            <h4 class="heading-title">Support Growth Opportunities</h4>
+            <p class="text-Size new-txt">
+              Secure assets or investments immediately, enabling expansion or
+              strategic moves.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-6 d-flex justify-content-center">
+        <!-- constrain height so it doesn't force parent taller than desired -->
+        <img
+          src="/commerciallending/bridgingloan/benefits-bridging-loan.png"
+          alt="illustration"
+          class="img-fluid right-illustration"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="container mgtop">
+    <app-faq [faqs]="buyToLetFaqs"></app-faq>
+
+    <!-- section-5 -->
+
+  </div>
+</div>
+<div class="container mgtopbottom p-1 p-lg-2">
+      <app-last-btn-comp
+        [align]="'center'"
+        [title]="'Looking for Bridging Loan?'"
+        [subtitle]="
+          'Wealthmax Financial Advisers is here to help! Our specialists in bridging loans provide fast, flexible finance solutions to help you complete property purchases, renovations, or business transactions without delay. We’ll guide you to the right short-term funding option tailored to your goals.Contact us today to secure quick and reliable bridging finance when timing matters most.'
+        "
+        [buttonText]="'Speak to our Advisers'"
+        [buttonLink]="'/contact-us'"
+      />
+    </div>

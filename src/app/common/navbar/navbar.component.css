@@ -1,0 +1,345 @@
+/* Top Header Section */
+.top-header {
+  background-color: white;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 12px 0;
+}
+
+.top-header-container {
+  max-width: 1650px;
+  margin: 0 auto;
+  padding: 0 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 62px;
+  width: auto;
+  object-fit: contain;
+}
+
+.contact-section {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #333;
+  font-family: "Urbanist", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.contact-item i {
+  font-size: 14px;
+  color: #f27c3e;
+}
+
+.contact-item:hover {
+  color: #f27c3e;
+}
+
+.adviser-hub-btn {
+  background-color: #f27c3e;
+  color: white;
+  padding: 10px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-family: "Urbanist", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.adviser-hub-btn:hover {
+  background-color: #e06b2f;
+  color: white;
+}
+
+/* Main Navbar Styles */
+.navbar-new {
+  background-color: #f27c3e;
+  width: 100%;
+  position: relative;
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.nav-items-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  width: 100%;
+}
+
+.nav-item-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item.has-dropdown {
+  position: relative;
+}
+
+.nav-item.dropdown-open .nav-link {
+  background-color: #00104c;
+}
+
+.nav-link {
+  font-family: "Urbanist", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: white !important;
+  text-decoration: none;
+  padding: 18px 24px;
+  display: block;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-item .active-link {
+  background-color: #00104c;
+  color: white !important;
+}
+
+/* Dropdown Panel Styles */
+.dropdown-panel {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #00104c;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: slideDown 0.3s ease-out;
+  width: auto;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-content {
+  padding: 20px 20px;
+}
+
+.dropdown-title {
+  font-family: "Urbanist", sans-serif;
+  font-weight: 600;
+  font-size: 26px;
+  color: white;
+  margin-bottom: 25px;
+  margin-top: 0;
+  white-space: nowrap;
+}
+
+/* Dropdown Items Grid */
+.dropdown-items-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+
+/* Grouped Items (for Protection, Commercial Lending) */
+.dropdown-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.group-title {
+  font-family: "Urbanist", sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  color: white;
+  margin-bottom: 0;
+  margin-top: 0;
+  white-space: nowrap;
+}
+
+.group-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px 40px;
+  align-items: flex-start;
+  margin-top: 12px;
+}
+
+/* Flat Items (for Mortgage, About Us, etc.) */
+.dropdown-flat-items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.dropdown-link {
+  font-family: "Urbanist", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  padding: 6px 0;
+  display: inline-block;
+  transition: all 0.2s ease;
+  position: relative;
+  white-space: nowrap;
+}
+
+.dropdown-link:hover {
+  color: #f27c3e;
+}
+
+.dropdown-link.active-dropdown-link {
+  color: #f27c3e;
+  font-weight: 500;
+}
+
+/* Responsive Styles */
+@media (max-width: 1400px) {
+  .top-header-container {
+    padding: 0 40px;
+  }
+
+  .dropdown-content {
+    padding: 40px 40px;
+  }
+
+  .nav-link {
+    padding: 18px 20px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .top-header {
+    display: none;
+  }
+
+  .navbar-new {
+    display: none;
+  }
+
+  .dropdown-items-grid {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .dropdown-flat-items {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-header-container {
+    padding: 0 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .logo-img {
+    height: 40px;
+  }
+
+  .contact-section {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .contact-item {
+    font-size: 13px;
+  }
+
+  .adviser-hub-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .dropdown-content {
+    padding: 30px 20px;
+  }
+
+  .dropdown-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .dropdown-items-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .group-title {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .dropdown-link {
+    font-size: 14px;
+  }
+}
+
+/* Ensure proper stacking */
+.position-relative {
+  position: relative;
+  z-index: 1001;
+}

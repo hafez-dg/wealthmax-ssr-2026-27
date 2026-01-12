@@ -1,0 +1,141 @@
+<app-banner
+  [title]="'Buy to Let Finance'"
+  [subtitle]="
+    'Transform your property goals into reality with Buy to Let Finance crafted to support smart investment and steady growth'
+  "
+  [desktopImage]="'/desktop image/buyToLetFinance.webp'"
+  [mobileImage]="'/Mobile img/buy to let finance.webp'"
+  [buttons]="[
+    {
+      label: 'Book a Free Consultation',
+      class: 'btn btn-lg bg-white txtorange',
+      action: 'dialog'
+    }
+  ]"
+></app-banner>
+<div class="container mgtop">
+  <!-- Title -->
+  <h3 class="heading-txt mb-3 text-center">Why Choose Buy to Let Finance?</h3>
+
+  <p class="text-Size text-justify text-lg-center">
+    Whether you’re, looking to expand your investment portfolio or diversify
+    your assets, understanding what's involved with a commercial buy-to-let
+    mortgage is crucial. At Wealthmax, we can support you with options around
+    lenders who would finance these investment opportunities. According to
+    recent figures, the average yearly commercial rental property yield is 4.5%,
+    meaning that this type of investment can offer a significant return - and
+    that's before you consider the building's overall appreciation over time.
+    Our experts can search buy-to-let mortgage deals from all of the UK's major
+    lenders to find you the best option.
+  </p>
+
+  <div class="mgtop">
+    <div>
+      <h3 class="heading-txt mb-3 text-center">
+        What are Benefits of Buy to Let Finance?
+      </h3>
+      <p class="text-Size text-md-center text-justify mb-3">
+        Investing in property can be a smart way to build long-term wealth.
+        Here’s how Buy to Let Finance can make your investment journey easier
+        and more rewarding.
+      </p>
+    </div>
+    <div class="row justify-content-center align-items-center gx-4 pt-1">
+      <div class="col-12 col-lg-6 d-flex flex-column justify-content-center">
+        <!-- each feature row is a flex row so icon and text align nicely -->
+
+        <div class="d-flex align-items-start mb-3 feature border-bottom">
+          <div class="me-3 icon-col">
+            <img
+              src="/commerciallending/buyToLet/icon1.svg"
+              alt="icon"
+              class="icon-img"
+            />
+          </div>
+          <div>
+            <h4 class="heading-title">Steady Rental Income</h4>
+            <p class="text-Size new-txt">
+              Investing in buy-to-let properties provides a reliable income
+              stream, especially with long-term tenant leases.
+            </p>
+          </div>
+        </div>
+        <div class="d-flex align-items-start mb-3 feature border-bottom">
+          <div class="me-3 icon-col">
+            <img
+              src="/commerciallending/asset/icon1.svg"
+              alt="icon"
+              class="icon-img"
+            />
+          </div>
+          <div>
+            <h4 class="heading-title">Capital Appreciation</h4>
+            <p class="text-Size new-txt">
+              Over time, the property you purchase is likely to increase in
+              value, enhancing your overall investment.
+            </p>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-start mb-3 feature border-bottom">
+          <div class="me-3 icon-col">
+            <img
+              src="/commerciallending/asset/icon3.svg"
+              alt="icon"
+              class="icon-img"
+            />
+          </div>
+          <div>
+            <h4 class="heading-title">Tax Advantages</h4>
+            <p class="text-Size new-txt">
+              Mortgage interest and property-related expenses can be deducted,
+              reducing your taxable income.
+            </p>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-start mb-3 feature border-bottom">
+          <div class="me-3 icon-col">
+            <img
+              src="/commerciallending/buyToLet/icon4.svg"
+              alt="icon"
+              class="icon-img"
+            />
+          </div>
+          <div>
+            <h4 class="heading-title">Prime Location Benefits</h4>
+            <p class="text-Size new-txt">
+              Properties in desirable areas tend to attract better tenants and
+              retain higher value, increasing profitability.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-6 d-flex justify-content-center">
+        <!-- constrain height so it doesn't force parent taller than desired -->
+        <img
+          src="/commerciallending/buyToLet/benefit-banner.png"
+          alt="illustration"
+          class="img-fluid right-illustration"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="mgtop">
+    <app-faq [faqs]="buyToLetFaqs"></app-faq>
+  </div>
+</div>
+
+<!-- section-5 -->
+<div class="mgtopbottom p-1 p-lg-2">
+  <app-last-btn-comp
+    [align]="'center'"
+    [title]="'Looking for Buy to Let Finance?'"
+    [subtitle]="
+      'Wealthmax Financial Advisers is here to help! Our advisers are experienced in buy-to-let mortgages and can guide you to secure the right property financing to maximize your rental income and investment potential. Contact us today to find the ideal solution for your property investment goals'
+    "
+    [buttonText]="'Speak to our Advisers'"
+    [buttonLink]="'/contact-us'"
+  />
+</div>

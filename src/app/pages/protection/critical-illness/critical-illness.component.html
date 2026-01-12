@@ -1,0 +1,209 @@
+<app-banner
+  [title]="'Critical Illness Cover'"
+  [subtitle]="
+    'Face life’s uncertainties with confidence through critical illness cover that ensures financial strength during challenging times '
+  "
+  [desktopImage]="'/desktop image/criticalillness.webp'"
+  [mobileImage]="'/Mobile img/critical illness.webp'"
+  [buttons]="[
+      {
+        label: ' Get Your Free Quote ',
+        class: 'btn btn-lg bg-orange text-white',
+        href: 'https://wealthmax-financial-advisers.prequo.co.uk/#/',
+        target: '_blank'
+      }
+    ]"
+></app-banner>
+
+<div class="container mgtop">
+  <h3 class="heading-txt mb-3 text-center">
+    Why Consider Critical Illness Cover?
+  </h3>
+  <p class="text-Size text-justify text-lg-center">
+    According to Cancer Research UK, one in two people will be diagnosed with
+    cancer at some point in their lifetime. Figures published by the Association
+    of British Insurers show that in 2022, £1.27 billion was paid out in
+    critical illness claims. This type of cover can offer a valuable financial
+    safety net for individuals and their families, providing breathing space
+    during difficult times especially when illness prevents someone from working
+    and adds emotional and financial strain.
+  </p>
+</div>
+
+<div class="container ">
+  <div class=" mgtop">
+    <h3 class="heading-txt mb-3 text-center">
+      The Various Conditions Covered by Critical Illness Policies
+    </h3>
+    <p class="text-Size text-justify text-lg-center">
+      When discussing critical illness cover with a WealthMax financial adviser,
+      you'll discover that most policies provide financial protection against a
+      range of major health issues. The number of conditions covered can vary
+      from as little as three up to 60 to 70 illnesses, depending on the
+      insurance company. That said, the majority will typically include the
+      following
+    </p>
+  </div>
+
+  <div class="my-md-5">
+    <div class="row align-items-center justify-content-between h-100">
+      <!-- Left Column -->
+      <div class="col-md-6 col-lg-4 row height-cards">
+        <div>
+          <div class="my-3">
+            <img
+              src="/Critical Illness/cancer.svg"
+              alt="Critical"
+              class="icon-img"
+            />
+          </div>
+          <div>
+            <h5 class="btn-text1">Cancer: Specific Types & Stages</h5>
+            <p class="textSize1">Financial support if diagnosed with cancer</p>
+          </div>
+        </div>
+        <div>
+          <div class="my-3">
+            <img
+              src="/Critical Illness/stroke.svg"
+              alt="stroke"
+              class="icon-img"
+            />
+          </div>
+          <div>
+            <h5 class="btn-text1">Stroke: Resulting in permanent symptoms</h5>
+            <p class="textSize1">
+              Protection if a stroke leaves lasting disabilities
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="my-3">
+            <img
+              src="/Critical Illness/paralysis.svg"
+              alt="Paralysis"
+              class="icon-img"
+            />
+          </div>
+          <div>
+            <h5 class="btn-text1">Paralysis</h5>
+            <p class="textSize1">
+              Support if you lose mobility dur to Paralysis
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="my-3">
+            <img
+              src="/Critical Illness/organ.svg"
+              alt="Organ "
+              class="icon-img"
+            />
+          </div>
+          <div>
+            <h5 class="btn-text1">Organ Transplants</h5>
+            <p class="textSize1">
+              Support for expenses related to organ transplants
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Center Image -->
+      <div class="col-0 col-lg-4 text-center d-lg-block d-none">
+        <div class="position-relative">
+          <div>
+            <img
+              src="/Critical Illness/Doctor..png"
+              class="img-fluid rounded-3 img-height"
+              alt="frame"
+            />
+          </div>
+          <div>
+            <button routerLink="/contact-us" class="btnall mt-5 element" tabindex="0">
+              Contact Us
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="col-md-6 col-lg-4 row height-cards">
+        <div class=" ">
+          <div class="my-3">
+            <img src="/Critical Illness/loss.svg" alt="Loss" class="icon-img" />
+          </div>
+          <div>
+            <h5 class="btn-text1">Loss of a hand or foot</h5>
+            <p class="textSize1">Assistance if you lose a limb</p>
+          </div>
+        </div>
+        <div>
+          <div class="my-3">
+            <img
+              src="/Critical Illness/clinically.svg"
+              alt="Heart"
+              class="icon-img"
+            />
+          </div>
+          <div>
+            <h5 class="btn-text1">Clinically Diagnosed Heart Attack</h5>
+            <p class="textSize1">
+              Cover provided upon diagnosis of a heart attack
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="my-3">
+            <img
+              src="/Critical Illness/deafness.svg"
+              alt="Deafness"
+              class="icon-img"
+            />
+          </div>
+          <div>
+            <h5 class="btn-text1">Deafness</h5>
+            <p class="textSize1">
+              Financial protection if you face difficulty with hearing
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="my-3">
+            <img
+              src="/Critical Illness/blindness.svg"
+              alt="Blindness"
+              class="icon-img"
+            />
+          </div>
+          <div>
+            <h5 class="btn-text1">Blindness</h5>
+            <p class="textSize1">Support if you lose your eyesight.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- mobile view contact us button -->
+    <div class="d-block d-lg-none justify-content-center text-center">
+      <button routerLink="/contact-us" class="btnall mt-2" tabindex="0">
+        Contact Us
+      </button>
+    </div>
+  </div>
+  <!-- faq -->
+
+  <div class="mgtop">
+    <app-faq [faqs]="faqs"></app-faq>
+  </div>
+</div>
+<div class="container mgtopbottom p-1 p-lg-2">
+  <app-last-btn-comp
+    [align]="'center'"
+    [title]="'Looking for Critical Illness Cover?'"
+    [subtitle]="
+      'Wealthmax is here to help. Our advisers are experienced in critical illness cover and can tailor protection to meet your needs. Contact us today to secure the right cover and protect yourself and your loved ones during life’s unexpected challenges.'
+    "
+    [buttonText]="'Speak to our Advisers'"
+    [buttonLink]="'/contact-us'"
+  />
+</div>

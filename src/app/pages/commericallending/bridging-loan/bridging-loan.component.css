@@ -1,0 +1,29 @@
+
+.card:hover {
+  transform: translateY(-6px);
+  transition: 0.3s;
+  border-color: #ff6600 !important;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.border-card {
+  border: 3px solid #ffc9a7 !important;
+}
+.gradient-bg {
+  background: linear-gradient(to bottom, #fffaf8, #ffdcc5);
+}
+.heading-title {
+  font-family: "Urbanist";
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 2.3vh;
+  line-height: 3vh;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+.border-bottom {
+  border-bottom: 2px solid #e3e3e3;
+}
+.new-txt{
+  text-align: left !important;
+}

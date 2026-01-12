@@ -1,0 +1,138 @@
+<div *ngIf="featuredPosts.length === 0" class="text-center py-5">
+  <div
+    class="no-blogs container d-flex align-items-center justify-content-center py-5"
+  >
+    <div class="row w-100 justify-content-center">
+      <div class="col-12 col-md-10 col-lg-10 text-center">
+        <h1 class="display-6 fw-bold text-main mb-5">
+          No blogs available in this category — check back soon for updates!
+        </h1>
+
+        <p class="text-muted mb-5 px-2">
+          There aren’t any blog articles here just yet, but our team is busy
+          crafting fresh tips and insights. Check back soon—good things are
+          coming!
+        </p>
+
+        <div class="mx-auto illustration mb-5">
+          <img
+            [src]="imgSrc"
+            alt="Empty folder illustration with crosses"
+            class="img-fluid imgd rounded-3 shadow-sm"
+            loading="lazy"
+          />
+        </div>
+
+        <button class="btn px-4" routerLink="/">Back to Homepage</button>
+      </div>
+    </div>
+  </div>
+</div>
+<section *ngFor="let post of featuredPosts" class="mb-5">
+  <h4 class="post-title-accent mb-3">{{ post.title }}</h4>
+
+  <!-- <div class="ratio ratio-16x9 mb-3">
+    <img
+      [src]="post.image"
+      alt="no img found"
+      class="w-100 h-100 object-fit-contain rounded-4 shadow-sm"
+    />
+  </div> -->
+  <div class="img-wrapper">
+    <img [src]="post.image" alt="no img found" class="img-fill" />
+  </div>
+
+  <ul class="d-flex list-inline small mb-3 post-meta">
+    <li class="list-inline-item me-3">
+      <span class="meta-chip">
+        <i class="cal-icon bi-calendar2-week-fill me-1"></i>{{ post.date }}
+      </span>
+    </li>
+    <li class="list-inline-item me-3">
+      <span class="meta-chip">
+        <img src="newsletter/newsPerson.svg" class="me-1" /> By:
+        {{ post.author }}
+      </span>
+    </li>
+    <li class="list-inline-item">
+      <span class="meta-chip">
+        <img src="newsletter/newsComment.svg" class="me-1" />{{
+          post.replyCount
+        }}
+      </span>
+    </li>
+  </ul>
+
+  <p class="text-muted mb-3">
+    {{ post.excerpt }}
+  </p>
+
+  <button
+    (click)="routrTpSubPage(post.id)"
+    style="cursor: pointer"
+    class="btn btn-accent btn-sm -pill py-2 px-4"
+  >
+    Read More
+  </button>
+</section>
+
+<section class="mt-4">
+  <div class="row g-4 cards-row">
+    <div *ngFor="let card of pagedGridPosts" class="col-12 col-md-6 col-xl-4">
+      <article class="post-card shadow-sm">
+        <div class="ratio ratio-16x9 post-thumb">
+          <img [src]="card.image" alt="no image" />
+        </div>
+
+        <div class="post-body">
+          <ul class="post-meta small">
+            <li class="d-inline-flex align-items-center">
+              <i class="bi bi-person-fill me-1"></i>{{ card.author }}
+            </li>
+            <li class="d-inline-flex align-items-center">
+              <i class="bi bi-chat-dots-fill me-1"></i>
+              {{ card.replyCount }} Comments
+            </li>
+          </ul>
+
+          <h6 class="post-title">{{ card.title }}</h6>
+          <div class="post-divider"></div>
+
+          <span (click)="routrTpSubPage(card.id)" class="post-read">
+            <span style="cursor: pointer">Read More</span>
+            <span style="cursor: pointer" class="post-arrow">→</span>
+          </span>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <nav aria-label="Page navigation" class="mt-4" *ngIf="!featuredPosts">
+    <ul class="pagination justify-content-center mb-0">
+      <li class="page-item" [class.disabled]="currentPage === 1">
+        <a class="page-link" href (click)="$event.preventDefault(); prevPage()"
+          >&laquo;</a
+        >
+      </li>
+
+      <li
+        *ngFor="let p of range(totalPages)"
+        class="page-item"
+        [class.active]="currentPage === p"
+      >
+        <a
+          class="page-link"
+          href
+          (click)="$event.preventDefault(); applyPage(p)"
+          >{{ p }}</a
+        >
+      </li>
+
+      <li class="page-item" [class.disabled]="currentPage === totalPages">
+        <a class="page-link" href (click)="$event.preventDefault(); nextPage()"
+          >&raquo;</a
+        >
+      </li>
+    </ul>
+  </nav>
+</section>

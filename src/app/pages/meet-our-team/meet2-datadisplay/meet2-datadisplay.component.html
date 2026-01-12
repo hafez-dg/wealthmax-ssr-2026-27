@@ -1,0 +1,72 @@
+<div class="container mgtopbottom">
+  <div style="text-align: center;">
+    <h3 class="headingtxt text-center">Meet Our Team</h3>
+  </div>
+
+  <div class="cont2 d-flex justify-content-center flex-wrap gap-2 mb-3">
+    <button
+      *ngFor="let roleObj of roles"
+      (click)="selectRole(roleObj.role)"
+      [ngClass]="{ 'active-tab': selectedRole === roleObj.role }"
+      class="tab-button btn btn-sm"
+      type="button"
+      aria-pressed="{{ selectedRole === roleObj.role }}"
+    >
+      {{ roleObj.role }}
+    </button>
+  </div>
+
+  <!-- Loading Spinner -->
+  <div *ngIf="loading" class="loading-wrapper text-center">
+    <img src="customloaders/customloaders.svg" alt="Loading..." class="loading-img" />
+  </div>
+
+  <!-- Empty State -->
+  <div *ngIf="!loading && noData" class="empty-state text-center">
+    <img src="assets/images/empty-state.svg" alt="No Data" />
+    <p>No team members found for this category.</p>
+  </div>
+
+  <!-- Grid of Team Members -->
+  <div class="grid-container" *ngIf="!loading && !noData">
+    <div class="card" *ngFor="let item of emprole; trackBy: trackById">
+      <div class="image-wrapper">
+        <img
+          [src]="item.fileName ? (environment.apiUrl + 'blob/download/' + item.fileName) : 'assets/images/fallback-profile.png'"
+          class="image_items"
+          alt="{{ item.name || 'Team member' }}"
+       
+        />
+        <div class="image-overlay"></div>
+
+        <div class="belowcont">
+          <div class="below d-flex justify-content-between align-items-center">
+            <div class="persondetails">
+              <div class="name">{{ item.name }}</div>
+              <hr class="line" />
+              <div class="category">{{ item.category }}</div>
+            </div>
+
+            <div class="icon d-flex align-items-center">
+              <ng-container *ngIf="item.linkedInUrl">
+                <div class="me-2">
+                  <a [href]="item.linkedInUrl" target="_blank" rel="noopener noreferrer">
+                    <img src="meetourteam/linksvg.svg" alt="LinkedIn" style="border-radius: 1px;" />
+                  </a>
+                </div>
+              </ng-container>
+
+              <ng-container *ngIf="item.emailUrl">
+                <div>
+                  <a [href]="'mailto:' + item.emailUrl" rel="noopener noreferrer">
+                    <img src="meetourteam/emailsvg.svg" alt="Email" style="border-radius: 1px;" />
+                  </a>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

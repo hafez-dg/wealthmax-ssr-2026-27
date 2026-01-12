@@ -1,0 +1,173 @@
+<div class="bgclr_main">
+  <app-banner
+    [title]="'Commercial Mortgage'"
+    [subtitle]="
+      'Build your business with confidence using commercial mortgage solutions that provide structure, flexibility and financial security'
+    "
+    [desktopImage]="'/desktop image/comMortgage.webp'"
+    [mobileImage]="'/Mobile img/commercial mortgage.webp'"
+    [buttons]="[
+      {
+        label: 'Book a Free Consultation',
+        class: 'btn btn-lg bg-white txtorange',
+        action: 'dialog'
+      }
+    ]"
+  ></app-banner>
+  <div class="container mgtop">
+    <!-- Title -->
+    <h3 class="heading-txt mb-3 text-center">
+      Why Choose Commercial Mortgage?
+    </h3>
+
+    <p class="text-Size text-justify text-lg-center">
+      A commercial loan is a financing solution designed specifically to support
+      businesses in meeting their larger financial needs, such as purchasing
+      property, funding expansion or investing in major assets. Unlike personal
+      loans, commercial loans are structured to suit the scale and complexity of
+      business operations, often offering flexible repayment terms and
+      competitive rates. They provide companies with the capital required to
+      grow, innovate, and remain resilient in a competitive marketplace. At
+      WealthMax Financial Advisers, we guide businesses through the process of
+      securing the right commercial loan, ensuring they have the financial
+      foundation to achieve their goals.
+    </p>
+  </div>
+  <div class="bgcolorlinear">
+    <div class="container mgtop">
+      <h3 class="heading-txt mb-3 text-center">What we Offer?</h3>
+      <p class="textSize text-md-center text-justify">
+        Commercial mortgages provide businesses with long-term, structured
+        financing to purchase, refinance or develop commercial properties with
+        stability and growth in mind.
+      </p>
+
+      <!-- Cards Grid -->
+      <div class="row g-4 justify-content-center mt-3 mb-3">
+        <div
+          class="col-12 col-sm-10 col-md-6 col-lg-6"
+          *ngFor="let card of cards"
+        >
+          <div
+            class="card h-100 border-0 shadow-sm rounded-4 border-card hover-card text-start p-3"
+          >
+            <div class="card-body d-flex flex-column align-items-start">
+              <img [src]="card.icon" alt="icon" class="mb-3 card-icon" />
+              <h5 class="fw-bold btn-text mb-2">{{ card.title }}</h5>
+              <p class="mb-3 text-muted textSize text-start">
+                {{ card.description }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container mgtop">
+    <div>
+      <h3 class="heading-txt mb-3 text-center">
+        What are Benefits of Commercial Mortgage?
+      </h3>
+      <p class="text-Size text-center mb-3">
+        Empower your business with tailored funding solutions that support
+        growth, stability and long-term success
+      </p>
+    </div>
+    <div class="row justify-content-center align-items-center gx-4 pt-1">
+      <div class="col-12 col-lg-6 d-flex flex-column justify-content-center">
+        <!-- each feature row is a flex row so icon and text align nicely -->
+        <div class="d-flex align-items-start mb-3 feature border-bottom">
+          <div class="me-3 icon-col">
+            <img
+              src="/commerciallending/buyToLet/icon1.svg"
+              alt="icon"
+              class="icon-img"
+            />
+          </div>
+          <div>
+            <h4 class="heading-title">Access to Larger Loan Amounts</h4>
+            <p class="text-Size new-txt">
+              Secure higher funding compared to standard business loans, ideal
+              for property purchases or expansions .
+            </p>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-start mb-3 feature border-bottom">
+          <div class="me-3 icon-col">
+            <img
+              src="/commerciallending/asset/icon1.svg"
+              alt="icon"
+              class="icon-img"
+            />
+          </div>
+          <div>
+            <h4 class="heading-title">Long-Term Stability</h4>
+            <p class="text-Size new-txt">
+              Benefit from fixed or variable repayment options, providing
+              predictable financial planning.
+            </p>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-start mb-3 feature border-bottom">
+          <div class="me-3 icon-col">
+            <img
+              src="/commerciallending/bussiness/icon1.svg"
+              alt="icon"
+              class="icon-img"
+            />
+          </div>
+          <div>
+            <h4 class="heading-title">Business Growth Opportunity</h4>
+            <p class="text-Size new-txt">
+              Leverage property ownership to expand operations and strengthen
+              your business presence.
+            </p>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-start mb-3 feature border-bottom">
+          <div class="me-3 icon-col">
+            <img
+              src="/commerciallending/commercial/benefit4.svg"
+              alt="icon"
+              class="icon-img"
+            />
+          </div>
+          <div>
+            <h4 class="heading-title">Potential Investment Returns</h4>
+            <p class="text-Size new-txt">
+              Property can appreciate over time, offering both equity growth and
+              rental income opportunities .
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-6 d-flex justify-content-center">
+        <!-- constrain height so it doesn't force parent taller than desired -->
+        <img
+          src="/commerciallending/commercial/benefit-banner.png"
+          alt="illustration"
+          class="img-fluid right-illustration"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="container mgtop">
+    <app-faq [faqs]="buyToLetFaqs"></app-faq>
+  </div>
+</div>
+<!-- section-5 -->
+<div class="container mgtopbottom p-1 p-lg-2">
+  <app-last-btn-comp
+    [align]="'center'"
+    [title]="'Looking for Commercial Mortgage?'"
+    [subtitle]="
+      'Wealthmax Financial Advisers is here to help! Our advisers are experienced in commercial mortgages and can guide you to secure the right property financing. Contact us today to find the ideal solution for your business property needs'
+    "
+    [buttonText]="'Speak to our Advisers'"
+    [buttonLink]="'/contact-us'"
+  />
+</div>

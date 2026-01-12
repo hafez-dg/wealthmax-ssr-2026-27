@@ -1,0 +1,160 @@
+<div class="bgclr_main">
+  <!-- section-1 -->
+
+  <app-banner
+    [title]="'Will Writing'"
+    [subtitle]="
+      'Safeguard your assets and intentions with tailored will writing guidance, giving your loved ones clarity and security'
+    "
+    [desktopImage]="'/desktop image/wills.webp'"
+    [mobileImage]="'/Mobile img/will writing.webp'"
+    [buttons]="[
+      {
+        label: 'Book a Free Consultation',
+        class: 'btn btn-lg bg-white txtorange',
+        action: 'dialog'
+      }
+    ]"
+  ></app-banner>
+
+  <!-- section-2 -->
+  <div class="container mgtop">
+    <h3 class="heading-txt mb-3 text-center">Why Write a Will?</h3>
+    <p class="text-Size text-justify text-lg-center">
+      Writing a will is a key part of estate planning. It ensures your assets
+      are passed on to the people you choose, rather than being distributed
+      under intestacy laws. Despite its importance, around 60% of UK adults do
+      not have a will in place. Creating a will—and where appropriate, setting
+      up a trust—allows you to name specific beneficiaries, decide how your
+      assets are distributed, and appoint guardians for your children. This
+      helps ensure your wishes are respected and your loved ones are looked
+      after. At WealthMax Financial Advisers, we have extensive experience in
+      trust and will services. We guide you through the process, helping you
+      make informed decisions that protect your legacy and provide peace of
+      mind. Legal and tax rules may change. Advice should be tailored to your
+      individual circumstances to ensure suitability and compliance.
+    </p>
+  </div>
+  <!-- section-3 -->
+  <div class="bgcolorlinear">
+    <div class="container mgtop">
+      <h3 class="heading-txt mb-3 text-center">What we Offer?</h3>
+      <p class="textSize text-justify text-md-center">
+        While it’s possible to write a will yourself, there are several reasons
+        to seek professional support. These include:
+      </p>
+      <div class="cards-container mt-1 mt-4">
+        <app-cards [cards]="cards"> </app-cards>
+      </div>
+    </div>
+  </div>
+  <!-- section-4 -->
+  <div class="container mgtop">
+    <div class="mb-2 mb-md-3">
+      <h3 class="heading-txt mb-3 text-center">
+        What are Benefits of Will Writing?
+      </h3>
+      <p class="text-Size text-justify text-md-center mb-3 mb-lg-5">
+        No matter your age, writing a will is a responsible and valuable step in
+        estate planning. It ensures your wishes are legally documented, helping
+        to avoid uncertainty and reduce the risk of future disputes. Without a
+        will, your estate may be subject to intestacy laws, which can lead to
+        complications and delays.
+      </p>
+    </div>
+    <div class="row justify-content-center align-items-center gx-4">
+      <div class="col-12 col-lg-6 d-flex flex-column justify-content-center">
+        <div class="d-flex mb-3 feature border-bottom">
+          <div class="me-3 icon-col">
+            <img
+              src="/willsplanning/writing/q1.svg"
+              alt="icon"
+              class="icon-img"
+            />
+          </div>
+          <div>
+            <h4 class="heading-title">Control Over Asset Distribution</h4>
+            <p class="text-Size">
+              Decide exactly who inherits your estate, avoiding default
+              intestacy rulees.
+            </p>
+          </div>
+        </div>
+
+        <div class="d-flex mb-3 feature border-bottom">
+          <div class="me-3 icon-col">
+            <img
+              src="/willsplanning/writing/q2.svg"
+              alt="icon"
+              class="icon-img"
+            />
+          </div>
+          <div>
+            <h4 class="heading-title">Appoint Guardians for Children</h4>
+            <p class="text-Size">
+              Ensure your children are cared for by people you trust.
+            </p>
+          </div>
+        </div>
+
+        <div class="d-flex mb-3 feature border-bottom">
+          <div class="me-3 icon-col">
+            <img
+              src="/willsplanning/writing/q3.svg"
+              alt="icon"
+              class="icon-img"
+            />
+          </div>
+          <div>
+            <h4 class="heading-title">Minimise Family Disputes</h4>
+            <p class="text-Size">
+              A legally valid will helps prevent disagreements and delays during
+              estate administration.
+            </p>
+          </div>
+        </div>
+        <div class="d-flex mb-3 feature border-bottom">
+          <div class="me-3 icon-col">
+            <img
+              src="/willsplanning/writing/q4.svg"
+              alt="icon"
+              class="icon-img"
+            />
+          </div>
+          <div>
+            <h4 class="heading-title">Tax Planning Opportunities</h4>
+            <p class="text-Size">
+              A well-structured will can support inheritance tax planning and
+              help preserve more of your estate.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-6 d-flex justify-content-center">
+        <img
+          src="/willsplanning/writing/wll-right-side-img.png"
+          alt="illustration"
+          class="img-fluid right-illustration"
+        />
+      </div>
+    </div>
+  </div>
+  <!-- section-5 -->
+  <div class="container mgtop">
+    <app-faq [faqs]="buyToLetFaqs"></app-faq>
+  </div>
+
+  <!-- secton-6 -->
+  <div class="container mgtopbottom p-1 p-lg-2">
+    <app-last-btn-comp
+      [align]="'center'"
+      [title]="'Looking to Write a Will?'"
+      [subtitle]="
+        'Wealthmax is here to help. Our advisers are experienced in will writing and can guide you through creating a clear and legally sound will. Contact us today to secure your legacy and ensure your assets are passed on according to your wishes.'
+      "
+      [buttonText]="'Speak to our Advisers'"
+      [buttonLink]="'/contact-us'"
+    />
+  </div>
+</div>

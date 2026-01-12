@@ -1,0 +1,180 @@
+.marginCal {
+  margin: 0 10px; /* default for smaller screens */
+}
+/* .bg-img{
+  background-image: url("/mortage/mortgageFrame.png");;
+} */
+.calc-container {
+  /* display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 42px;
+  padding: 30px; */
+  border: 3px solid #eaeff540;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0px 0px 20px rgba(86, 86, 86, 0.25);
+  margin-bottom: 20px;
+  background-image: url("/calculator/bg3cal.png");
+}
+.calc-card {
+  background: #ffe2d0;
+  padding: 4%;
+  border-radius: 14px;
+  border: 1px solid #ff9b4d;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.25s ease;
+
+}
+
+.calc-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+/* TITLE */
+.calc-card h4 {
+  font-family: "Urbanist";
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 40px;
+  letter-spacing: 0%;
+  color: #01004c;
+}
+
+/* DESCRIPTION */
+.calc-card p {
+  font-family: "Inter";
+  font-weight: 400;
+
+  font-size: 16px;
+
+  line-height: 27px;
+  letter-spacing: 0%;
+}
+
+/* BUTTON */
+.calc-btn {
+  width: 100%;
+  background: #ff7a21;
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.calc-btn:hover {
+  background: #e06712;
+}
+.width95{
+  width: 98%;
+}
+@media(max-width:1500px){
+.width95{
+  width: 100%;
+}
+}
+
+@media (min-width: 1200px) {
+    .calc-card {
+      width: 390px;
+    }
+}
+@media (max-width: 1200px) {
+  .calc-container {
+    grid-template-columns: 1fr;
+    padding: 30px;
+  }
+}
+
+/* 🔥 RESPONSIVE (TABLETS) */
+@media (max-width: 992px) {
+  .calc-container {
+    grid-template-columns: 1fr;
+    padding: 30px;
+  }
+}
+
+/* 🔥 RESPONSIVE (MOBILE PHONES) */
+@media (max-width: 600px) {
+  .calc-container {
+    grid-template-columns: 1fr;
+    padding: 12px;
+  }
+
+  .calc-card {
+    padding: 18px;
+  }
+
+  .calc-card h4 {
+    font-size: 16px;
+  }
+
+  .calc-card p {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 1732px) {
+  .marginCal {
+    margin: 0 400px;
+  }
+}
+@media (min-width: 1012px) and (max-width: 1732px) {
+  .marginCal {
+    margin: 0 4%;
+  }
+}
+@media (min-width: 1400px) and (max-width: 1732px) {
+  .marginCal {
+    margin: 0 200px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .marginCal {
+    margin: 0 100px;
+  }
+}
+@media (min-width: 1012px) and (max-width: 1200px) {
+  .marginCal {
+    margin: 0 4%;
+  }
+}
+@media (min-width: 950px) and (max-width: 1010px) {
+  .marginCal {
+    margin: 0 100px;
+  }
+   .Calculator {
+    width: 100% !important;
+    height: 420px !important;
+  }
+}
+
+@media (min-width: 1012px) {
+  .Calculator {
+    width: 100% !important;
+    height: 420px !important;
+  }
+}
+@media (min-width: 768px) and (max-width:1110px) {
+  .Calculator {
+    width: 100% !important;
+    height: 418px !important;
+  }
+}
+@media (min-width: 769px) and (max-width:1010px) {
+  .Calculator {
+    width: 100% !important;
+    height: 710px !important;
+  }
+}
+@media (max-width: 768px) {
+  .Calculator {
+    width: 100% !important;
+    height: 750px !important;
+  }
+}

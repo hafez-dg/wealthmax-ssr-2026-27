@@ -1,0 +1,133 @@
+<!-- section 1 -->
+<app-banner
+  [title]="'Buy to Let Mortgage'"
+  [subtitle]="
+    'Unlock the potential of property investment with tailored buy to let mortgage solutions designed to grow your portfolio and maximise returns'
+  "
+  [desktopImage]="'/desktop image/mortgage.webp'"
+  [mobileImage]="'/Mobile img/mortgage.webp'"
+  [buttons]="[
+    {
+      label: 'Book a Free Consultation',
+      class: 'btn btn-lg bg-white txtorange',
+      action: 'dialog'
+    }
+  ]"
+/>
+<!-- section 2 -->
+<div class="container mgtop">
+  <h3 class="heading-txt mb-3 text-center">Why have Buy to Let Mortgage?</h3>
+  <p class="text-Size text-justify text-lg-center mb-0">
+    Do you have an existing mortgage rate you're not happy with? Do you need to
+    release equity to access funds for home improvements? There can be multiple
+    reasons why a remortgage might be the path for you, but it's important to
+    know the ramifications of doing so. That's where Wealthmax Financial
+    advisers can assist. Our team can help you compare mortgage deals and advise
+    you on associated aspects like valuations, the fees involved and whether it
+    makes financial sense for you. Remortgaging offers financial flexibility
+    and we can give you the reassurance that it's the right decision for your
+    unique set of circumstances.
+  </p>
+  <!-- <p class="text-Size text-justify text-lg-center">
+    So, whether you're a seasoned investor looking to diversify your portfolio,
+    a retiree wanting to enjoy an additional income stream, or a young
+    professional seeking to build long term financial stability, it's a path
+    that's very much worth consideration.
+  </p> -->
+</div>
+<!-- section 3 -->
+<div class="container mgtop">
+  <div class="mb-2 mb-md-3">
+    <h3 class="heading-txt mb-3 text-center">
+      What are Benefits of Buy to Let Mortgage?
+    </h3>
+    <p class="text-Size text-justify text-md-center mb-3 mb-lg-5">
+      Obtaining a buy to let mortgage gives you a range of investor benefits,
+      meaning that you’ll benefit beyond a monthly rental income and property
+      appreciation
+    </p>
+  </div>
+  <div class="row justify-content-center align-items-center gx-4 pt-1">
+    <div class="col-12 col-lg-6 d-flex flex-column justify-content-center">
+      <!-- each feature row is a flex row so icon and text align nicely -->
+      <div class="d-flex align-items-start mb-3 feature border-bottom">
+        <div class="me-3 icon-col">
+          <img
+            src="/mortgages/buy-to-let/portfolio.svg"
+            alt="icon"
+            class="icon-img"
+          />
+        </div>
+        <div>
+          <h4 class="heading-title">Portfolio Diversification</h4>
+          <p class="text-Size">
+            When you spread your investment risk across multiple properties,
+            you’ll reduce your vulnerability to market fluctuations.
+          </p>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-start mb-3 feature border-bottom">
+        <div class="me-3 icon-col">
+          <img
+            src="/mortgages/buy-to-let/inflation.svg"
+            alt="icon"
+            class="icon-img"
+          />
+        </div>
+        <div>
+          <h4 class="heading-title">Inflation Protection</h4>
+          <p class="text-Size">
+            Property does not guarantee protection against inflation and may
+            fluctuate in value. However,a diversified buy-to-let portfolio has
+            historically shown resilience over the long term.
+          </p>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-start mb-3 feature border-bottom">
+        <div class="me-3 icon-col">
+          <img
+            src="/mortgages/buy-to-let/tax advantages.svg"
+            alt="icon"
+            class="icon-img"
+          />
+        </div>
+        <div>
+          <h4 class="heading-title">Tax Advantages</h4>
+          <p class="text-Size">
+            As a buy-to-let landlord you get access to tax deductions on
+            mortgage interest payments and expenses, potentially reducing your
+            tax liabilities.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-6 d-flex justify-content-center">
+      <!-- constrain height so it doesn't force parent taller than desired -->
+      <img
+        src="/mortgages/buy-to-let/rs-img.png"
+        alt="illustration"
+        class="img-fluid right-illustration"
+      />
+    </div>
+  </div>
+</div>
+<!-- section-4 -->
+<div class="container mgtop box-shadow-faq">
+  <app-faq [faqs]="buyToLetFaqs"></app-faq>
+</div>
+
+<!-- section-5 -->
+<div class="container mgtopbottom p-1 p-lg-2">
+  <app-last-btn-comp
+    [align]="'center'"
+    [title]="'Looking for Buy to Let mortgage?'"
+    [subtitle]="
+      'Wealthmax is here to help. Our advisers are experienced in financing and have access to a wide range of mortgage options. Contact us today to discuss your mortgage requirements and secure the ideal financing solution.'
+    "
+    [buttonText]="'Speak to our Advisers'"
+    [buttonLink]="'/contact-us'"
+  />
+</div>

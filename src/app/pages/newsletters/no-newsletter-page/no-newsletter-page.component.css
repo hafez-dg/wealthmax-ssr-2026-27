@@ -1,0 +1,23 @@
+.no-blogs {
+  min-height: 100vh;
+}
+
+.illustration {
+  max-width: 420px;
+}
+
+@media (min-width: 992px) {
+  .illustration {
+    max-width: 520px;
+  }
+}
+.btn {
+  background-color: #ff751d;
+  color: #fff;
+}
+.text-main {
+  color: #ff751d;
+}
+.imgd{
+    max-width: 60%;
+}

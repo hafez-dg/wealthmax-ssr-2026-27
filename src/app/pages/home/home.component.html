@@ -1,0 +1,143 @@
+<div class="bgclr_main">
+  <header class="hero-banner">
+    <div class="banner-content container">
+      <div class="text-animation">
+        <h1 class="banner-header">
+          Your Path to <br />Financial Independence!
+        </h1>
+      </div>
+
+      <div class="heartdiv"></div>
+
+      <div class="text-animation1">
+        <div class="sub-heading my-1 my-md-2">
+          Expert Financial Planning & Wealth Management
+        </div>
+      </div>
+
+      <div class="mb-3 mt-4 text-animation2">
+        <button class="btnall" routerLink="/who-we-are">About Us</button>
+      </div>
+
+      <div class="card-avatar-section">
+        <div class="avatar-stack">
+          <img class="avatar" src="homepage/p-avatargroup.svg" />
+
+          <div class="avatar-text">
+            Silviya, Tyler and thousands others have already protected
+            themselves.
+          </div>
+        </div>
+
+        <div class="mt-4">
+          <a href="https://www.google.com/maps/place/Wealthmax+Financial+Advisers+Limited/@51.4888301,-0.3134515,17z/data=!3m1!4b1!4m6!3m5!1s0x48760dbc719cf051:0x9db2f90b30b82e0c!8m2!3d51.4888301!4d-0.3134515!16s%2Fg%2F11gl298nv_?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D"
+            target="_blank">
+            <img src="homepage/stars-g.svg" alt="google-rating" class="g_rating" /></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container mgtop">
+    <div class="row align-items-start justify-content-between g-4 h-100">
+      <!-- Left side text -->
+      <div class="col-12 col-xl-6 px-auto pe-xl-5">
+        <div class="">
+          <h3 class="heading-txt text-left text-lg-start">
+            Customised Financial Solutions To Meet Your Needs
+          </h3>
+          <p class="text-Size">
+            It's sometimes not that easy to deal with the complexities involved
+            with personal finances and other finance related services. This
+            becomes even more daunting with the ever evolving financial sectors,
+            but with a professional financial adviser by your side it becomes
+            truly easy to deal with such scenarios. We are dedicated towards
+            your financial wellbeing by offering a wide range of financial
+            products that are customised to meet your requirements.
+          </p>
+        </div>
+      </div>
+
+      <!-- Right side card -->
+      <div class="col-12 col-xl-6 h-100" style="overflow: hidden">
+        <div class="row g-3 justify-content-center">
+          <div class="col-12 col-sm-6" *ngFor="let card of cardsitem">
+            <div class="card shadow-sm p-3 d-flex flex-row align-items-center gap-3 cardwidth border-clr">
+              <img [src]="card.image" [alt]="card.title" class="img-fluid icon-img" />
+              <div>
+                <div class="cardstitles mb-2">{{ card.title }}</div>
+                <div class="small mt-1 learnmore" [routerLink]="card.link" style="cursor: pointer">
+                  Learn More
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-leftside-img-overcoming-financial />
+  <app-rightside-img-financial-protection />
+
+  <div class="bgcallback d-flex align-items-center justify-content-center mgtop">
+    <div class="container">
+      <div class="row ps-0 ps-lg-1">
+        <!-- Carousel Column -->
+        <div class="col-12 col-xl-6 order-2 order-xl-1 d-flex align-items-center justify-content-center"
+          style="padding-inline: 0px">
+          <ngb-carousel [interval]="3000" [pauseOnHover]="false" [pauseOnFocus]="false" [wrap]="true" [keyboard]="true"
+            [showNavigationIndicators]="true" [showNavigationArrows]="true">
+            <ng-template ngbSlide *ngFor="let group of groupedProducts; let i = index">
+              <div class="container">
+                <div class="row g-3 justify-content-center">
+                  <div class="col-12 col-md-6" *ngFor="let product of group; trackBy: trackByIndex">
+                    <div class="testimonial-card border rounded shadow-sm bg-white tc_card">
+                      <div class="mb-2 text-warning text-center">
+                        <ng-container *ngFor="let star of getFilledStars(product.stars); trackBy: trackByIndex">
+                          <i class="bi bi-star-fill"></i>
+                        </ng-container>
+                        <ng-container *ngFor="let star of getEmptyStars(product.stars); trackBy: trackByIndex">
+                          <i class="bi bi-star"></i>
+                        </ng-container>
+                      </div>
+                      <p class="tt_txt truncate-4">
+                        "{{ product.testimonial }}"
+                      </p>
+                      <h6 class="prodname mt-3 mb-0 text-center" *ngIf="product.name">
+                        {{ product.name }}
+                      </h6>
+                      <h6 class="text-center" *ngIf="product.designation">
+                        <small class="proddesg">{{ product.designation }}</small>
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+          </ngb-carousel>
+        </div>
+
+
+        <!-- Text Column -->
+        <div class="col-12 col-xl-6 py-4 order-1 order-xl-2">
+          <div class="d-flex justify-content-center align-items-start h-100 p-1 p-lg-4 position-relative">
+            <div>
+              <h3 class="heading-txt clientchoiceheadercolor text-center text-xl-start">
+                The Client's Choice
+              </h3>
+              <p class="text-Size clientparaclr">
+                If you're looking for an unbiased opinion about the service
+                provided by our financial advisers, take a closer look at what
+                our clients say about us, and our commitment to financial
+                excellence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-homecont6-callback />
+</div>
+

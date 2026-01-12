@@ -1,0 +1,139 @@
+<app-banner
+  [title]="' Business Loan Protection'"
+  [subtitle]="
+    'Secure your loans and your growth with tailored Business Loan Protection solutions that keep your business resilient in uncertain times'
+  "
+  [desktopImage]="'/desktop image/businessLP.webp'"
+  [mobileImage]="'/Mobile img/business loan protection.webp'"
+  [buttons]="[
+    {
+      label: 'Book a Free Consultation',
+      class: 'btn btn-lg bg-white txtorange',
+      action: 'dialog'
+    }
+  ]"
+></app-banner>
+
+<div class="container mgtop">
+  <h3 class="heading-txt mb-3 text-center">
+    Why Consider Business Loan Protection?
+  </h3>
+  <p class="text-Size text-justify text-lg-center">
+    Many lenders and creditors require company directors and business owners to
+    provide personal guarantees for loans made to their business. In the event
+    that a key individual passes away or suffers a critical illness, the
+    business may face challenges in meeting its financial obligations.
+  </p>
+
+  <p class="text-Size text-justify text-lg-center">
+    Without appropriate protection in place, personal assets may be at risk, and
+    the financial security of your family could be affected. Business loan
+    protection is designed to help repay outstanding business debts in such
+    circumstances, reducing financial strain and supporting business continuity.
+    In addition to safeguarding personal guarantees, this type of cover may help
+    mitigate wider business risks such as cash flow disruption, supplier
+    concerns, and customer confidence. At Wealthmax Financial Advisers, we have
+    experience advising directors and business owners on suitable business loan
+    protection options. We offer access to products from a range of UK providers
+    and can help you find cover that aligns with your business needs.
+  </p>
+</div>
+<!-- Title -->
+
+<div class="container">
+  <div class="mgtop">
+    <h3 class="heading-txt mb-3 text-center">
+      What are the Benefits of Business Loan Protection Cover?
+    </h3>
+    <p class="text-Size text-justify text-lg-center">
+      The primary advantage of this type of cover is to help businesses maintain
+      continuity during difficult times. In addition, a business loan protection
+      policy offers several key benefits:
+    </p>
+  </div>
+  <div class="row justify-content-center align-items-center gx-4 pt-1">
+    <div class="col-12 col-lg-6 d-flex flex-column justify-content-center textleft">
+      <!-- each feature row is a flex row so icon and text align nicely -->
+      <div class="d-flex align-items-start mb-3 feature border-bottom">
+        <div class="me-3 icon-col">
+          <img src="/bussiness loan/maintain.svg" alt="icon" class="icon-img" />
+        </div>
+        <div>
+          <h4 class="heading-title">Maintain Cash Flow</h4>
+          <p class="text-Size">
+            Helps ensure operational continuity by easing financial pressure
+            during challenging periods.
+          </p>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-start mb-3 feature border-bottom">
+        <div class="me-3 icon-col">
+          <img src="/bussiness loan/preserve.svg" alt="icon" class="icon-img" />
+        </div>
+        <div>
+          <h4 class="heading-title">Preserve Your Credit Rating</h4>
+          <p class="text-Size">
+            By avoiding defaults on business loans, you help protect your
+            company’s creditworthiness.
+          </p>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-start mb-3 feature border-bottom">
+        <div class="me-3 icon-col">
+          <img src="/bussiness loan/enhance.svg" alt="icon" class="icon-img" />
+        </div>
+        <div>
+          <h4 class="heading-title">Enhance Resilience</h4>
+          <p class="text-Size">
+            Supports your business in navigating unforeseen circumstances
+            without increasing the risk of closure or insolvency.
+          </p>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-start mb-3 feature border-bottom">
+        <div class="me-3 icon-col">
+          <img
+            src="/bussiness loan/peace of mind.svg"
+            alt="icon"
+            class="icon-img"
+          />
+        </div>
+        <div>
+          <h4 class="heading-title">Peace of Mind</h4>
+          <p class="text-Size">
+            Provides reassurance to business owners and stakeholders that loan
+            obligations are covered, helping safeguard personal assets and
+            family security.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-6 d-flex justify-content-center">
+      <!-- constrain height so it doesn't force parent taller than desired -->
+      <img
+        src="/bussiness loan/protection cover.png"
+        alt="illustration"
+        class="img-fluid right-illustration"
+      />
+    </div>
+  </div>
+</div>
+<div class="container mgtop">
+  <app-faq [faqs]="faqs"></app-faq>
+</div>
+
+<div class="container mgtopbottom p-1 p-lg-2">
+  <app-last-btn-comp
+    [align]="'center'"
+    [title]="'Looking for Business Loan Protection?'"
+    [subtitle]="
+      'At Wealthmax, we understand the importance of safeguarding your business against unforeseen financial challenges. Our experienced advisers can help tailor business loan protection solutions to suit your specific needs.'
+    "
+    [buttonText]="'Speak to our Advisers'"
+    [buttonLink]="'/contact-us'"
+  />
+</div>

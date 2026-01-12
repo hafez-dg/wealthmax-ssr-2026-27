@@ -1,0 +1,230 @@
+/* ---------------------------
+   Global baseline / text
+   --------------------------- */
+.smalltxt {
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+
+/* Job card area */
+.job-card {
+  border-bottom: 1px solid #ccc;
+  padding: 16px 0;
+  font-family: "Arial", sans-serif;
+}
+.tag {
+  font-family: "Inter";
+  font-weight: 400;
+  border: 1px solid #f08000;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 16px;
+  line-height: 100%;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #333;
+  cursor: pointer;
+}
+.tag:hover { background-color: #ff660077; }
+
+.jobtt {
+  font-family: "Urbanist";
+  font-weight: 600;
+  font-style: normal;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+.jobdp {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 2vh;
+  line-height: 3vh;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+.job-tags { margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap; }
+
+.policy {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+.policy12
+  {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+
+}
+
+.applybtn {
+  /* container for the link and pseudo underline */
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-end; /* stays aligned to right if used in a flex context */
+  align-items: center;
+  white-space: nowrap;
+  gap: 6px;
+  cursor: pointer;
+}
+
+/* link styling */
+.apply-link {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 28px; /* keep your desired size */
+  line-height: 100%;
+  color: rgba(50, 50, 50, 1); /* default text color */
+  text-decoration: none; /* remove default underline */
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  position: relative; /* for ::after */
+  transition: color 0.2s ease;
+}
+
+/* Custom underline using ::after so we can control position (2px below text) */
+.apply-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -9px;        /* <-- 2px below the text baseline */
+  height: 2px;         /* underline thickness */
+  width: 0;            /* starts hidden */
+  background-color: #ff6600; /* orange color */
+  transition: width 0.28s cubic-bezier(.2,.9,.2,1);
+  will-change: width;
+  border-radius: 2px;
+}
+
+.applybtn:hover .apply-link::after {
+  width: 100%;
+}
+
+
+.applybtn:hover .apply-link {
+
+}
+
+
+.applybtn img,
+.applybtn svg {
+  display: inline-block;
+  vertical-align: middle;
+  transition: filter 0.28s ease, transform 0.28s ease;
+
+  filter: none;
+}
+
+
+.applybtn:hover img,
+.applybtn:hover svg {
+  filter: invert(48%) sepia(95%) saturate(3498%) hue-rotate(1deg)
+    brightness(101%) contrast(103%);
+  transform: translateY(-1px);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.line-hover { display: none !important; }
+
+.empty-icon { width: 180px; height: auto; }
+.no-posts-message { padding-top: 20px; }
+
+.emp-cont > .empty-icon {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Keep applybtn as flex for layout consistency */
+.applybtn { display: flex; justify-content: flex-end; align-items: center; gap: 4px; }
+.icon-up{
+  padding-left: 3px
+}
+/* small-screen adjustments */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .jobtt { font-size: 30px; line-height: 40px; }
+  .smalltxt { font-size: 16px; line-height: 24px; }
+  .tag { font-size: 14px; line-height: 100%; }
+  .policy { font-size: 16px; line-height: 24px; }
+  .policy12
+  {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+
+}
+}
+@media (min-width: 767px) and (max-width: 992px) {
+  .jobtt { font-size: 30px; line-height: 40px; }
+  .smalltxt { font-size: 16px; line-height: 24px; }
+  .tag { font-size: 14px; line-height: 100%; }
+  .policy { font-size: 16px; line-height: 24px; }
+  .policy12
+  {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+
+}
+}
+@media (max-width: 767px) {
+  .jobtt { font-size: 24px; line-height: 100%; }
+  .smalltxt { font-size: 14px; line-height: 20px; }
+  .apply-link { font-size: 20px; line-height: 100%; }
+  .policy { font-size: 14px; line-height: 20px; }
+  .tag { font-size: 12px; line-height: 100%; }
+  .icon-up{padding-left: 1.5px}
+  .policy12
+  {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+
+}
+}
+@media (max-width: 500px) {
+  .jobtt { font-size: 16px; line-height: 24px; }
+  .smalltxt { font-size: 12px; line-height: 18px; }
+  .apply-link { font-size: 20px; line-height: 100%; }
+  .policy { font-size: 14px; line-height: 20px; }
+  .tag { font-size: 12px; line-height: 100%; }
+  .icon-up{height: 15px !important;}
+  .policy12
+  {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+
+}
+
+}

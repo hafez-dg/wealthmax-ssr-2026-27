@@ -1,0 +1,12 @@
+.custom-img {
+    width: 100%;
+  }
+  @media (min-width: 992px) {
+    .custom-img {
+      width: 60%;
+    }
+}
+.textleft>div>div>p{
+
+  text-align: left;
+}

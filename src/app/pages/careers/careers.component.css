@@ -1,0 +1,27 @@
+.hero-banner {
+  background-image: url("/careers/carrersbanner.png");
+}
+.widthofimage{
+  width: 92%;
+}
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.main-img {
+  width: 80%;
+  height: auto;
+  border-radius: 8px;
+}
+.overlay-img {
+  position: absolute;
+  bottom: 20px;
+  right: 0px;
+  width: 40%;
+  border-radius: 10px;
+}
+@media (max-width:992px){
+  .widthofimage{
+  width: 100%;
+}
+}

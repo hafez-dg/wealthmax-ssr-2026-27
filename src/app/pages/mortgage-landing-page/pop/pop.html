@@ -1,0 +1,108 @@
+<mat-dialog-content class="callback-dialog" style="background: transparent">
+  <div class="p-2 p-md-4">
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="row g-3">
+      <div class="col-12 d-flex justify-content-between align-items-center">
+        <h2 class="mb-2">Request a Callback</h2>
+
+        <!-- Close Button -->
+        <button type="button" class="close-btn" aria-label="Close" (click)="closedialog()">
+          ✕
+        </button>
+      </div>
+
+      <!-- Full Name -->
+      <div class="col-12">
+        <label class="form-label">Full Name <sup class="error">*</sup></label>
+        <input
+          type="text"
+          class="form-control"
+          formControlName="fullName"
+          placeholder="Full Name"
+          (input)="onNameInput($event)"
+        />
+        <div class="error" *ngIf="contactForm.get('fullName')?.touched">
+          <small *ngIf="contactForm.get('fullName')?.hasError('required')"
+            >Full name is required</small
+          >
+          <small *ngIf="contactForm.get('fullName')?.hasError('pattern')"
+            >Please enter a valid name</small
+          >
+        </div>
+      </div>
+
+      <!-- Contact Number -->
+      <div class="col-12">
+        <label class="form-label">Phone number <sup class="error">*</sup></label>
+        <input
+          type="tel"
+          class="form-control"
+          placeholder="+44 1234567890"
+          formControlName="contactNumber"
+          autocomplete="tel"
+          inputmode="tel"
+          required
+        />
+        <div class="error" *ngIf="contactForm.get('contactNumber')?.touched">
+          <small *ngIf="contactForm.get('contactNumber')?.hasError('required')"
+            >Contact Number is required</small
+          >
+          <small *ngIf="contactForm.get('contactNumber')?.hasError('pattern')"
+            >Invalid phone number.</small
+          >
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="col-12">
+        <label class="form-label">Email <sup class="error">*</sup></label>
+        <input type="email" class="form-control" formControlName="emailId" placeholder="@abc.com" />
+        <div class="error" *ngIf="contactForm.get('emailId')?.touched">
+          <small *ngIf="contactForm.get('emailId')?.hasError('required')">Email is required</small>
+          <small *ngIf="contactForm.get('emailId')?.hasError('pattern')"
+            >Invalid email format</small
+          >
+        </div>
+      </div>
+
+      <!-- Product Interested -->
+      <div class="col-12 form-label">
+        <label class="mb-2 mt-3 d-block">I’m Interested In</label>
+
+        <div class="row interest-row">
+          <div class="col-md-6 col-sm-6 col-12" *ngFor="let s of products">
+            <div class="checkbox-item">
+              <input
+                type="checkbox"
+                class="custom-checkbox"
+                [id]="s.code"
+                (change)="toggleService(s.code)"
+                [checked]="isChecked(s.code)"
+              />
+              <label [attr.for]="s.code" class="sizetxt">{{ s.name }}</label>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="error"
+          *ngIf="
+            contactForm.get('products')?.touched &&
+            contactForm.get('products')?.hasError('required')
+          "
+        >
+          <small>Please select at least one product.</small>
+        </div>
+      </div>
+
+      <!-- Submit -->
+      <div class="col-12">
+        <button
+          type="submit"
+          class="custom-btn w-100 d-flex justify-content-center align-items-center gap-2"
+        >
+          <i class="bi bi-send"></i> Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</mat-dialog-content>

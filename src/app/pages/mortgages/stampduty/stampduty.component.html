@@ -1,0 +1,38 @@
+<app-banner
+  [title]="'Stamp Duty Calculator'"
+  [subtitle]="
+    'Our mortgage calculators can give you an idea of how much you could borrow, your monthly repayments, stamp duty costs, overpayments, and more'
+  "
+  [desktopImage]="'/desktop image/subCalcPage.webp'"
+  [mobileImage]="'/Mobile img/subcalc.webp'"
+/>
+<div class="container mgtop mb-2">
+  <h3 class="headingtxt mb-2 mb-md-5 text-center">Calculate your Stamp Duty Now!</h3>
+
+  <div class="calc-grid">
+    <!-- IFREAME CARD -->
+    <div class="calc-card position-relative">
+      <!-- <div class="calc-card-header">Mortgage Calculator</div> -->
+
+      <div class="calc-card-body position-relative">
+        <!-- Loader overlay -->
+        <div *ngIf="isLoading" class="iframe-loader">
+          <div class="spinner"></div>
+          <p>Loading calculator...</p>
+        </div>
+
+        <!-- Iframe always present -->
+        <iframe
+          class="p-3 px-0 Calculator"
+          src="https://webtools.twenty7tec.com/Sourcing/WebToolsTwo?apiKey=b35a7324-3af6-4760-802c-3f08dcf43e98&pluginKey=c530269b-0476-4a28-a866-a80df2fde7ea"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--
+ <iframe
+      class="p-3 Calculator"
+      src="https://webtools.twenty7tec.com/Sourcing/WebToolsTwo?apiKey=b35a7324-3af6-4760-802c-3f08dcf43e98&pluginKey=c530269b-0476-4a28-a866-a80df2fde7ea"
+    ></iframe> -->

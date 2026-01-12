@@ -1,0 +1,176 @@
+<!-- section 1 -->
+
+<app-banner
+  [title]="'Remortgage'"
+  [subtitle]="
+    'Our experts to discuss your remortgage options and find the solution that’s right for you'
+  "
+  [desktopImage]="'/desktop image/romortgage.webp'"
+  [mobileImage]="'/Mobile img/remortgage.webp'"
+  [buttons]="[
+    {
+      label: 'Book a Free Consultation',
+      class: 'btn btn-lg bg-white txtorange',
+      action: 'dialog'
+    }
+  ]"
+/>
+<!-- section-2 -->
+<div class="container mgtop">
+  <h3 class="heading-txt mb-3 text-center">Why Remortgage?</h3>
+  <p class="text-Size text-justify text-lg-center mb-0">
+    Homeowners may consider remortgaging for a variety of reasons, such as
+    securing a more competitive rate, gaining greater flexibility, borrowing
+    additional funds, or paying off their mortgage sooner. Changes in personal
+    circumstances, like divorce, consolidating debts or an increase in property
+    value, can also make remortgaging a suitable option. It can help you review
+    your mortgage choices and manage potential interest rate changes, but it’s
+    important to carefully consider your individual circumstances.
+  </p>
+  <!-- <p class="text-Size text-justify text-lg-center">
+    Our team can help you compare mortgage deals and advise you on associated
+    aspects like valuations, the fees involved, and whether it makes financial
+    sense for you. Remortgaging offers financial flexibility, and we can give
+    you the reassurance that it's the right decision for your unique set of
+    circumstances
+  </p> -->
+</div>
+
+<!-- section-3 -->
+<div class="container mgtop">
+  <div class="mb-2 mb-md-3">
+    <h3 class="heading-txt mb-3 text-center">
+      What are Benefits of Remortgage?
+    </h3>
+    <p class="text-Size text-justify text-md-center mb-3 mb-lg-5">
+      A remortgage offers a myriad of advantages, which is why 1.2 million
+      people take this route in the UK each year, according to the FCA. Let's
+      take at some of the benefits available to anyone looking to remortgage
+      their property.
+    </p>
+  </div>
+  <div class="row justify-content-center align-items-center gx-4">
+    <div class="col-12 col-lg-6 d-flex flex-column justify-content-center">
+      <div class="d-flex mb-3 feature border-bottom">
+        <div class="me-3 icon-col">
+          <img
+            src="/mortgages/remortgages/better.svg"
+            alt="icon"
+            class="icon-img"
+          />
+        </div>
+        <div>
+          <h4 class="heading-title">Better Interest Rates</h4>
+          <p class="text-Size">
+            The mortgage market offers a wide range of interest rates, and
+            moving to a new lender or securing a better deal could help lower
+            your monthly mortgage payments. While switching may involve paying
+            an early repayment charge (ERC) or exit fees to your current lender,
+            these costs could be offset by the potential savings from a more
+            favourable mortgage rate.
+          </p>
+        </div>
+      </div>
+
+      <div class="d-flex mb-3 feature border-bottom">
+        <div class="me-3 icon-col">
+          <img
+            src="/mortgages/remortgages/improved.svg"
+            alt="icon"
+            class="icon-img"
+          />
+        </div>
+        <div>
+          <h4 class="heading-title">Improved Cash Flow</h4>
+          <p class="text-Size">
+            By extending the term and potentially reducing monthly payments,
+            homeowners can enhance their cash flow, enabling them to allocate
+            funds towards other investments or financial goals.
+          </p>
+        </div>
+      </div>
+
+      <div class="d-flex mb-3 feature border-bottom">
+        <div class="me-3 icon-col">
+          <img
+            src="/mortgages/remortgages/access.svg"
+            alt="icon"
+            class="icon-img"
+          />
+        </div>
+        <div>
+          <h4 class="heading-title">Access to Equity</h4>
+          <p class="text-Size">
+            Using a remortgage to consolidate debt is increasingly common. If
+            you have multiple short-term loans or credit card balances with
+            different lenders, you may be able to release funds through your
+            mortgage to pay them off, leaving you with a single monthly payment.
+          </p>
+        </div>
+      </div>
+      <div class="d-flex mb-3 feature border-bottom">
+        <div class="me-3 icon-col">
+          <img
+            src="/mortgages/remortgages/additional.svg"
+            alt="icon"
+            class="icon-img"
+          />
+        </div>
+        <div>
+          <h4 class="heading-title">Additional Perks</h4>
+          <p class="text-Size">
+            Switching to a new mortgage deal may offer added benefits such as
+            lower fees, improved terms, or enhanced features.
+          </p>
+        </div>
+      </div>
+      <div class="d-flex mb-3 feature border-bottom">
+        <div class="me-3 icon-col">
+          <img
+            src="/mortgages/remortgages/adaptability.svg"
+            alt="icon"
+            class="icon-img"
+          />
+        </div>
+        <div>
+          <h4 class="heading-title">Adaptability</h4>
+          <p class="text-Size">
+            People’s financial situations often change over time. For instance,
+            you might receive a higher income and want to make extra payments on
+            your mortgage, or you may prefer an interest-only or offset mortgage
+            to access available funds. Remortgaging can provide the flexibility
+            to move to a mortgage deal that better aligns with your current
+            circumstances.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-6 d-flex justify-content-center">
+      <!-- constrain height so it doesn't force parent taller than desired -->
+      <img
+        src="mortgages/remortgages/remortgage-benefts.png"
+        alt="illustration"
+        class="img-fluid right-illustration"
+      />
+    </div>
+  </div>
+</div>
+
+<!-- section-4 -->
+<div class="container mgtop">
+  <app-faq [faqs]="buyToLetFaqs"></app-faq>
+</div>
+
+<!-- section-5 -->
+<div class="container mgtopbottom p-1 p-lg-2">
+  <app-last-btn-comp
+    [align]="'center'"
+    [title]="'Looking for Remortgage? '"
+    [subtitle]="
+      'Our advisers have experience in mortgage finance and can help you explore a wide range of options from UK lenders. Get in touch today to discuss your mortgage needs and receive guidance tailored to your circumstances.'
+    "
+    [buttonText]="'Speak to our Advisers'"
+    [buttonLink]="'/contact-us'"
+  />
+</div>

@@ -1,0 +1,25 @@
+<div
+  class="hero-banner d-flex align-content-center"
+  [ngStyle]="{ 'background-image': 'url(' + background + ')' }"
+>
+  <div class="banner-content container">
+    <div class="row g-0">
+      <h1 class="banner-header">{{ title }}</h1>
+    </div>
+    <div class="row g-0">
+      <p class="col-md-10 sub-heading">{{ subtitle }}</p>
+    </div>
+    <div class="row g-0 my-4">
+      <div class="col-md-3">
+        <a href="#contact" class="btn btn-lg w-100 bg-white btn-text">
+          {{ buttonText }}
+        </a>
+      </div>
+
+      <!-- Extra Slot Area -->
+      <div class="row g-0">
+        <ng-content></ng-content>
+      </div>
+    </div>
+  </div>
+</div>

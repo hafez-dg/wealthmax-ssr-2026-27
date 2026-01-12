@@ -1,0 +1,143 @@
+<app-banner
+  [title]="'Keyman Cover'"
+  [subtitle]="
+    'Safeguard your business against the unexpected with Keyman Protection Cover, designed to protect your vital leaders and ensure continuity'
+  "
+  [desktopImage]="'/desktop image/keyman.webp'"
+  [mobileImage]="'/Mobile img/keyman protection.webp'"
+  [buttons]="[
+    {
+      label: 'Book a Free Consultation',
+      class: 'btn btn-lg bg-white txtorange',
+      action: 'dialog'
+    }
+  ]"
+></app-banner>
+
+<div class="container">
+  <div class="mgtop">
+    <h3 class="heading-txt mb-3 text-center">Why have Key Person Insurance</h3>
+    <p class="text-Size text-justify text-lg-center">
+      Most companies insure their buildings and physical assets against risks
+      such as fire, flood, theft and equipment breakdown. However, they often
+      overlook their most valuable asset: the key individuals at the top of the
+      organisation who drive critical business functions. Without these people,
+      the business could face serious disruption—and in some cases, may struggle
+      to survive.
+    </p>
+  </div>
+</div>
+<!-- Title -->
+
+<div class="container">
+  <div class="mgtop">
+    <h3 class="heading-txt mb-3 text-center">
+      What are the Benefits of Key Person Protection Cover?
+    </h3>
+    <p class="text-Size text-justify text-lg-center">
+      A question we're often asked is, “Why is key person insurance important?”
+      Recent research shows that more than half of businesses would cease
+      trading within 12 months if a key employee were to pass away or become
+      critically ill. That alone is a compelling reason to consider this type of
+      cover.
+    </p>
+  </div>
+  <div class="row justify-content-center align-items-center gx-4 pt-1">
+    <div class="col-12 col-lg-6 d-flex flex-column justify-content-center">
+      <!-- each feature row is a flex row so icon and text align nicely -->
+      <div class="d-flex align-items-start mb-3 feature border-bottom">
+        <div class="me-3 icon-col">
+          <img
+            src="/keyman protection/smooth.svg"
+            alt="icon"
+            class="icon-img"
+          />
+        </div>
+        <div>
+          <h4 class="heading-title">Smooth Transition Support</h4>
+          <p class="text-Size">
+            It can cover the cost associated with finding and training a
+            replacement, helping to minimise the length of time that others will
+            be expected to take the strain.
+          </p>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-start mb-3 feature border-bottom">
+        <div class="me-3 icon-col">
+          <img
+            src="/keyman protection/dividend.png"
+            alt="icon"
+            class="icon-img"
+          />
+        </div>
+        <div>
+          <h4 class="heading-title">Ensures Dividend Stability</h4>
+          <p class="text-Size">
+            It can cover the loss of profits that might follow the loss of a key
+            person - which enables the surviving shareholders to maintain their
+            dividend income.
+          </p>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-start mb-3 feature border-bottom">
+        <div class="me-3 icon-col">
+          <img
+            src="/keyman protection/ensures financial.svg"
+            alt="icon"
+            class="icon-img"
+          />
+        </div>
+        <div>
+          <h4 class="heading-title">Ensures Financial Stability</h4>
+          <p class="text-Size">
+            Financial stability and security are provided during this
+            transitional period.
+          </p>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-start mb-3 feature border-bottom">
+        <div class="me-3 icon-col">
+          <img
+            src="/keyman protection/builds.svg"
+            alt="icon"
+            class="icon-img"
+          />
+        </div>
+        <div>
+          <h4 class="heading-title">Builds Investor Confidence</h4>
+          <p class="text-Size">
+            Reassurance is afforded to creditors and investors about business
+            continuity.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-6 d-flex justify-content-center">
+      <!-- constrain height so it doesn't force parent taller than desired -->
+      <img
+        src="/keyman protection/keyperson.png"
+        alt="illustration"
+        class="img-fluid right-illustration"
+      />
+    </div>
+  </div>
+</div>
+<div class="container mgtop">
+  <app-faq [faqs]="faqs"></app-faq>
+</div>
+
+<div class="container mgtopbottom p-1 p-lg-2">
+  <app-last-btn-comp
+    [align]="'center'"
+    [title]="'Looking for a Key Person Insurance?'"
+    [subtitle]="
+      'Wealthmax is here to help. Our advisers are experienced in business protection and can design a plan tailored to safeguard your business. Contact us today to secure the right cover and protect your company from the financial impact of losing a key employee.'
+    "
+    [buttonText]="'Speak to our Advisers'"
+    [buttonLink]="'/contact-us'"
+  />
+</div>

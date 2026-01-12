@@ -1,0 +1,298 @@
+<div class="blog container pb-4 pb-md-5">
+  <!-- Hero -->
+  <div class="row">
+    <div class="col-12 col-lg-10">
+      <div class="breadcrumb-wrapper text-end mb-2 mb-md-3">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end">
+            <li class="breadcrumb-item cursor-pointer">
+              <a routerLink="/newsletter" class="breadcrumb-link">NEWSLETTER</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              {{ data?.headline }}
+            </li>
+          </ol>
+        </nav>
+      </div>
+      <!-- <div class="ratio ratio-16x9">
+      <img
+        [src]="image"
+        class="img-fluid w-100 rounded-3 shadow-sm hero-img"
+        alt="Blog cover image"
+      />
+      </div> -->
+      <div class="hero-wrapper">
+        <img
+          [src]="image"
+          class="hero-img rounded-3 shadow-sm"
+          alt="Blog cover image"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- Meta + Title -->
+  <div class="row mt-3 mt-md-4">
+    <div class="col-12 col-lg-10">
+      <div class="d-flex align-items-center gap-3 small text-muted flex-wrap">
+        <ul class="d-flex list-inline small mb-3 post-meta">
+          <li class="list-inline-item me-3">
+            <span class="meta-chip">
+              <i class="bi cal-icon bi-calendar2-week-fill me-1"></i
+              >{{ data?.createdAt | date }}
+            </span>
+          </li>
+          <li class="list-inline-item me-3">
+            <span class="meta-chip">
+              <img src="newsletter/newsPerson.svg" class="me-1" /> By:
+              {{ data?.author }}
+            </span>
+          </li>
+          <li class="list-inline-item">
+            <span class="meta-chip">
+              <img src="newsletter/newsComment.svg" class="me-1" />{{
+                data?.replyCount
+              }}
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <h1 class="post-title mt-2">
+        {{ data?.headline }}
+      </h1>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="row">
+    <div class="col-12 col-lg-10">
+      <p class="lead text-muted" [innerHTML]="data?.description"></p>
+
+      <div
+        class="d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between gap-3 mt-4"
+      >
+        <div class="d-flex align-items-center gap-2 flex-wrap">
+          <span class="me-1 fw-semibold">Tags:</span>
+          <span class="badge rounded-1 tag-pill">{{ data?.tags }}</span>
+        </div>
+
+        <div class="d-flex align-items-center gap-2 share-icons">
+          <a
+            role="button"
+            tabindex="0"
+            class="btn btn-icon"
+            aria-label="Share on LinkedIn"
+            href="https://www.linkedin.com/company/wealthmax/"
+            target="_blank"
+          >
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a
+            role="button"
+            tabindex="0"
+            class="btn btn-icon"
+            aria-label="Share on Facebook"
+            href="https://www.facebook.com/WealthmaxUK"
+            target="_blank"
+          >
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a
+            role="button"
+            tabindex="0"
+            class="btn btn-icon"
+            aria-label="Share on Instagram"
+            href="https://www.instagram.com/wadvisers/"
+            target="_blank"
+          >
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a
+            role="button"
+            tabindex="0"
+            class="btn btn-icon"
+            aria-label="Share on X"
+            href="https://x.com/WAdvisers"
+            target="_blank"
+          >
+            <i class="bi bi-twitter-x"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="reply-box mt-5">
+        <h6 class="reply-title mb-3">Leave a Reply</h6>
+
+        <form [formGroup]="commentForm">
+          <div class="row g-3 mb-3">
+            <!-- Full Name -->
+            <div class="col-md-6">
+              <input
+                type="text"
+                class="form-control reply-input"
+                placeholder="Enter Name"
+                formControlName="fullName"
+                [ngClass]="{
+                  'is-invalid':
+                    commentForm.get('fullName')?.touched &&
+                    commentForm.get('fullName')?.invalid
+                }"
+              />
+              <div
+                *ngIf="
+                  commentForm.get('fullName')?.touched &&
+                  commentForm.get('fullName')?.invalid
+                "
+                class="error small mt-1"
+              >
+                <div *ngIf="commentForm.get('fullName')?.errors?.['required']">
+                  Name is required.
+                </div>
+                <div *ngIf="commentForm.get('fullName')?.errors?.['maxlength']">
+                  Name cannot exceed 80 characters.
+                </div>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="col-md-6">
+              <input
+                type="email"
+                class="form-control reply-input"
+                placeholder="Enter Email"
+                formControlName="email"
+                [ngClass]="{
+                  'is-invalid':
+                    commentForm.get('email')?.touched &&
+                    commentForm.get('email')?.invalid
+                }"
+              />
+              <div
+                *ngIf="
+                  commentForm.get('email')?.touched &&
+                  commentForm.get('email')?.invalid
+                "
+                class="error small mt-1"
+              >
+                <div *ngIf="commentForm.get('email')?.errors?.['required']">
+                  Email is required.
+                </div>
+                <div *ngIf="commentForm.get('email')?.errors?.['email']">
+                  Please enter a valid email address.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Message -->
+          <div class="mb-3">
+            <textarea
+              class="form-control reply-textarea"
+              rows="5"
+              placeholder="Enter Message"
+              formControlName="message"
+              [ngClass]="{
+                'is-invalid':
+                  commentForm.get('message')?.touched &&
+                  commentForm.get('message')?.invalid
+              }"
+            ></textarea>
+            <div
+              *ngIf="
+                commentForm.get('message')?.touched &&
+                commentForm.get('message')?.invalid
+              "
+              class="error small mt-1"
+            >
+              <div *ngIf="commentForm.get('message')?.errors?.['required']">
+                Message is required.
+              </div>
+              <div *ngIf="commentForm.get('message')?.errors?.['maxlength']">
+                Message cannot exceed 2000 characters.
+              </div>
+            </div>
+          </div>
+
+          <!-- Remember Checkbox -->
+          <div class="form-check mb-4 d-flex align-items-center">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="remember"
+              formControlName="remember"
+            />
+            <label for="remember" class="form-check-label small text-muted">
+              Save my name, email, and website in this browser for the next time
+              I comment.
+            </label>
+          </div>
+
+          <!-- Submit -->
+          <button
+            [disabled]="commentForm.invalid"
+            class="btn reply-btn"
+            (click)="onSubmit()"
+          >
+            Post Comment
+          </button>
+        </form>
+      </div>
+      <div class="mt-5">
+        <h3 class="post-title fw-semibold mb-4">Comments</h3>
+
+        <div class="mb-4" *ngFor="let comment of visibleComments">
+          <h5 class="fw-semibold mb-0">{{ comment.fullName }}</h5>
+          <p class="post-title small mb-2">{{ comment.email }}</p>
+          <p class="text-body">{{ comment.message }}</p>
+        </div>
+        <div class="d-flex justify-content-between mt-4">
+          <button
+            class="btn btn-outline-secondary"
+            (click)="prevPage()"
+            [disabled]="currentPage === 1"
+          >
+            ‹ Previous
+          </button>
+
+          <button
+            class="btn btn-outline-secondary"
+            (click)="nextPage()"
+            [disabled]="currentPage * itemsPerPage >= comments.length"
+          >
+            Next ›
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="successModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content success-popup text-center p-4">
+      <div class="checkmark mb-3"><i class="bi bi-check-circle-fill"></i></div>
+      <h5 class="fw-semibold mb-2">Comment Submitted!</h5>
+      <p class="text-muted mb-4">Thank you for your feedback.</p>
+      <button
+        type="button"
+        class="btn btn-accent rounded-pill px-4"
+        data-bs-dismiss="modal"
+      >
+        OK
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- <div class=" mt-5">
+  <h3 class="post-title fw-semibold mb-4">Comments</h3>
+
+  <div class="mb-4" *ngFor="let comment of comments">
+    <h5 class="fw-semibold mb-0">{{ comment.fullName }}</h5>
+    <p class="post-title small mb-2">{{ comment.email }}</p>
+    <p class="text-body">
+      {{ comment.message }}
+    </p>
+  </div>
+</div> -->

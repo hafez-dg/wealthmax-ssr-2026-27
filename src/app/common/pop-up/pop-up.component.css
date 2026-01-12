@@ -1,0 +1,149 @@
+/* .subBtn {
+  background: #eb7124;
+  color: #fff;
+  border: none;
+  margin-left: 4px;
+}
+label {
+  font-weight: 600;
+}
+:host::ng-deep.p-dialog .p-dialog-header .p-dialog-title {
+  font-family: "TiemposHeadline-Regular";
+  color: #01004c;
+  font-weight: 700;
+  font-size: 32px;
+}
+:host::ng-deep input.p-inputtext.p-component{
+  height: 38px;
+}
+
+mat-form-field {
+  margin-right: 16px;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.325); /* visible but not harsh
+}
+
+
+input::-webkit-input-placeholder { color: rgba(255,255,255,0.7); }
+input:-ms-input-placeholder { color: rgba(255,255,255,0.7); }
+input::-ms-input-placeholder { color: rgba(255,255,255,0.7); } */
+/* Popup container radius and padding */
+.popup-dialog-container .mat-dialog-container {
+  border-radius: 12px !important; /* decreased corner radius to 12px */
+  padding: 24px;
+  box-shadow: 0 8px 30px rgba(1, 0, 76, 0.08);
+  overflow: visible;
+}
+
+/* Keep label weight consistent */
+label {
+  font-weight: 600;
+}
+
+/* Submit button - match site primary orange and site button-radius */
+.btn-submit {
+  background: #eb7124;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  padding: 8px 18px;
+  min-width: 110px;
+  border-radius: 8px; /* adjust to the site corner radius you prefer; change to 4/12 as needed */
+  box-shadow: 0 4px 10px rgba(235, 113, 36, 0.15);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.08s ease, box-shadow 0.12s ease;
+}
+
+/* Disabled state */
+.btn-submit[disabled],
+.btn-submit[aria-busy="true"] {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Hover/active (for non-touch) */
+.btn-submit:not([disabled]):hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(235, 113, 36, 0.18);
+}
+
+/* If you want material ripple preserved, keep mat-flat-button wrapper; styles still apply */
+
+/* Cancel button small tweaks if using bootstrap */
+.cancel-btn {
+  min-width: 92px;
+  padding: 7px 12px;
+  border-radius: 8px;
+}
+
+/* Form inputs spacing and height tweak */
+:host ::ng-deep input.p-inputtext.p-component {
+  height: 38px;
+}
+
+/* Placeholder colors (already present but more scoped) */
+input::placeholder {
+  color: rgba(255, 255, 255, 0.325);
+}
+input::-webkit-input-placeholder { color: rgba(255,255,255,0.7); }
+input:-ms-input-placeholder { color: rgba(255,255,255,0.7); }
+input::-ms-input-placeholder { color: rgba(255,255,255,0.7); }
+
+/* Responsive behaviour: mobile and tablet adjustments */
+@media (max-width: 991px) {
+  /* Make dialog take more of the viewport on tablet */
+  .popup-dialog-container .mat-dialog-container {
+    padding: 18px;
+  }
+
+  /* Stack the action buttons vertically on narrow screens */
+  .popup-actions {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .btn-submit, .cancel-btn {
+    width: 100%;
+    min-width: 0;
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Mobile: make inputs comfortably tappable */
+  .popup-dialog-container .mat-dialog-container {
+    padding: 14px;
+  }
+
+  input.form-control,
+  select.form-control,
+  textarea.form-control {
+    font-size: 15px;
+    padding: 10px 12px;
+  }
+
+  /* increase clickable area for datetime control */
+  #availableTime {
+    height: 44px;
+  }
+}
+
+/* Style the popup dialog container globally */
+.popup-dialog-container .mat-dialog-container {
+  border-radius: 12px !important;
+  padding: 24px;
+  overflow: visible;
+  box-shadow: 0 8px 30px rgba(1, 0, 76, 0.08);
+  background-color: #fff; /* optional, to ensure it's not transparent */
+}
+.form-label
+ {
+    margin-bottom: 0rem !important;
+}

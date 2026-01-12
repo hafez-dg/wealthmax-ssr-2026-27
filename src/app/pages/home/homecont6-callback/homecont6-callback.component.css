@@ -1,0 +1,394 @@
+.pd-all {
+  padding: 4% 5%;
+}
+
+label {
+  font-family: "Inter";
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  padding-bottom: 6px;
+}
+.callbackicon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.dropdown-items-form {
+  font-size: 14px;
+  font-family: "Inter";
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 90%;
+  padding-bottom: 0px !important;
+}
+
+.submit-btn {
+  background-color: #eb7124;
+  color: white;
+  padding: 10px 24px;
+  border-radius: 6px;
+  border: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+button.submit-btn:disabled {
+  background-color: #eb7124 !important;
+  color: #ffffff !important;
+  cursor: not-allowed;
+}
+
+.form-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.form-wrapper h2 {
+  color: #eb7124;
+  margin-bottom: 0.5rem;
+}
+
+.form-wrapper p {
+  margin-bottom: 2rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0rem;
+  column-gap: 0.5rem; /* no horizontal gap */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group input,
+.form-group select {
+  padding: 12px !important;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.form-padding input {
+  padding: 12px;
+}
+
+.form-group.full-width {
+  grid-column: span 2;
+}
+
+/* .form-group button {
+
+  background-color: #eb7124;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+} */
+
+.form-group button i {
+  margin-right: 5px;
+}
+
+.contact-info div {
+  padding: 0rem;
+  border-radius: 6px;
+  margin: 2px;
+}
+
+.contact-info div .icon {
+  color: #eb7124;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-info div strong {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+.icon_name {
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  text-align: left;
+  padding: 3px;
+  line-height: 24px;
+  letter-spacing: 0%;
+}
+.icon-address {
+  font-family: "Inter";
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  padding: 3px !important;
+  white-space: nowrap;
+}
+.email-icon {
+  width: 54px;
+  height: 54px;
+}
+.select-box {
+  width: 100%;
+}
+/* styles.scss or component CSS */
+ .iconleftscotainer{
+    margin-left: 10px !important;
+
+  }
+
+@media (max-width: 1100px) {
+  .iconleftscotainer{
+    margin-left: 11px !important;
+
+  }
+  .formfill {
+    flex-direction: column;
+  }
+
+  /* .form-group button {
+    padding: 0.75rem;
+    background-color: #eb7124;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+  } */
+
+  /* .lefticon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } */
+}
+@media (max-width:992px){
+    .lefticon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+   .iconleftscotainer{
+    margin-left: 1px !important;
+    row-gap: 4%;
+
+  }
+}
+
+@media (max-width: 767px) {
+  .icon-address {
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 12px;
+
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+  .icon_name {
+    font-weight: 400;
+
+    font-size: 12px;
+
+    line-height: 20px;
+    letter-spacing: 0%;
+  }
+  .form-grid {
+    grid-template-columns: auto;
+  }
+
+  .pd_allside {
+    padding: 1.1rem 0.8rem;
+  }
+
+  .f_input {
+    width: 100%;
+  }
+  .email-icon {
+    width: 2rem;
+  }
+}
+
+.custom-multiselect {
+  position: relative;
+  width: 100%;
+  font-family: "Arial", sans-serif;
+}
+
+.select-box {
+  border: 1px solid #ac9797a1 !important;
+  padding: 10px 12px !important;
+  height: 48px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+  /* border: 1px solid red; */
+  z-index: 1010;
+}
+
+.select-box:hover {
+  border-color: #999;
+}
+
+.select-box .selected-text {
+  color: #333;
+  font-size: 14px;
+  font-family: "Inter";
+  padding: 2px !important;
+}
+
+.select-box .arrow-icon {
+  font-size: 12px;
+  color: #666;
+}
+
+.options {
+  position: absolute;
+  width: 100%;
+  border: 1px solid #ebd3d3;
+  background: rgb(255, 255, 255) !important;
+  max-height: 140px;
+  overflow-y: visible;
+  margin-top: 4px;
+  border-radius: 4px;
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.options .option-item {
+  display: flex;
+  align-items: center;
+  padding: 0px 12px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.options .option-item input {
+  margin-right: 8px;
+}
+
+.options .option-item:hover {
+  background-color: #f2f2f2;
+}
+
+.label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+@media (max-width: 767px) {
+  .options {
+    width: 100%;
+  }
+}
+@media (max-width: 360px) {
+  .icon-address {
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 10px;
+
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+}
+
+.cont1 {
+  width: 40%;
+}
+.cont2 {
+  width: 60%;
+}
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 560px;
+  gap: 8px;
+  border-radius: 4px 10px 10px 6px;
+}
+
+.input-wrapper {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.subscribe-form input[type="email"] {
+  flex: 1;
+  padding: 12px 16px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background-color: #fef7f3;
+}
+
+.subscribe-form button:disabled {
+  background-color: #eb7124;
+  color: white;
+  cursor: not-allowed;
+}
+
+.sub_image {
+  width: 100%;
+}
+
+@media (max-width: 340px) {
+  .btnall {
+    font-size: 12px !important;
+  }
+}
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.custom-checkbox {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  /* accent-color: #ff6600;  */
+  cursor: pointer;
+}
+
+.sizetxt {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+  .col-md-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}

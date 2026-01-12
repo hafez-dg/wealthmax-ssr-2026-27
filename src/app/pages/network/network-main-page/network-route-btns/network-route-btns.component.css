@@ -1,0 +1,236 @@
+.container {
+  overflow-x: visible !important;
+}
+
+img {
+     border-radius: 0px !important;
+}
+.cont_btn {
+  position: relative; /* keeps it in flow but allows z-index control */
+  z-index: 10;
+  margin-top: -5vh; /* Replace negative margin with positive padding */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5%;
+  height: 400px;
+}
+.cards {
+  border-radius: 12px;
+}
+.effects {
+  cursor: pointer;
+}
+/* Card background */
+.bg-img {
+  width: 100%;
+  height: 100%;
+  min-height: 300px; /* Reduced for smaller screens */
+  background-image: url("/nw/nwbgig.png");
+  background-size: cover;
+  background-position: left; /* Changed to center for better scaling */
+  border-radius: 12px;
+  transition: background-image 0.5s ease-in-out;
+  padding-inline: 5%;
+}
+.btn_nw {
+  padding-inline: 5%;
+  padding-top: 1%;
+}
+.effects:hover .bg-img {
+  background-image: url("/nw/nwbgig.png");
+}
+
+/* Overlay content */
+.card-img-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0px;
+  padding-bottom: 10px;
+}
+
+/* Icon */
+/* .iconsimg {
+  width: 3rem; 
+  height: 3.5rem;
+} */
+
+/* Typography */
+.card-title {
+  font-family: "Urbanist", sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 1.2;
+  color: white;
+  height: 70px;
+}
+.card-text {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: white;
+  position: absolute;
+  padding-right: 4%;
+}
+
+/* CTA link with underline animation */
+.cta-link {
+  position: relative;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+  color: rgba(1, 0, 76, 1);
+  text-decoration: none;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Create the underline */
+.cta-link::after {
+  content: "";
+  position: absolute;
+  left: 5%;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: rgb(221, 75, 7);
+  transition: width 0.9s ease;
+}
+
+/* On hover, animate underline */
+.cta-link:hover::after {
+  width: 35%;
+}
+.effects:hover .bg-img {
+  background-image: url("/nw/Bg WithHover.png");
+}
+
+/* Responsive adjustments */
+@media (min-width: 1024px) and (max-width: 1400px) {
+  .card-title {
+    font-size: 1.5rem; /* 24px */
+    height: 62px;
+  }
+  .card-text {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  .cont_btn {
+    gap: 2%;
+    height: 320px;
+  }
+  .bg-img {
+    min-height: 240px;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 1024px) {
+  .card-title {
+    font-size: 1.15rem; /* 20px */
+    height: 44px;
+  }
+  .card-text {
+    font-size: 0.80rem;
+    line-height: 1.3;
+  }
+  /* .iconsimg {
+    width: 2.5rem;
+    height: auto;
+  } */
+
+  .cont_btn {
+    height: 280px;
+  }
+  .bg-img {
+    min-height: 240px;
+  }
+}
+@media (max-width: 992px) {
+  .bg-img {
+    min-height: 220px;
+  }
+}
+
+@media (max-width: 850px) {
+    .container {
+    margin-top: 5%;
+  }
+  .cont_btn {
+    margin-top: -50px;
+    display: grid;
+    grid-template-columns: auto;
+    gap: 2%;
+    height: 900px;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    margin-top: 5%;
+  }
+  .cont_btn {
+    margin-top: -50px;
+    display: grid;
+    grid-template-columns: auto;
+    gap: 2%;
+    height: 920px;
+  }
+  .btn_nw {
+padding-top: 0%;
+}
+  .card-title {
+    font-size: 1.07rem; /* 18px */
+    height: 30px;
+  }
+  .card-text {
+    font-size: 0.8rem;
+    line-height: 1.2;
+  }
+  
+  /* .iconsimg {
+    width: 2rem;
+    height: 2.3rem;
+  } */
+  .card-img-overlay {
+    padding: 2px;
+  }
+  .bg-img {
+    min-height: 249px;
+    max-height: 420px;
+    background-position: bottom left;
+  }
+}
+/* @media (max-width: 420px) {
+  .container {
+    margin-top: 10%;
+  }} */
+   
+.effects {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.effects:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.effects:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.effects:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cards {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cards:hover {
+  transform: translateY(-6px); /* lift effect */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}

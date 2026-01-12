@@ -1,0 +1,474 @@
+body {
+  background-color: #2e75bb !important;
+}
+
+.top-heading {
+  color: rgba(29, 40, 58, 1);
+  font-family: "Epilogue";
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 3.6vh;
+  line-height: 40px;
+  letter-spacing: 0%;
+  /* text-align: center; */
+  vertical-align: middle;
+}
+
+.sub-heading {
+  font-family: "Epilogue";
+  font-weight: 400;
+  font-style: "Regular";
+  font-size: 2vh;
+  line-height: 28px;
+  letter-spacing: 0%;
+  /* text-align: center; */
+  vertical-align: middle;
+}
+
+.mb-subheading {
+  margin-bottom: 60px;
+}
+
+.step-card {
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(225, 231, 239, 1);
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 30px 25px;
+  position: relative;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.step-card:hover {
+  transform: translateY(-5px);
+}
+
+.step-number {
+  position: absolute;
+  top: -20px;
+  left: 25px;
+  background-color: rgba(235, 112, 36, 1);
+  color: #fff;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.67vh;
+}
+
+.icon-box {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.step-icon {
+  width: 4vh;
+  height: 4vh;
+  object-fit: contain;
+  /* margin-top: 15px; */
+}
+
+.styleh5 {
+  font-family: "Epilogue";
+  font-weight: 600;
+  color: rgba(29, 40, 58, 1);
+  font-style: "Semibold";
+  font-size: 1.85vh;
+  line-height: 28px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.stylep {
+  color: rgba(104, 116, 135, 1);
+  font-family: "Epilogue";
+  font-weight: 400;
+  font-style: "Regular";
+  font-size: 1.6vh;
+  line-height: 24px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  text-align: left;
+}
+
+/* MOBILE/TABLET: show horizontal lines */
+.mobile-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #eb7124;
+  margin: 1rem 0;
+}
+
+/* DESKTOP: hide horizontal lines */
+@media (min-width: 767px) {
+  .mobile-divider {
+    display: none;
+  }
+}
+
+/* DESKTOP: vertical orange borders */
+@media (min-width: 767px) {
+  .feature-box.border-lg-start {
+    border-left: 1px solid #eb7124 !important;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 767px) {
+  .feature-box:nth-child(3) {
+    border-left: none !important;
+  }
+}
+
+/* image section */
+.greyradius {
+  border-radius: 45px;
+}
+
+.imgtext {
+  font-family: "Epilogue";
+  font-weight: 400;
+  font-style: "Regular";
+  font-size: 2.78vh; /* 30px */
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin-left: 0px;
+}
+/* Default: mobile & tablet - NO background color */
+.bg-desktop {
+  background-color: transparent;
+}
+
+/* Laptop & Desktop only */
+@media (min-width: 767px) {
+  /* Bootstrap's lg breakpoint */
+  .bg-desktop {
+    background-color: #f3f3f3;
+  }
+}
+/* ===== Header Section ===== */
+.top-header-container {
+  background: #ffffff;
+  box-shadow: 0px 2px 15px 0px #0000001a;
+  padding: 0 106px; /* adjust spacing left+right */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.bgclr {
+  background: linear-gradient(to bottom, #f8fafc);
+}
+.adviser-hub-btn {
+  font-family: "Epilogue";
+  font-weight: 500;
+  font-style: "Medium";
+  font-size: 1.5vh;
+  line-height: 17.37px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #eb7124;
+  color: white;
+  padding: 14px 30px;
+  border-radius: 8px;
+}
+
+.adviser-hub-btn:hover {
+  background-color: #eb7124;
+  color: white;
+}
+
+/* Responsive logo */
+@media (max-width: 425px) {
+  .logo {
+    max-height: 30px;
+    margin-right: 0;
+  }
+}
+@media (max-width: 768px) {
+  .logo {
+    max-height: 45px;
+    margin-right: 0;
+  }
+}
+
+/* ===== Typography ===== */
+.text-size {
+  font-family: "Epilogue";
+  font-weight: 700 !important;
+  font-size: 4.6vh;
+  line-height: 60px;
+}
+
+.button-size,
+.button-icon-size {
+  font-family: "Epilogue";
+  font-weight: 500 !important;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 16px !important;
+  line-height: 25px;
+  color: #21c45d;
+}
+
+.button-icon-size {
+  font-size: 1.4vh !important;
+  line-height: 20px;
+}
+
+.fca-badge {
+  border-radius: 50px;
+}
+
+/* ===== Colors ===== */
+.bg-icon {
+  background-color: #eb7024;
+  color: #ffffff;
+}
+
+.bg-icon:hover,
+.bg-icon:focus,
+.bg-icon:active {
+  background-color: #eb7024;
+  color: #ffffff;
+}
+
+.txt-clr {
+  color: #eb7024;
+}
+
+/* ===== Placeholder Box ===== */
+.placeholder-box {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== Steps Section ===== */
+.steps-wrapper {
+  /* max-width: 850px; */
+  margin: 0 auto;
+}
+
+.step-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #e1e7ef;
+  /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); */
+  position: relative;
+}
+
+.stepsicon {
+  width: 6.4vh !important;
+  height: 6.4vh !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-label {
+  background: #fff1e8;
+  color: #eb7024;
+  font-weight: 700;
+  font-size: 1.4vh;
+  border-radius: 8px;
+  padding: 3px 8px;
+}
+
+.connector {
+  position: absolute;
+  bottom: -28px;
+  left: 52px;
+  width: 2px;
+  height: 28px;
+  background: repeating-linear-gradient(45deg, #e1e7ef, transparent 100px);
+}
+
+/* Remove connector for last step */
+.step-box:last-child .connector {
+  display: none;
+}
+
+/* ===== Journey Section ===== */
+.journey-section {
+  background-color: #eb7024;
+  text-align: center;
+  padding: 4rem 1rem;
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.journey-section h2 {
+  font-family: "Epilogue";
+  font-weight: 700 !important;
+  font-style: "Bold";
+  font-size: 4.1vh;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #fff;
+  vertical-align: middle;
+}
+
+.journey-section p {
+  font-family: "Epilogue";
+  font-weight: 400 !important;
+  font-style: "Regular";
+  font-size: 1.8vh;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.journey-section .btn {
+  background-color: #00114d;
+  color: #fff;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.journey-section .btn:hover {
+  background-color: #002e5a;
+}
+
+/* ===== Footer ===== */
+.footer {
+  background-color: #f9f9f9;
+  color: #444;
+  font-size: 0.875rem;
+}
+
+.footer a {
+  color: #0d6efd;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+/* <!--your Mortgage options  Section  --> */
+
+.title-heading {
+  font-size: 32px;
+  color: #1a1a1a;
+}
+
+.sub-text {
+  /* max-width: 750px; */
+  margin: 0 auto;
+  font-size: 15px;
+}
+
+.card-box {
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid #e1e7ef;
+  transition: all 0.25s ease;
+}
+
+.card-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+.optionIcon {
+  width: 5vh;
+  height: 5vh;
+}
+
+.icon-img1 {
+  width: 2vh;
+  height: 2vh;
+}
+
+.bottom-box {
+  font-family: "Epilogue";
+  font-weight: 400;
+  border-radius: 16px;
+  background: #f3f3f3;
+  margin: 0 auto;
+  font-size: 1.6vh;
+  line-height: 26px;
+}
+.f18 {
+  font-family: "Epilogue";
+  font-weight: 400;
+  font-size: 1.8vh;
+  line-height: 28px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+}
+a.footer-link {
+  text-decoration: none !important;
+  color: #606060 !important ;
+}
+/* Default for mobile/tablet — show text in one line */
+.responsive-text {
+  display: inline;
+}
+
+/* Apply flex-column ONLY on laptops & desktops */
+@media (min-width: 992px) {
+  .responsive-text {
+    display: flex;
+    flex-direction: column;
+  }
+}
+/* container css */
+.pdml {
+  padding-inline: 10% !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  /* margin-inline: 10% !important; */
+}
+@media (max-width: 1800px) {
+  .pdml {
+    padding-inline: 6% !important;
+  }
+}
+@media (max-width: 1600px) {
+  .pdml {
+    padding-inline: 2% !important;
+  }
+}
+
+/* navbar responsive */
+@media (min-width: 767px) and (max-width: 1024px) {
+  .top-header-container {
+    padding: 0 80px;
+  }
+}
+@media (min-width: 425px) and (max-width: 767px) {
+  .top-header-container {
+    padding: 0 30px;
+  }
+}
+@media (max-width: 365px) {
+  .adviser-hub-btn {
+    padding: 4px 30px;
+  }
+}
+@media (max-width: 425px) {
+  .top-header-container {
+    padding: 0 8px;
+  }
+  .adviser-hub-btn {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .text-size {
+    font-size: 3.6vh;
+    line-height: 44px;
+  }
+}

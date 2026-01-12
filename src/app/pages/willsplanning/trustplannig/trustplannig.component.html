@@ -1,0 +1,172 @@
+<div class="bgclr_main">
+  <app-banner
+    [title]="'Trust Planning '"
+    [subtitle]="
+      'Protect your assets and secure your legacy with tailored Trust Planning solutions designed to safeguard your wealth for generations'
+    "
+    [desktopImage]="'/desktop image/trustPlanning.webp'"
+    [mobileImage]="'/Mobile img/trust planning.webp'"
+    [buttons]="[
+      {
+        label: 'Book a Free Consultation',
+        class: 'btn btn-lg bg-white txtorange',
+        action: 'dialog'
+      }
+    ]"
+  />
+  <!-- section 2 -->
+  <div class="container mgtop">
+    <h3 class="heading-txt mb-3 text-center">Why Trust Planning Matters?</h3>
+    <p class="text-Size text-justify text-md-center">
+      Around 60% of UK people die intestate, which can make things very
+      complicated for your beneficiaries when it comes to distributing your
+      property or assets as you wish. However, when WealthMax assists you in
+      setting up a trust, you can avoid the delays and increased costs that
+      occur when adequate inheritance tax planning isn’t carried out.  When
+      trusts are established, they not only provide clear instructions regarding
+      who receives your assets or property but also how they’re passed on. For
+      example, without a trust, the beneficiary may simply receive a lump sum,
+      which can lead to irresponsible spending and disputes among family
+      members. Our experts can help you in setting up a trust in which trustees
+      hold your assets for the benefit of your heirs. They offer a flexible way
+      to transfer your assets while retaining control over how they're
+      distributed. This also protects your assets from creditors and inheritance
+      tax by reducing the overall size of your estate. Trusts are subject to
+      legal and tax rules that may change. Tax treatment depends on individual
+      circumstances. Professional advice is recommended to ensure suitability.
+    </p>
+  </div>
+  <!-- section-3 -->
+  <div class="bgcolorlinear">
+    <div class="container mgtop">
+      <h3 class="heading-txt mb-3 text-center">What we Offer?</h3>
+      <p class="textSize text-justify text-md-center">
+        Trusts are widely used as part of inheritance tax planning and they come
+        in a variety of different forms, something you'll find out about when
+        talking to our experts. They include:
+      </p>
+      <div class="cards-container mt-1 mt-4">
+        <div class="cards-container">
+          <div class="card" *ngFor="let card of cards">
+            <div class="d-flex flex-column align-items-start">
+              <img
+                [src]="card.image"
+                alt="icon"
+                class="icon-img mb-1 mb-lg-2"
+              />
+              <h3 class="card-title my-2">{{ card.title }}</h3>
+              <p class="card-text mb-0">{{ card.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- section-4 -->
+  <div class="container mgtop">
+    <div>
+      <h3 class="heading-txt mb-3 text-center">
+        What are Benefits of Trust planning?
+      </h3>
+      <p class="text-Size text-justify text-md-center mb-3 mb-lg-5">
+        Shield your wealth from potential creditors, divorce settlements, or
+        financial disputes, ensuring it stays within the family.
+      </p>
+    </div>
+    <div class="row justify-content-center align-items-center gx-4 pt-1">
+      <div class="col-12 col-lg-6 d-flex flex-column justify-content-center">
+        <!-- each feature row is a flex row so icon and text align nicely -->
+        <div class="d-flex align-items-start mb-3 feature border-bottom">
+          <div class="me-3 icon-col">
+            <img
+              src="/trustplanning/ICON1.svg"
+              alt="icon"
+              class="icon-img"
+            />
+          </div>
+          <div>
+            <h4 class="heading-title">Control How Wealth Is Used</h4>
+            <p class="text-Size">
+              Decide exactly how and when beneficiaries receive assets, helping
+              prevent misuse or overspending.
+            </p>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-start mb-3 feature border-bottom">
+          <div class="me-3 icon-col">
+            <img
+              src="/trustplanning/ICON2.svg"
+              alt="icon"
+              class="icon-img"
+            />
+          </div>
+          <div>
+            <h4 class="heading-title">Support Future Generations</h4>
+            <p class="text-Size">
+              Set aside funds to provide long-term financial support for
+              children, grandchildren, or vulnerable family members.
+            </p>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-start mb-3 feature border-bottom">
+          <div class="me-3 icon-col">
+            <img
+              src="/trustplanning/Inheritance Tax.svg"
+              alt="icon"
+              class="icon-img"
+            />
+          </div>
+          <div>
+            <h4 class="heading-title">Efficient Tax Planning</h4>
+            <p class="text-Size">
+              Use trusts to manage inheritance tax more effectively, helping to
+              preserve more of your estate.
+            </p>
+          </div>
+        </div>
+        <div class="d-flex align-items-start mb-3 feature border-bottom">
+          <div class="me-3 icon-col">
+            <img
+              src="/trustplanning/Legal Expertise.svg"
+              alt="icon"
+              class="icon-img"
+            />
+          </div>
+          <div>
+            <h4 class="heading-title">Ensure Continuity and Stability</h4>
+            <p class="text-Size">
+              Trusts provide a structured way to transfer wealth, reducing
+              disputes and giving your family peace of mind.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-6 d-flex justify-content-center">
+        <img
+          src="/trustplanning/middleimg.png"
+          alt="illustration"
+          class="img-fluid right-illustration"
+        />
+      </div>
+    </div>
+  </div>
+  <!-- section-5 -->
+  <div class="container mgtop">
+    <app-faq [faqs]="buyToLetFaqs"></app-faq>
+  </div>
+  <!-- secton-6 -->
+  <div class="container mgtopbottom p-1 p-lg-2">
+    <app-last-btn-comp
+      [align]="'center'"
+      [title]="'Looking to Secure your Wealth through Trust Planning?'"
+      [subtitle]="
+        'Wealthmax is here to help. Our advisers are experienced in trust planning and can create solutions to protect your assets and ensure they reach the right beneficiaries. Contact us today to secure your wealth and provide peace of mind for your family.'
+      "
+      [buttonText]="'Speak to our Advisers'"
+      [buttonLink]="'/contact-us'"
+    />
+  </div>
+</div>

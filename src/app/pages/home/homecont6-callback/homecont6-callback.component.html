@@ -1,0 +1,321 @@
+<div class="form-wrapper container mgtop overflow-hidden">
+  <div class="bg-white p-1 p-lg-5">
+    <h3 class="heading-txt text-center text-lg-start">Request a Callback</h3>
+    <p class="text-Size">
+      To get in touch with Wealthmax about life cover, protection planning or
+      anything else relating to your financial needs, simply enter your details
+      below. Upon receipt of your enquiry, one of our expert financial advisers
+      will call you back.
+    </p>
+
+    <div class="row position-relative">
+      <div class="col-12 col-lg-6 position-relative">
+        <form
+          [formGroup]="contactForm"
+          (ngSubmit)="onContactSubmit()"
+          class="form-grid"
+        >
+          <!-- First Name -->
+          <div class="form-group">
+            <label>First name</label>
+            <input
+              class="f_input"
+              type="text"
+              formControlName="firstName"
+              placeholder="First name"
+              (keypress)="allowOnlyLetters($event)"
+              (blur)="trimName('firstName')"
+            />
+            <small class="error" *ngIf="contactForm.get('firstName')?.touched">
+              <span *ngIf="contactForm.get('firstName')?.hasError('required')"
+                >First name is required</span
+              >
+              <span *ngIf="contactForm.get('firstName')?.hasError('pattern')"
+                >Only letters and single spaces allowed</span
+              >
+            </small>
+          </div>
+
+          <!-- Last Name -->
+          <div class="form-group">
+            <label>Last name</label>
+            <input
+              class="f_input"
+              type="text"
+              formControlName="lastName"
+              placeholder="Last name"
+              (keypress)="allowOnlyLetters($event)"
+              (blur)="trimName('lastName')"
+            />
+            <small class="error" *ngIf="contactForm.get('lastName')?.touched">
+              <span *ngIf="contactForm.get('lastName')?.hasError('required')"
+                >Last name is required</span
+              >
+              <span *ngIf="contactForm.get('lastName')?.hasError('pattern')"
+                >Only letters and single spaces allowed</span
+              >
+            </small>
+          </div>
+
+          <!-- Email -->
+          <div class="form-group full-width">
+            <label>Email</label>
+            <input
+              class="f_input"
+              type="email"
+              formControlName="emailId"
+              placeholder="example@.co.uk"
+            />
+            <small class="error" *ngIf="contactForm.get('emailId')?.touched">
+              <span *ngIf="contactForm.get('emailId')?.hasError('required')"
+                >Email is required</span
+              >
+              <span *ngIf="contactForm.get('emailId')?.hasError('pattern')"
+                >Please enter a valid email address</span
+              >
+            </small>
+          </div>
+
+          <!-- Phone Number -->
+          <div class="form-group full-width">
+            <label for="contactNumber" class="form-label">Contact Number</label>
+            <input
+              id="contactNumber"
+              type="tel"
+              class="form-control"
+              placeholder="+441234567890"
+              formControlName="contactNumber"
+              autocomplete="tel"
+              inputmode="tel"
+              required
+            />
+
+            <div
+              *ngIf="
+                (f.contactNumber.touched || f.contactNumber.dirty) &&
+                f.contactNumber.invalid
+              "
+              class="error"
+            >
+              <div *ngIf="f.contactNumber.errors?.required">
+                Contact Number is required
+              </div>
+              <div *ngIf="f.contactNumber.errors?.pattern">
+                Please enter a valid contact number:
+                <br />
+                • 10 digits without “+” (e.g. 9876543210) or +CC followed by 10
+                digits (e.g. +441234567890 or +44 1234567890)
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Interested (custom multiselect) -->
+          <div class="form-group full-width position-relative">
+            <label class="mb-2 d-block fw-semibold">Product Interested</label>
+
+            <div class="row">
+              <div
+                class="col-md-4 col-sm-6 col-lg-6 col-xxl-4 col-12"
+                *ngFor="let s of products"
+              >
+                <div class="checkbox-item d-flex align-items-center">
+                  <div>
+                    <input
+                      type="checkbox"
+                      class="custom-checkbox"
+                      [id]="s.code"
+                      (change)="toggleService(s.code, $event)"
+                      [checked]="isChecked(s.code)"
+                    />
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <label [for]="s.code" class="sizetxt mb-0">
+                      {{ s.name }}
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <small
+              class="error"
+              *ngIf="
+                contactForm.get('products')?.touched &&
+                contactForm.get('products')?.hasError('required')
+              "
+            >
+              Please select at least one product.
+            </small>
+          </div>
+
+          <!-- Consent -->
+          <!-- <div class="form-group form-padding full-width">
+            <label class="form-check">
+              <input
+                type="checkbox"
+                formControlName="consent"
+                class="form-check-input"
+                style="margin-top: -2px"
+              />
+              <span style="margin-left: 8px">
+                By completing your information you agree for us to contact you
+                via phone, email, post or SMS.
+              </span>
+            </label>
+            <small
+              class="error"
+              *ngIf="
+                contactForm.get('consent')?.touched &&
+                contactForm.get('consent')?.hasError('required')
+              "
+            >
+              You must agree before submitting.
+            </small>
+          </div> -->
+
+          <!-- Submit -->
+          <div class="form-group full-width">
+            <button type="submit" class="btnall text-center">
+              <i
+                class="bi bi-send"
+                style="font-size: 16px; font-weight: 500"
+              ></i>
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Right column contact info stays the same -->
+      <div class="contact-info col-12 col-lg-6 position-relative p-2 p-md-3">
+        <div
+          class="row h-100 justify-content-center justify-content-md-center justify-content-lg-between justify-content-xxl-end iconleftscotainer"
+        >
+          <div class="col-5">
+            <div class="lefticon">
+              <div>
+                <img
+                  src="homepage/callback-icons/h1 (1).png"
+                  alt="Email Icon"
+                  class="icon-img"
+                />
+              </div>
+              <div><span class="icon_name mt-1">Email</span></div>
+              <div class="icon-address emailaddress">
+                <a href="mailto:contact@wealthmax.co.uk" target="_blank"
+                  ><u>{{ email }}</u></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-5">
+            <div class="lefticon">
+              <div>
+                <img
+                  src="homepage/callback-icons/h1 (4).png"
+                  alt="Phone Icon"
+                  class="icon-img"
+                />
+              </div>
+              <div><span class="icon_name mt-1">Phone</span></div>
+              <a href="tel:+442036758998" class="icon-address"
+                >+44 20 3675 8998</a
+              >
+            </div>
+          </div>
+
+          <div class="col-5">
+            <div class="lefticon">
+              <div>
+                <img
+                  src="homepage/callback-icons/h1 (3).png"
+                  alt="Clock Icon"
+                  class="icon-img"
+                />
+              </div>
+              <div>
+                <span class="icon_name mt-1">Office Timings</span>
+              </div>
+              <div class="icon-address">10:30 AM to 6:30 PM</div>
+            </div>
+          </div>
+
+          <div class="col-5">
+            <div class="lefticon">
+              <div>
+                <img
+                  src="homepage/callback-icons/h1 (2).png"
+                  alt="Day Icon"
+                  class="icon-img"
+                />
+              </div>
+              <div>
+                <span class="icon_name mt-1">Office Days</span>
+              </div>
+              <div class="icon-address">Monday to Friday</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Subscribe area unchanged -->
+<div class="container mgtopbottom">
+  <div
+    class="row align-content-center bg-white py-4 py-lg-5 px-lg-4 justify-content-between"
+  >
+    <div class="col-12 col-sm-5 pb-2 pb-lg-0">
+      <div>
+        <img
+          src="homepage/subscribe_image.png"
+          alt="Subscribe Image"
+          class="sub_image"
+        />
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-7">
+      <h3 class="heading-txt">
+        Be The First One To Be Notified Of Newest Articles
+      </h3>
+      <p class="text-Size">Subscribe our daily newsletter</p>
+
+      <form
+        [formGroup]="subscribeForm"
+        (ngSubmit)="onSubscribeSubmit()"
+        class="subscribe-form"
+      >
+        <div class="input-wrapper" style="background-color: #fef7f3">
+          <input
+            style="border-radius: 12px"
+            type="email"
+            formControlName="email"
+            placeholder="Enter Email"
+          />
+          <button
+            type="submit"
+            class="btnall"
+            style="
+              border-radius: 0px 8px 8px 0px;
+              border: 1px solid #eb7124 !important;
+            "
+          >
+            Subscribe
+          </button>
+        </div>
+
+        <small class="error" *ngIf="subscribeForm.get('email')?.touched">
+          <span *ngIf="subscribeForm.get('email')?.hasError('required')">
+            Email is required
+          </span>
+          <span *ngIf="subscribeForm.get('email')?.hasError('pattern')">
+            Please enter a valid email address
+          </span>
+        </small>
+      </form>
+    </div>
+  </div>
+</div>

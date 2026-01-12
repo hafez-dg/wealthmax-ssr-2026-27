@@ -1,0 +1,23 @@
+<div class="bgcolorlinear">
+  <div class="container mgtop">
+    <h3 class="heading-txt text-center pb-lg-3">Why should you Join Wealthmax?</h3>
+    <div class="cards-container">
+      <div class="card" *ngFor="let card of cards">
+        <div class="align-items-start ">
+          <!-- Icon -->
+          <div
+            class="icon-box align-items-center justify-content-center mb-3"
+          >
+            <img [src]="card.icon" alt="icon" class="card-icon" />
+          </div>
+
+          <!-- Text -->
+          <div class="flex-grow-1">
+            <h3 class="card-title mb-2 dark-blue">{{ card.title }}</h3>
+            <p class="card-text mb-0">{{ card.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

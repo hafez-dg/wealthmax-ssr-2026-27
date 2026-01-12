@@ -1,0 +1,97 @@
+<app-banner
+  [title]="'Our Team'"
+  [subtitle]="
+    'We are Wealthmax Financial Advisers , Curating Financial Strategies as Unique as your Fingerprints.'
+  "
+  [desktopImage]="'/desktop image/whoweare.webp'"
+  [mobileImage]="'/Mobile img/who we are.webp'"
+  [buttons]="[
+    {
+      label: 'Join Now',
+      class: 'btn btn-lg bg-white txtorange',
+      routerLink: '/network'
+    }
+  ]"
+>
+</app-banner>
+
+<!-- <div class="hero-banner d-flex align-content-center">
+    <div class="container">
+      <div class="row g-0">
+        <h1 class="banner-header">Our Team</h1>
+      </div>
+      <div class="row g-0">
+        <p class="col-md-6 sub-heading">
+           We are Wealthmax Financial Advisers , Curating Financial Strategies as
+        Unique as your Fingerprints.
+        </p>
+      </div>
+    </div>
+  </div> -->
+
+<app-meet2-datadisplay />
+
+<div class="container mgtopbottom">
+  <div>
+    <h3 class="headingtxt text-center mb-3 mb-md-5">Our Team Gallery</h3>
+  </div>
+  <div class="img-box">
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide"
+      data-bs-ride="carousel"
+      data-bs-pause="false"
+    >
+      <!-- Indicators -->
+      <div class="carousel-indicators">
+        <button
+          *ngFor="let img of imgs; let i = index"
+          type="button"
+          [class.active]="i === currentIndex"
+          (click)="goTo(i)"
+          aria-label="Slide {{ i + 1 }}"
+        ></button>
+      </div>
+
+      <!-- Carousel images -->
+      <div class="carousel-inner">
+        <div
+          *ngFor="let img of imgs; let i = index"
+          class="carousel-item"
+          [class.active]="i === currentIndex"
+        >
+          <img [src]="img" class="d-block w-100" alt="Team image {{ i + 1 }}" />
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" (click)="prev()">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+
+      <button class="carousel-control-next" type="button" (click)="next()">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="container mgtopbottom">
+  <div>
+    <h3 class="headingtxt text-center">
+      Ready to Discover New Opportunities? Take the First Step
+    </h3>
+  </div>
+  <div>
+    <p class="textSize text-center">
+      Join a team of dedicated financial professionals committed to empowering
+      individuals and families with tailored solutions, expert guidance and
+      long-term financial security.
+    </p>
+  </div>
+  <div class="d-flex justify-content-center align-content-center">
+    <button class="btnall" routerLink="/network">Join Now</button>
+  </div>
+</div>

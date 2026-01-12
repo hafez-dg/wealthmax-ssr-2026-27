@@ -1,0 +1,221 @@
+<div class="footer position-relative">
+  <button class="scroll-top-btn" (click)="scrollToTop()">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- circles -->
+  <!-- <div class="rounded-circle position-absolute circle-made circle-1"></div>
+  <div class="rounded-circle position-absolute circle-made circle-2"></div>
+  <div class="rounded-circle position-absolute circle-made circle-3"></div>
+  <div class="rounded-circle position-absolute circle-made circle-4"></div>
+  <div class="rounded-circle position-absolute circle-made circle-5"></div> -->
+
+  <footer class="container">
+    <div class="row justify-content-between align-items-start g-0">
+      <!-- Logo & Address -->
+      <div class="col-12 col-xl-4 p-1 order-1 order-md-1">
+        <img
+          src="footer/wealthLogo.svg.png"
+          alt="WealthMax Logo"
+          class="img-fluid mb-3"
+          style="max-width: 280px"
+        />
+        <p class="text-justify mb-0">
+          The Mille, River Suite, 3rd Floor, 1000 Great West Road, Brentford,
+          London, TW8 9DW, United Kingdom
+        </p>
+      </div>
+
+      <!-- Quick Links + Services -->
+      <div class="col-12 col-md-8 col-lg-6 col-xl-4 p-1 order-3 order-md-2">
+        <div class="row g-0">
+          <div class="col-6 footer-section">
+            <h4 class="fw-bold border-bottom pb-2">Quick Links</h4>
+            <ul class="list-unstyled footer-ul">
+              <li><button routerLink="/" class="footer-btn">Home</button></li>
+              <li>
+                <button routerLink="/contact-us" class="footer-btn">
+                  Contact Us
+                </button>
+              </li>
+              <li>
+                <button routerLink="/network" class="footer-btn">
+                  Join Our Network
+                </button>
+              </li>
+              <li>
+                <button routerLink="/careers" class="footer-btn">
+                  Careers
+                </button>
+              </li>
+              <li>
+                <button routerLink="/who-we-are" class="footer-btn">
+                  About Us
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 footer-section">
+            <h4 class="fw-bold border-bottom pb-2">Services</h4>
+            <ul class="list-unstyled footer-ul">
+              <li>
+                <button routerLink="/protection" class="footer-btn">
+                  Protection
+                </button>
+              </li>
+              <li>
+                <button routerLink="/mortgage" class="footer-btn">
+                  Mortgages
+                </button>
+              </li>
+              <li>
+                <button routerLink="/wills" class="footer-btn">
+                  Wills & Estate Planning
+                </button>
+              </li>
+              <li>
+                <button routerLink="/commercial-lending" class="footer-btn">
+                  Commercial Lending
+                </button>
+              </li>
+              <li>
+                <button routerLink="/pension" class="footer-btn">
+                  Pension Planning
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Info -->
+      <div
+        class="col-12 col-md-4 col-lg-4 col-xl-4 p-1 d-flex flex-column justify-content-center order-2 order-md-3"
+      >
+        <div class="mb-2 footer-ul">
+          <a
+            href="tel:+442036758998"
+            class="text-decoration-none text-white contact-item"
+          >
+            <p class="mb-1"><i class="fas fa-phone"></i> +44 20 3675 8998</p>
+          </a>
+          <a
+            href="mailto:contact@wealthmax.co.uk"
+            class="text-decoration-none text-white contact-item"
+          >
+            <i class="fas fa-envelope"></i> contact&#64;wealthmax.co.uk
+          </a>
+        </div>
+
+        <span class="txtorange txt-small">
+          All calls to and from our office landlines are recorded to meet
+          regulatory requirements
+        </span>
+      </div>
+    </div>
+
+    <!-- Legal and Bottom Section -->
+    <div class="footer-legal mt-3">
+      <p class="mb-2">
+        Wealthmax or Wealthmax Financial Advisers is a trading style of
+        Wealthmax Financial Advisers Limited. Wealthmax Financial Advisers
+        Limited is authorised and regulated by the Financial Conduct Authority,
+        FRN No 766509. Registered company in England & Wales, Company No
+        10501962. (ICO Registration Reference Z8925674).
+      </p>
+      <p class="mb-2">
+        Your Insurance policies may lapse if you do not keep up to date with
+        regular premium payments and you may not be cover if a claim is made.
+      </p>
+      <p class="mb-2">
+        A pension is a long-term investment. The fund value may fluctuate and
+        can go down" and "Your eventual income may depend on the size of fund
+        when accessed, interest rates and legislation.
+      </p>
+      <p class="mb-2">
+        Your Home may be repossessed if you do not keep up repayment on your
+        mortgages.
+      </p>
+      <p class="mb-2">
+        Some Commercial and Buy to Let mortgages are not regulated by the
+        Financial Conduct Authority. We are a credit broker, not a lender. We
+        work with a panel of providers and lenders; we will typically receive
+        commission from lenders. Different lenders pay different amounts
+        depending on different commission models. For transparency we work with
+        the following commission models: fixed application and completion fee
+        and percentage of the amount you borrow and rate for risk.
+      </p>
+      <p class="mb-2">
+        Wills & Estate planning services are provided through Wealthmax Estate
+        Planning Limited and are not regulated by the Financial Conduct
+        Authority.
+      </p>
+    </div>
+
+    <div class="footer-bottom mt-2">
+      <div class="links">
+        <div class="content">
+          <span><div class="dot"></div></span>
+          <button routerLink="privacy-policy" class="footer-btn">
+            Privacy Policy
+          </button>
+        </div>
+        <div class="content">
+          <span><div class="dot"></div></span>
+          <button routerLink="financial-ombudsman-service" class="footer-btn">
+            Financial Ombudsman Service
+          </button>
+        </div>
+        <div class="content">
+          <span><div class="dot"></div></span>
+          <button routerLink="terms-and-conditions" class="footer-btn">
+            Terms & Conditions
+          </button>
+        </div>
+        <div class="content">
+          <span><div class="dot"></div></span>
+          <button routerLink="treating-customers-fairly" class="footer-btn">
+            Fair Treatment of Customers
+          </button>
+        </div>
+        <div class="content">
+          <span><div class="dot"></div></span>
+          <button routerLink="complaint-procedure" class="footer-btn">
+            Complaints Procedure
+          </button>
+        </div>
+      </div>
+
+      <div class="footer-line"></div>
+
+      <div class="social-icons">
+        <a
+          class="facebook"
+          href="https://www.facebook.com/WealthmaxUK"
+          target="_blank"
+          ><i class="fab fa-facebook-f i1"></i
+        ></a>
+        <a class="twitter" href="https://x.com/WAdvisers" target="_blank"
+          ><i class="fab fa-x-twitter"></i
+        ></a>
+        <a
+          class="linkedin"
+          href="https://www.linkedin.com/company/wealthmax/"
+          target="_blank"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+        <a
+          class="insta"
+          href="https://www.instagram.com/wadvisers/"
+          target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+      </div>
+
+      <p class="copyright mb-0">
+        Copyright © 2026 Wealthmax Financial Advisers. All rights reserved.
+      </p>
+    </div>
+  </footer>
+</div>
