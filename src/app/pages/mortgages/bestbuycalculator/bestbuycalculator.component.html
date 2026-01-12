@@ -11,7 +11,6 @@
   <h3 class="headingtxt mb-4 text-center">Calculate your Mortgage Rates Now!</h3>
 
   <div class="iframe-height">
-
     <!-- Loader overlay -->
     <div *ngIf="isLoading" class="iframe-loader">
       <div class="spinner"></div>
@@ -21,8 +20,8 @@
     <!-- Iframe always present -->
     <iframe
       class="p-3 calculator-frame"
+      (load)="onIframeLoad()"
       src="https://webtools.twenty7tec.com/Sourcing/WebToolsTwo?apiKey=b35a7324-3af6-4760-802c-3f08dcf43e98&pluginKey=cde198f9-a1ef-4c9b-a5a9-89c8a6a63573"
     ></iframe>
-
   </div>
 </div>

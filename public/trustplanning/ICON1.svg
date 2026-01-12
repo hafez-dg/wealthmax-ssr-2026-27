@@ -1,25 +1,3 @@
-<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_7192_38690)">
-<mask id="mask0_7192_38690" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="-1" y="-1" width="50" height="50">
-<path d="M0 0.000141144H47.9999V48H0V0.000141144Z" fill="white" stroke="white" stroke-width="1.4"/>
-</mask>
-<g mask="url(#mask0_7192_38690)">
-<path d="M17.4313 24.6953C17.4313 22.4533 15.617 20.639 13.375 20.639" stroke="#EB7124" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M41.4453 24.6953C41.4453 22.4533 43.2596 20.639 45.5016 20.639" stroke="#EB7124" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M41.4453 7.56092C41.4453 9.80294 43.2596 11.6172 45.5016 11.6172" stroke="#EB7124" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M29.4375 7.50471H44.0414C44.8815 7.50471 45.5625 8.18571 45.5625 9.0258V23.2445C45.5625 24.0846 44.8815 24.7656 44.0414 24.7656H33.6562" stroke="#EB7124" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M25.2187 24.7656H14.8336C13.9936 24.7656 13.3125 24.0846 13.3125 23.2445V15.1039" stroke="#EB7124" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M25.4018 14.0084C26.1673 12.562 27.6874 11.5765 29.4378 11.5765C31.958 11.5765 34.0011 13.6196 34.0011 16.1398C34.0011 18.66 31.958 20.7031 29.4378 20.7031C27.5049 20.7031 25.8527 19.5013 25.1875 17.8042" stroke="#EB7124" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M9.1875 2.43456H22.7818C24.1168 2.43456 25.4143 2.87669 26.4715 3.69193L31.4062 7.49705H21.2117C20.1369 7.49705 19.2656 8.36836 19.2656 9.4432C19.2656 10.1513 19.6503 10.8035 20.2698 11.1462L25.0931 13.8137C26.0931 14.3667 26.5377 15.5686 26.1383 16.6393C25.7501 17.6801 24.6754 18.2965 23.5811 18.1063L20.1946 17.5175C17.0406 16.9691 14.0489 15.7237 11.4375 13.872H9.1875" stroke="#EB7124" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M9.18748 15.9375H0.9375V0.937544H9.18748V15.9375Z" stroke="#EB7124" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M38.8015 45.9375H20.435C18.8266 45.9375 17.234 45.6207 15.748 45.0052C14.2621 44.3897 12.9119 43.4876 11.7747 42.3503L6.68152 37.2571C5.7698 36.3454 5.77327 34.866 6.6893 33.9585C7.59933 33.0569 9.06698 33.0605 9.9727 33.9664L14.5301 38.5251C15.2863 39.2815 16.1842 39.8816 17.1724 40.291C18.1606 40.7005 19.2197 40.9112 20.2894 40.9112H25.3538" stroke="#EB7124" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M30.8886 40.9141H20.6801C19.3984 40.9141 18.3594 39.875 18.3594 38.5933C18.3594 37.3116 19.3984 36.2726 20.6801 36.2726H26.5992L27.8236 34.8192C28.5763 33.9257 29.5151 33.2075 30.5744 32.7148C31.6337 32.2221 32.7878 31.9669 33.956 31.9669C35.6478 31.9669 37.2962 32.5019 38.6654 33.4956L38.8017 33.5945" stroke="#EB7124" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M47.0625 47.0625H38.8125V32.0625H47.0625V47.0625Z" stroke="#EB7124" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
-</g>
-<defs>
-<clipPath id="clip0_7192_38690">
-<rect width="48" height="48" fill="white"/>
-</clipPath>
-</defs>
-</svg>
+version https://git-lfs.github.com/spec/v1
+oid sha256:da5414be9294aa75cec13deb559d59120bf10e2e926c9b97009b89c708985065
+size 3548
